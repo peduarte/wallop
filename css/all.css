@@ -1,0 +1,171 @@
+/*-----  Responsive  ------*/
+/* line 1, _global.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* line 3, _global.scss */
+body {
+  font-family: 'Voltaire', Arial;
+  text-align: center;
+  background: #5D78A4;
+  color: #ffffff;
+  padding: 0 5%;
+  font-size: 22px; }
+
+/* line 12, _global.scss */
+h1 {
+  font-weight: 400;
+  padding: 60px 0 20px;
+  font-size: 54px;
+  line-height: 1; }
+
+/* line 19, _global.scss */
+p {
+  margin: 0 0 60px; }
+
+/* line 23, _global.scss */
+.container {
+  margin: 0 auto 60px;
+  position: relative;
+  max-width: 612px; }
+
+/* line 30, _global.scss */
+.photo-slider {
+  margin: 0 auto 20px;
+  position: relative; }
+
+/* line 35, _global.scss */
+.btn {
+  font-family: 'Voltaire', Arial;
+  background: #ffffff;
+  color: #333333;
+  border: none;
+  -webkit-appearance: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  line-height: 20px;
+  margin-top: 20px; }
+  @media only screen and (min-width: 480px) {
+    /* line 35, _global.scss */
+    .btn {
+      margin-top: 0;
+      position: absolute;
+      top: 50%;
+      opacity: 0;
+      -webkit-transition: opacity 200ms ease;
+      -moz-transition: opacity 200ms ease;
+      -ms-transition: opacity 200ms ease;
+      -o-transition: opacity 200ms ease;
+      transition: opacity 200ms ease; }
+      /* line 54, _global.scss */
+      .container:hover .btn {
+        opacity: 1; } }
+  /* line 59, _global.scss */
+  .btn:hover {
+    cursor: pointer; }
+
+@media only screen and (min-width: 480px) {
+  /* line 64, _global.scss */
+  .btn--prev {
+    left: 10px; } }
+
+@media only screen and (min-width: 480px) {
+  /* line 70, _global.scss */
+  .btn--next {
+    right: 10px; } }
+
+/* line 7, _wallop-slider.scss */
+.wallop-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateZ(0); }
+
+/* line 15, _wallop-slider.scss */
+.wallop-slider__list {
+  list-style: none; }
+
+/* line 17, _wallop-slider.scss */
+.wallop-slider__item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  /* line 24, _wallop-slider.scss */
+  .wallop-slider__item img {
+    display: block;
+    width: 100%; }
+
+/* line 30, _wallop-slider.scss */
+.current {
+  display: block;
+  position: static; }
+
+/* line 32, _wallop-slider.scss */
+.show--from-left {
+  -webkit-animation: showFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
+
+/* line 33, _wallop-slider.scss */
+.show--from-right {
+  -webkit-animation: showFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
+
+/* line 35, _wallop-slider.scss */
+.hide--to-left, .hide--to-right {
+  display: block; }
+
+/* line 36, _wallop-slider.scss */
+.hide--to-left {
+  -webkit-animation: hideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
+
+/* line 37, _wallop-slider.scss */
+.hide--to-right {
+  -webkit-animation: hideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+@-webkit-keyframes showFromLeft {
+  /* line 40, _wallop-slider.scss */
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0); }
+
+  /* line 43, _wallop-slider.scss */
+  100% {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes showFromRight {
+  /* line 49, _wallop-slider.scss */
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0); }
+
+  /* line 52, _wallop-slider.scss */
+  100% {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes hideToLeft {
+  /* line 58, _wallop-slider.scss */
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+
+  /* line 61, _wallop-slider.scss */
+  99% {
+    opacity: 1; }
+
+  /* line 64, _wallop-slider.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0); } }
+
+@-webkit-keyframes hideToRight {
+  /* line 71, _wallop-slider.scss */
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+
+  /* line 74, _wallop-slider.scss */
+  99% {
+    opacity: 1; }
+
+  /* line 77, _wallop-slider.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0); } }

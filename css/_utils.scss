@@ -1,0 +1,45 @@
+
+
+    /*-----  Responsive  ------*/
+    $medium: 480px;
+    $large: 960px;
+
+    @mixin prefixr($property, $value...){
+        -webkit-#{$property}: $value;
+           -moz-#{$property}: $value;
+            -ms-#{$property}: $value;
+             -o-#{$property}: $value;
+                #{$property}: $value;
+    }
+
+    @mixin media-query($media-query) {
+        @if $media-query == medium {
+            @media only screen and (min-width:$medium) { @content; }
+        }
+
+        @if $media-query == large {
+            @media only screen and (min-width:$large) { @content; }
+        }
+    }
+
+    @mixin keyframe ($animation-name){
+        @-webkit-keyframes $animation-name{
+            @content;
+        }
+
+        @-moz-keyframes $animation-name{
+            @content;
+        }
+
+        @-ms-keyframes $animation-name{
+            @content;
+        }
+
+        @-o-keyframes $animation-name{
+            @content;
+        }
+
+        @keyframes $animation-name{
+            @content;
+        }
+    }
