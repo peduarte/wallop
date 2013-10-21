@@ -1,6 +1,8 @@
 $(function() {
 
     // Set your classses here
+    var list = 'wallop-slider__list';
+    var item = 'wallop-slider__item';
     var btn = 'wallop__btn';
     var current = 'current';
     var showFromLeft = 'show--from-left';
@@ -8,18 +10,13 @@ $(function() {
     var hideToLeft = 'hide--to-left';
     var hideToRight = 'hide--to-right';
 
-    var showPrev = function ($current) {
-      var $prev = $current.prev();
-      if ($prev.length === 0) { return; }
-      $current.removeClass(current).addClass(hideToRight);
-      $prev.addClass(current + ' ' + showFromLeft);
-    };
-
-    var showNext = function ($current) {
-      var $next = $current.next();
-      if ($next.length === 0) { return; }
-      $current.removeClass(current).addClass(hideToLeft);
-      $next.addClass(current + ' ' + showFromRight);
+    var goTo = function ($current, currentIndex, direction) {
+        var goToElement = $('.' + item).eq(currentIndex);
+        if (goToElement.length === 0 || currentIndex < 0) { return; }
+        var hideDirectionClass = direction === 'left' ? hideToRight : hideToLeft;
+        var showDirectionClass = direction === 'left' ? showFromLeft : showFromRight;
+        $current.removeClass(current).addClass(hideDirectionClass);
+        goToElement.addClass(current + ' ' + showDirectionClass);
     };
 
     var removeAllHelperClasses = function () {
@@ -31,13 +28,14 @@ $(function() {
 
     $('.' + btn).click(function () {
       var $current = $('.' + current);
+      var currentIndex = $current.index();
 
       removeAllHelperClasses();
 
       if ($(this).data('show') === 'prev') {
-        showPrev($current);
+        goTo($current, currentIndex - 1, 'left');
       } else {
-        showNext($current);
+        goTo($current, currentIndex + 1, 'right');
       }
     });
 
