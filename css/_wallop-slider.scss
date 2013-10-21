@@ -27,14 +27,14 @@ $height: auto;
     }
 }
 
-.current { display: block; position: static; } // Required
+.wallop-slider__item--current { display: block; position: static; } // Required
 
-.show--from-left { -webkit-animation: showFromLeft $animationDuration $animationEasing forwards; }
-.show--from-right { -webkit-animation: showFromRight $animationDuration $animationEasing forwards; }
+.wallop-slider__item--show-from-left { -webkit-animation: showFromLeft $animationDuration $animationEasing forwards; }
+.wallop-slider__item--show-from-right { -webkit-animation: showFromRight $animationDuration $animationEasing forwards; }
 
-.hide--to-left, .hide--to-right { display: block; } // Required
-.hide--to-left { -webkit-animation: hideToLeft $animationDuration $animationEasing forwards; }
-.hide--to-right { -webkit-animation: hideToRight $animationDuration $animationEasing both; }
+.wallop-slider__item--hide-to-left, .wallop-slider__item--hide-to-right { display: block; } // Required
+.wallop-slider__item--hide-to-left { -webkit-animation: hideToLeft $animationDuration $animationEasing forwards; }
+.wallop-slider__item--hide-to-right { -webkit-animation: hideToRight $animationDuration $animationEasing both; }
 
 @-webkit-keyframes showFromLeft {
     0% {

@@ -1,42 +1,73 @@
 $(function() {
 
     // Set your classses here
-    var list = 'wallop-slider__list';
-    var item = 'wallop-slider__item';
-    var btn = 'wallop__btn';
-    var current = 'current';
-    var showFromLeft = 'show--from-left';
-    var showFromRight = 'show--from-right';
-    var hideToLeft = 'hide--to-left';
-    var hideToRight = 'hide--to-right';
+    var btn = 'wallop-slider__btn';
+    var current = 'wallop-slider__item--current';
+    var showFromLeft = 'wallop-slider__item--show-from-left';
+    var showFromRight = 'wallop-slider__item--show-from-right';
+    var hideToLeft = 'wallop-slider__item--hide-to-left';
+    var hideToRight = 'wallop-slider__item--hide-to-right';
 
-    var goTo = function ($current, currentIndex, direction) {
-        var goToElement = $('.' + item).eq(currentIndex);
-        if (goToElement.length === 0 || currentIndex < 0) { return; }
+    var hasClass = function(elem, className) {
+        if (!elem) { return; }
+        return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
+    };
+
+    var addClass = function(elem, className) {
+        if (!elem) { return; }
+        if (!hasClass(elem, className)) {
+            elem.className += ' ' + className;
+        }
+    };
+
+    var removeClass = function(elem, className) {
+        if (!elem) { return; }
+        var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
+        if (hasClass(elem, className)) {
+            while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+                newClass = newClass.replace(' ' + className + ' ', ' ');
+            }
+            elem.className = newClass.replace(/^\s+|\s+$/g, '');
+        }
+    };
+
+    var goTo = function ($current, direction) {
+        var goToElement = direction === 'left' ? $current.previousSibling.previousElementSibling : $current.nextSibling.nextElementSibling;
+        console.log('$current -> ', $current);
+        console.log('$current.previousSibling -> ', $current.previousSibling);
+        console.log('$current.nextSibling -> ', $current.nextSibling);
+        console.log('goToElement -> ', goToElement);
+        if (!goToElement) { return; }
+
         var hideDirectionClass = direction === 'left' ? hideToRight : hideToLeft;
         var showDirectionClass = direction === 'left' ? showFromLeft : showFromRight;
-        $current.removeClass(current).addClass(hideDirectionClass);
-        goToElement.addClass(current + ' ' + showDirectionClass);
+        removeClass($current, current);
+        addClass($current, hideDirectionClass);
+        addClass(goToElement, current + ' ' + showDirectionClass);
     };
 
     var removeAllHelperClasses = function () {
-      $('.' + hideToLeft).removeClass(hideToLeft);
-      $('.' + hideToRight).removeClass(hideToRight);
-      $('.' + showFromLeft).removeClass(showFromLeft);
-      $('.' + showFromRight).removeClass(showFromRight);
+      removeClass(document.getElementsByClassName(hideToLeft)[0], hideToLeft);
+      removeClass(document.getElementsByClassName(hideToRight)[0], hideToRight);
+      removeClass(document.getElementsByClassName(showFromLeft)[0], showFromLeft);
+      removeClass(document.getElementsByClassName(showFromRight)[0], showFromRight);
     };
 
-    $('.' + btn).click(function () {
-      var $current = $('.' + current);
-      var currentIndex = $current.index();
+    var onBtnClick = function () {
+      var $current = document.getElementsByClassName(current)[0];
 
       removeAllHelperClasses();
 
-      if ($(this).data('show') === 'prev') {
-        goTo($current, currentIndex - 1, 'left');
+      if (this.getAttribute('data-show') === 'prev') {
+        goTo($current, 'left');
       } else {
-        goTo($current, currentIndex + 1, 'right');
+        goTo($current, 'right');
       }
-    });
+    };
+
+    var $buttons = document.getElementsByClassName(btn);
+    for (var i = 0; i < $buttons.length; i++) {
+        $buttons[i].addEventListener('click', onBtnClick);
+    }
 
 });

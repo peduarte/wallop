@@ -100,28 +100,28 @@ p {
     width: 100%; }
 
 /* line 30, _wallop-slider.scss */
-.current {
+.wallop-slider__item--current {
   display: block;
   position: static; }
 
 /* line 32, _wallop-slider.scss */
-.show--from-left {
+.wallop-slider__item--show-from-left {
   -webkit-animation: showFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
 
 /* line 33, _wallop-slider.scss */
-.show--from-right {
+.wallop-slider__item--show-from-right {
   -webkit-animation: showFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
 
 /* line 35, _wallop-slider.scss */
-.hide--to-left, .hide--to-right {
+.wallop-slider__item--hide-to-left, .wallop-slider__item--hide-to-right {
   display: block; }
 
 /* line 36, _wallop-slider.scss */
-.hide--to-left {
+.wallop-slider__item--hide-to-left {
   -webkit-animation: hideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
 
 /* line 37, _wallop-slider.scss */
-.hide--to-right {
+.wallop-slider__item--hide-to-right {
   -webkit-animation: hideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 @-webkit-keyframes showFromLeft {
