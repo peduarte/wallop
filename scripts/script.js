@@ -1,4 +1,5 @@
-$(function() {
+(function() {
+    'use strict';
 
     // Set your classses here
     var btn = 'wallop-slider__btn';
@@ -32,13 +33,8 @@ $(function() {
     };
 
     var goTo = function ($current, direction) {
-        var goToElement = direction === 'left' ? $current.previousSibling.previousElementSibling : $current.nextSibling.nextElementSibling;
-        console.log('$current -> ', $current);
-        console.log('$current.previousSibling -> ', $current.previousSibling);
-        console.log('$current.nextSibling -> ', $current.nextSibling);
-        console.log('goToElement -> ', goToElement);
+        var goToElement = direction === 'left' ? $current.previousSibling.previousSibling : $current.nextSibling.nextSibling;
         if (!goToElement) { return; }
-
         var hideDirectionClass = direction === 'left' ? hideToRight : hideToLeft;
         var showDirectionClass = direction === 'left' ? showFromLeft : showFromRight;
         removeClass($current, current);
@@ -70,4 +66,4 @@ $(function() {
         $buttons[i].addEventListener('click', onBtnClick);
     }
 
-});
+})();
