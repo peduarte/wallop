@@ -57,7 +57,16 @@ p {
     }
 
     &:hover {
-        cursor: pointer;
+      cursor: pointer;
+    }
+
+    &[disabled] {
+      &,
+      &:hover {
+        cursor: default;
+      }
+
+      visibility: hidden;
     }
 }
 

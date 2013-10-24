@@ -64,25 +64,31 @@ p {
   /* line 59, _global.scss */
   .btn:hover {
     cursor: pointer; }
+  /* line 63, _global.scss */
+  .btn[disabled] {
+    visibility: hidden; }
+    /* line 65, _global.scss */
+    .btn[disabled], .btn[disabled]:hover {
+      cursor: default; }
 
 @media only screen and (min-width: 480px) {
-  /* line 64, _global.scss */
+  /* line 73, _global.scss */
   .btn--previous {
     left: 10px; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 70, _global.scss */
+  /* line 79, _global.scss */
   .btn--next {
     right: 10px; } }
 
-/* line 76, _global.scss */
+/* line 85, _global.scss */
 .easing-label {
   padding: 5px 10px 10px;
   display: inline-block;
   line-height: 30px;
   vertical-align: middle;
   font-size: 16px; }
-  /* line 83, _global.scss */
+  /* line 92, _global.scss */
   .easing-label input {
     margin-right: 10px;
     vertical-align: middle; }
