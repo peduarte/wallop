@@ -25,17 +25,21 @@ p {
   margin: 0 0 30px; }
 
 /* line 23, _global.scss */
+a {
+  color: #ffffff; }
+
+/* line 27, _global.scss */
 .container {
   margin: 0 auto 60px;
   position: relative;
   max-width: 612px; }
 
-/* line 30, _global.scss */
+/* line 34, _global.scss */
 .photo-slider {
   margin: 0 auto 20px;
   position: relative; }
 
-/* line 35, _global.scss */
+/* line 39, _global.scss */
 .btn {
   font-family: 'Voltaire', Arial;
   background: #ffffff;
@@ -47,7 +51,7 @@ p {
   line-height: 20px;
   margin-top: 20px; }
   @media only screen and (min-width: 480px) {
-    /* line 35, _global.scss */
+    /* line 39, _global.scss */
     .btn {
       margin-top: 0;
       position: absolute;
@@ -58,40 +62,49 @@ p {
       -ms-transition: opacity 200ms ease;
       -o-transition: opacity 200ms ease;
       transition: opacity 200ms ease; }
-      /* line 54, _global.scss */
+      /* line 58, _global.scss */
       .container:hover .btn {
         opacity: 1; } }
-  /* line 59, _global.scss */
+  /* line 63, _global.scss */
   .btn:hover {
     cursor: pointer; }
-  /* line 63, _global.scss */
+  /* line 67, _global.scss */
   .btn[disabled] {
-    visibility: hidden; }
-    /* line 65, _global.scss */
+    opacity: .4; }
+    /* line 69, _global.scss */
     .btn[disabled], .btn[disabled]:hover {
       cursor: default; }
+    @media only screen and (min-width: 480px) {
+      /* line 67, _global.scss */
+      .btn[disabled] {
+        visibility: hidden; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 73, _global.scss */
+  /* line 80, _global.scss */
   .btn--previous {
     left: 10px; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 79, _global.scss */
+  /* line 86, _global.scss */
   .btn--next {
     right: 10px; } }
 
-/* line 85, _global.scss */
+/* line 92, _global.scss */
 .easing-label {
   padding: 5px 10px 10px;
   display: inline-block;
   line-height: 30px;
   vertical-align: middle;
   font-size: 16px; }
-  /* line 92, _global.scss */
+  /* line 99, _global.scss */
   .easing-label input {
     margin-right: 10px;
     vertical-align: middle; }
+
+/* line 105, _global.scss */
+footer {
+  font-size: 16px;
+  padding: 0 0 30px; }
 
 /* line 9, _wallop-slider.scss */
 .wallop-slider {
