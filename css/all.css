@@ -22,7 +22,7 @@ h1 {
 
 /* line 19, _global.scss */
 p {
-  margin: 0 0 60px; }
+  margin: 0 0 30px; }
 
 /* line 23, _global.scss */
 .container {
@@ -74,6 +74,18 @@ p {
   /* line 70, _global.scss */
   .btn--next {
     right: 10px; } }
+
+/* line 76, _global.scss */
+.easing-label {
+  padding: 5px 10px 10px;
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: middle;
+  font-size: 16px; }
+  /* line 83, _global.scss */
+  .easing-label input {
+    margin-right: 10px;
+    vertical-align: middle; }
 
 /* line 9, _wallop-slider.scss */
 .wallop-slider {

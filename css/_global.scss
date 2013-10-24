@@ -17,7 +17,7 @@ h1 {
 }
 
 p {
-    margin: 0 0 60px;
+    margin: 0 0 30px;
 }
 
 .container {
@@ -73,3 +73,15 @@ p {
     }
 }
 
+.easing-label {
+  padding: 5px 10px 10px;
+  display: inline-block;
+  line-height: 30px;
+  vertical-align: middle;
+  font-size: 16px;
+
+  input {
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+}
