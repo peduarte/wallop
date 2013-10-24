@@ -12,7 +12,13 @@
 <body>
 
     <h1>Wallop Slider</h1>
-    <p>An attempt to build a super simple slider... once again.</p>
+    <p>An attempt to build a slider that is mainly controlled with CSS</p>
+
+    <form>
+        <label><input type="radio" name="slider-easing" checked> Default</label>
+        <label><input type="radio" name="slider-easing" value="wallop-slider--fade"> Fade</label>
+        <label><input type="radio" name="slider-easing" value="wallop-slider--special"> Special</label>
+    </form>
 
     <div class="container">
       <div class="photo-slider wallop-slider">
@@ -23,8 +29,8 @@
           <li class="wallop-slider__item"><img src="http://distilleryimage11.ak.instagram.com/45fd96302b8111e3aa8c22000a1fc809_8.jpg"></li>
           <li class="wallop-slider__item"><img src="http://distilleryimage10.ak.instagram.com/a86f056a1ad311e39ff222000aa8009c_7.jpg"></li>
         </ul>
-        <button class="btn wallop-slider__btn btn--prev" data-show="prev">Prev</button>
-        <button class="btn wallop-slider__btn btn--next" data-show="next">Next</button>
+        <button class="wallop-slider__btn wallop-slider__btn--previous btn btn--previous">Previous</button>
+        <button class="wallop-slider__btn wallop-slider__btn--next btn btn--next">Next</button>
       </div>
     </div>
 

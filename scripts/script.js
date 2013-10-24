@@ -1,69 +1,81 @@
 (function() {
     'use strict';
 
-    // Set your classses here
-    var btn = 'wallop-slider__btn';
-    var current = 'wallop-slider__item--current';
-    var showFromLeft = 'wallop-slider__item--show-from-left';
-    var showFromRight = 'wallop-slider__item--show-from-right';
-    var hideToLeft = 'wallop-slider__item--hide-to-left';
-    var hideToRight = 'wallop-slider__item--hide-to-right';
+    // Set your classes here
+    var wSBtnClass = 'wallop-slider__btn';
+    var wSBtnPreviousClass = 'wallop-slider__btn--previous';
+    var wSBtnNextClass = 'wallop-slider__btn--next';
+    var wSItemClass = 'wallop-slider__item';
+    var wSCurrentItemClass = 'wallop-slider__item--current';
+    var wSShowPreviousClass = 'wallop-slider__item--show-previous';
+    var wSShowNextClass = 'wallop-slider__item--show-next';
+    var wSHidePreviousClass = 'wallop-slider__item--hide-previous';
+    var wSHideNextClass = 'wallop-slider__item--hide-next';
 
-    var hasClass = function(elem, className) {
-        if (!elem) { return; }
-        return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-    };
+    // Global vars
+    var allItemsArray = Array.prototype.slice.call(document.getElementsByClassName(wSItemClass));
+    var allItemsArrayLength = allItemsArray.length;
+    var currentItemIndex = allItemsArray.indexOf(document.getElementsByClassName(wSCurrentItemClass)[0]);
 
-    var addClass = function(elem, className) {
-        if (!elem) { return; }
-        if (!hasClass(elem, className)) {
-            elem.className += ' ' + className;
-        }
-    };
-
-    var removeClass = function(elem, className) {
-        if (!elem) { return; }
-        var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ') + ' ';
-        if (hasClass(elem, className)) {
-            while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
-                newClass = newClass.replace(' ' + className + ' ', ' ');
-            }
-            elem.className = newClass.replace(/^\s+|\s+$/g, '');
-        }
-    };
-
-    var goTo = function ($current, direction) {
-        var goToElement = direction === 'left' ? $current.previousSibling.previousSibling : $current.nextSibling.nextSibling;
-        if (!goToElement) { return; }
-        var hideDirectionClass = direction === 'left' ? hideToRight : hideToLeft;
-        var showDirectionClass = direction === 'left' ? showFromLeft : showFromRight;
-        removeClass($current, current);
-        addClass($current, hideDirectionClass);
-        addClass(goToElement, current + ' ' + showDirectionClass);
-    };
-
-    var removeAllHelperClasses = function () {
-      removeClass(document.getElementsByClassName(hideToLeft)[0], hideToLeft);
-      removeClass(document.getElementsByClassName(hideToRight)[0], hideToRight);
-      removeClass(document.getElementsByClassName(showFromLeft)[0], showFromLeft);
-      removeClass(document.getElementsByClassName(showFromRight)[0], showFromRight);
-    };
-
-    var onBtnClick = function () {
-      var $current = document.getElementsByClassName(current)[0];
+    var goTo = function (index) {
+      if (index >= allItemsArrayLength || index < 0) { return; }
 
       removeAllHelperClasses();
 
-      if (this.getAttribute('data-show') === 'prev') {
-        goTo($current, 'left');
-      } else {
-        goTo($current, 'right');
-      }
+      addClass(allItemsArray[currentItemIndex], index > currentItemIndex ? wSHidePreviousClass : wSHideNextClass);
+      addClass(allItemsArray[index], wSCurrentItemClass + ' ' + (index > currentItemIndex ? wSShowNextClass : wSShowPreviousClass));
+
+      currentItemIndex = index;
     };
 
-    var $buttons = document.getElementsByClassName(btn);
-    for (var i = 0; i < $buttons.length; i++) {
-        $buttons[i].addEventListener('click', onBtnClick);
+    var removeAllHelperClasses = function () {
+      removeClass(allItemsArray[currentItemIndex], wSCurrentItemClass);
+      removeClass(document.getElementsByClassName(wSHidePreviousClass)[0], wSHidePreviousClass);
+      removeClass(document.getElementsByClassName(wSHideNextClass)[0], wSHideNextClass);
+      removeClass(document.getElementsByClassName(wSShowPreviousClass)[0], wSShowPreviousClass);
+      removeClass(document.getElementsByClassName(wSShowNextClass)[0], wSShowNextClass);
+    };
+
+    var onPreviousButtonClicked = function () {
+      goTo(currentItemIndex - 1);
+    };
+
+    var onNextButtonClicked = function () {
+      goTo(currentItemIndex + 1);
+    };
+
+    document.getElementsByClassName(wSBtnPreviousClass)[0].addEventListener('click', onPreviousButtonClicked);
+    document.getElementsByClassName(wSBtnNextClass)[0].addEventListener('click', onNextButtonClicked);
+
+
+
+
+
+    // Change Slider CSS Classes - For easings
+    var wallopSliderWrapper = document.getElementsByClassName('wallop-slider')[0];
+    var classAdded;
+    var onRadioBtnChange = function () {
+      var newClass = this.getAttribute('value');
+      console.log('newClass -> ', newClass);
+      removeClass(wallopSliderWrapper, classAdded);
+      addClass(wallopSliderWrapper, newClass);
+      classAdded = newClass;
+    };
+
+    var radioBtns = document.querySelectorAll('input[type=radio]');
+    for (var i = 0; i < radioBtns.length; i++) {
+      radioBtns[i].addEventListener('change', onRadioBtnChange);
+    }
+
+    // Helper functions
+    function addClass(element, className) {
+      if (!element) { return; }
+      element.className = element.className.replace(/\s+$/gi, '') + ' ' + className;
+    }
+
+    function removeClass(element, className) {
+      if (!element) { return; }
+      element.className = element.className.replace(className, '');
     }
 
 })();

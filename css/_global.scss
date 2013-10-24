@@ -61,7 +61,7 @@ p {
     }
 }
 
-.btn--prev {
+.btn--previous {
     @include media-query(medium) {
         left: 10px;
     }
