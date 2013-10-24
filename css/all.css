@@ -8,7 +8,7 @@
 body {
   font-family: 'Voltaire', Arial;
   text-align: center;
-  background: #5D78A4;
+  background: #2B2A30;
   color: #ffffff;
   padding: 0 5%;
   font-size: 22px; }
@@ -98,7 +98,7 @@ a {
   font-size: 16px; }
   /* line 99, _global.scss */
   .easing-label input {
-    margin-right: 10px;
+    margin-right: 5px;
     vertical-align: middle; }
 
 /* line 105, _global.scss */
