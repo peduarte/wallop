@@ -12,7 +12,11 @@ var WallopSlider = WallopSlider || {};
 
 WallopSlider = (function() {
 
-  function Wallop(options) {
+  function Wallop(selector, options) {
+    if (!selector) {
+      throw new Error('selector missing, eg: new WallopSlider(".selector")');
+    }
+
     this.options = {
       wSBtnPreviousClass: 'wallop-slider__btn--previous',
       wSBtnNextClass: 'wallop-slider__btn--next',
@@ -24,14 +28,15 @@ WallopSlider = (function() {
       wSHideNextClass: 'wallop-slider__item--hide-next'
     };
 
+    this.selector = selector;
     this.options = extend(this.options, options);
 
     // "Global vars"
-    this.allItemsArray = Array.prototype.slice.call(document.getElementsByClassName(this.options.wSItemClass));
+    this.allItemsArray = Array.prototype.slice.call(document.querySelectorAll(this.selector + ' .' + this.options.wSItemClass));
     this.allItemsArrayLength = this.allItemsArray.length;
-    this.currentItemIndex = this.allItemsArray.indexOf(document.getElementsByClassName(this.options.wSCurrentItemClass)[0]);
-    this.buttonPrevious = document.getElementsByClassName(this.options.wSBtnPreviousClass)[0];
-    this.buttonNext = document.getElementsByClassName(this.options.wSBtnNextClass)[0];
+    this.currentItemIndex = this.allItemsArray.indexOf(document.querySelector(this.selector + ' .' + this.options.wSCurrentItemClass));
+    this.buttonPrevious = document.querySelector(this.selector + ' .' + this.options.wSBtnPreviousClass);
+    this.buttonNext = document.querySelector(this.selector + ' .' + this.options.wSBtnNextClass);
 
     this.bindEvents();
   }

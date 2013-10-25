@@ -2,7 +2,7 @@
     'use strict';
 
     // New isntance of WallopSlider
-    var wallopSlider = new WallopSlider();
+    var photoSlider = new WallopSlider('.photo-slider');
 
     // Change Slider CSS Classes - For easings
     var wallopSliderWrapper = document.getElementsByClassName('wallop-slider')[0];
