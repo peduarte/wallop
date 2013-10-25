@@ -1,2 +1,2 @@
-wallop-slider
-=============
+# wallopSlider
+## More to come...
