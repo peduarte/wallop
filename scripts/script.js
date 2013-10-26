@@ -3,6 +3,7 @@
 
     // New isntance of WallopSlider
     var photoSlider = new WallopSlider('.photo-slider');
+    var secondarySlider = new WallopSlider('.secondary-slider');
 
     // Change Slider CSS Classes - For easings
     var wallopSliderWrapper = document.getElementsByClassName('wallop-slider')[0];

@@ -11,49 +11,81 @@ body {
   background: #2B2A30;
   color: #ffffff;
   padding: 0 5%;
-  font-size: 22px; }
+  font-size: 22px;
+  -webkit-font-smoothing: antialiased; }
 
-/* line 12, _global.scss */
+/* line 13, _global.scss */
 h1 {
   font-weight: 400;
   padding: 60px 0 20px;
   font-size: 54px;
   line-height: 1; }
 
-/* line 19, _global.scss */
-p {
-  margin: 0 0 30px; }
-
-/* line 23, _global.scss */
+/* line 20, _global.scss */
 a {
   color: #ffffff; }
 
-/* line 27, _global.scss */
+/* line 24, _global.scss */
+section {
+  text-align: left;
+  padding-bottom: 60px; }
+  /* line 28, _global.scss */
+  section ul {
+    list-style: inside; }
+
+/* line 33, _global.scss */
+p {
+  font-size: 18px;
+  line-height: 28px; }
+
+/* line 38, _global.scss */
+h2 {
+  margin-bottom: 20px; }
+
+/* line 42, _global.scss */
+h3 {
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 10px; }
+
+/* line 48, _global.scss */
+pre {
+  margin-bottom: 10px; }
+
+/* line 52, _global.scss */
 .container {
-  margin: 0 auto 60px;
-  position: relative;
+  margin: 30px auto 60px;
+  max-width: 960px; }
+
+/* line 57, _global.scss */
+.photo-slider {
+  margin-bottom: 20px;
+  display: inline-block;
   max-width: 612px; }
 
-/* line 34, _global.scss */
-.photo-slider {
-  margin: 0 auto 20px;
-  position: relative; }
+/* line 63, _global.scss */
+.small-slider {
+  max-width: 320px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px; }
 
-/* line 39, _global.scss */
+/* line 70, _global.scss */
 .btn {
   font-family: 'Voltaire', Arial;
   background: #ffffff;
-  color: #333333;
-  border: none;
+  color: #2B2A30;
+  border: 2px solid #2B2A30;
   -webkit-appearance: none;
-  font-size: 16px;
-  padding: 10px 20px;
-  line-height: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  line-height: 10px;
   margin-top: 20px; }
   @media only screen and (min-width: 480px) {
-    /* line 39, _global.scss */
+    /* line 70, _global.scss */
     .btn {
-      margin-top: 0;
+      margin-top: -10px;
       position: absolute;
       top: 50%;
       opacity: 0;
@@ -62,223 +94,361 @@ a {
       -ms-transition: opacity 200ms ease;
       -o-transition: opacity 200ms ease;
       transition: opacity 200ms ease; }
-      /* line 58, _global.scss */
-      .container:hover .btn {
-        opacity: 1; } }
-  /* line 63, _global.scss */
+      /* line 90, _global.scss */
+      .wallop-slider:hover .btn {
+        opacity: .75; }
+        /* line 93, _global.scss */
+        .wallop-slider:hover .btn:hover {
+          opacity: 1; } }
+  /* line 99, _global.scss */
   .btn:hover {
     cursor: pointer; }
-  /* line 67, _global.scss */
+  /* line 103, _global.scss */
   .btn[disabled] {
     opacity: .4; }
-    /* line 69, _global.scss */
+    /* line 105, _global.scss */
     .btn[disabled], .btn[disabled]:hover {
       cursor: default; }
     @media only screen and (min-width: 480px) {
-      /* line 67, _global.scss */
+      /* line 103, _global.scss */
       .btn[disabled] {
         visibility: hidden; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 80, _global.scss */
+  /* line 116, _global.scss */
   .btn--previous {
     left: 10px; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 86, _global.scss */
+  /* line 122, _global.scss */
   .btn--next {
     right: 10px; } }
 
-/* line 92, _global.scss */
-.easing-label {
-  padding: 5px 10px 10px;
-  display: inline-block;
-  line-height: 30px;
-  vertical-align: middle;
-  font-size: 16px; }
-  /* line 99, _global.scss */
-  .easing-label input {
-    margin-right: 5px;
-    vertical-align: middle; }
-
-/* line 105, _global.scss */
+/* line 128, _global.scss */
 footer {
-  font-size: 16px;
-  padding: 0 0 30px; }
+  padding-bottom: 30px; }
 
-/* line 9, _wallop-slider.scss */
+/* line 4, _wallop-slider.scss */
 .wallop-slider {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: auto;
   -webkit-transform: translateZ(0); }
 
-/* line 17, _wallop-slider.scss */
+/* line 11, _wallop-slider.scss */
 .wallop-slider__list {
   list-style: none; }
 
-/* line 19, _wallop-slider.scss */
+/* line 13, _wallop-slider.scss */
 .wallop-slider__item {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; }
-  /* line 26, _wallop-slider.scss */
+  /* line 20, _wallop-slider.scss */
   .wallop-slider__item img {
     display: block;
     width: 100%; }
 
-/* line 32, _wallop-slider.scss */
+/* line 26, _wallop-slider.scss */
 .wallop-slider__item--current {
   display: block;
-  position: static;
-  z-index: 2; }
+  position: static; }
 
-/* line 34, _wallop-slider.scss */
+/**************************************************
+
+  ANIMATION CONFIG
+
+  What happens here is entirely up to you
+  You can remove all the code below this comment
+  and the slider will still work, but without
+  any animation.
+
+  For demo purposes, I'm only using -webkit prefix.
+
+**************************************************/
+/* line 42, _wallop-slider.scss */
 .wallop-slider__item--show-previous {
-  -webkit-animation: slideFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
+  -webkit-animation: slideFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
-/* line 35, _wallop-slider.scss */
+/* line 43, _wallop-slider.scss */
 .wallop-slider__item--show-next {
-  -webkit-animation: slideFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
+  -webkit-animation: slideFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
-/* line 37, _wallop-slider.scss */
+/* line 45, _wallop-slider.scss */
 .wallop-slider__item--hide-previous, .wallop-slider__item--hide-next {
   display: block; }
 
-/* line 38, _wallop-slider.scss */
+/* line 46, _wallop-slider.scss */
 .wallop-slider__item--hide-previous {
-  -webkit-animation: slideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
+  -webkit-animation: slideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
-/* line 39, _wallop-slider.scss */
+/* line 47, _wallop-slider.scss */
 .wallop-slider__item--hide-next {
   -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
-/* line 43, _wallop-slider.scss */
-.wallop-slider--fade .wallop-slider__item--show-previous {
-  -webkit-animation: fadeIn 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
-
-/* line 44, _wallop-slider.scss */
-.wallop-slider--fade .wallop-slider__item--show-next {
-  -webkit-animation: fadeIn 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
-
-/* line 45, _wallop-slider.scss */
-.wallop-slider--fade .wallop-slider__item--hide-previous {
-  -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
-
-/* line 46, _wallop-slider.scss */
-.wallop-slider--fade .wallop-slider__item--hide-next {
-  -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-
-/* line 50, _wallop-slider.scss */
-.wallop-slider--special .wallop-slider__item--show-previous {
-  -webkit-animation: none; }
-
-/* line 51, _wallop-slider.scss */
-.wallop-slider--special .wallop-slider__item--show-next {
-  -webkit-animation: none; }
-
-/* line 52, _wallop-slider.scss */
-.wallop-slider--special .wallop-slider__item--hide-previous {
-  -webkit-animation: specialToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards; }
-
-/* line 53, _wallop-slider.scss */
-.wallop-slider--special .wallop-slider__item--hide-next {
-  -webkit-animation: specialToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-
 /*==========  SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromLeft {
-  /* line 60, _wallop-slider.scss */
+  /* line 53, _wallop-slider.scss */
   0% {
     -webkit-transform: translate3d(-100%, 0, 0); }
 
-  /* line 61, _wallop-slider.scss */
+  /* line 54, _wallop-slider.scss */
   100% {
     -webkit-transform: translate3d(0, 0, 0); } }
 
 @-webkit-keyframes slideFromRight {
-  /* line 65, _wallop-slider.scss */
+  /* line 58, _wallop-slider.scss */
   0% {
     -webkit-transform: translate3d(100%, 0, 0); }
 
-  /* line 66, _wallop-slider.scss */
+  /* line 59, _wallop-slider.scss */
   100% {
     -webkit-transform: translate3d(0, 0, 0); } }
 
 @-webkit-keyframes slideToLeft {
-  /* line 70, _wallop-slider.scss */
+  /* line 63, _wallop-slider.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 71, _wallop-slider.scss */
+  /* line 64, _wallop-slider.scss */
   99% {
     opacity: 1; }
 
-  /* line 72, _wallop-slider.scss */
+  /* line 65, _wallop-slider.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0); } }
 
 @-webkit-keyframes slideToRight {
-  /* line 79, _wallop-slider.scss */
+  /* line 72, _wallop-slider.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 80, _wallop-slider.scss */
+  /* line 73, _wallop-slider.scss */
   99% {
     opacity: 1; }
 
-  /* line 81, _wallop-slider.scss */
+  /* line 74, _wallop-slider.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0); } }
 
+/*==========  FADE CONFIG  ==========*/
+/* line 7, _wallop-slider--fade.scss */
+.wallop-slider--fade .wallop-slider__item--show-previous {
+  -webkit-animation: fadeIn 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+/* line 8, _wallop-slider--fade.scss */
+.wallop-slider--fade .wallop-slider__item--show-next {
+  -webkit-animation: fadeIn 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+/* line 9, _wallop-slider--fade.scss */
+.wallop-slider--fade .wallop-slider__item--hide-previous {
+  -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+/* line 10, _wallop-slider--fade.scss */
+.wallop-slider--fade .wallop-slider__item--hide-next {
+  -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
 /*==========  FADE ANIMATIONS  ==========*/
 @-webkit-keyframes fadeIn {
-  /* line 91, _wallop-slider.scss */
+  /* line 17, _wallop-slider--fade.scss */
   0% {
     opacity: 0; }
 
-  /* line 92, _wallop-slider.scss */
+  /* line 18, _wallop-slider--fade.scss */
   100% {
     opacity: 1; } }
 
 @-webkit-keyframes fadeOut {
-  /* line 96, _wallop-slider.scss */
+  /* line 22, _wallop-slider--fade.scss */
   0% {
     opacity: 1; }
 
-  /* line 97, _wallop-slider.scss */
+  /* line 23, _wallop-slider--fade.scss */
   100% {
     opacity: 0; } }
 
+/*==========  SPECIAL CONFIG  ==========*/
+/* line 7, _wallop-slider--special.scss */
+.wallop-slider--special .wallop-slider__item--show-previous {
+  -webkit-animation: none; }
+/* line 8, _wallop-slider--special.scss */
+.wallop-slider--special .wallop-slider__item--show-next {
+  -webkit-animation: none; }
+/* line 9, _wallop-slider--special.scss */
+.wallop-slider--special .wallop-slider__item--hide-previous {
+  -webkit-animation: specialToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+/* line 10, _wallop-slider--special.scss */
+.wallop-slider--special .wallop-slider__item--hide-next {
+  -webkit-animation: specialToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
 /*==========  SPCECIAL ANIMATIONS  ==========*/
 @-webkit-keyframes specialToLeft {
-  /* line 105, _wallop-slider.scss */
+  /* line 17, _wallop-slider--special.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 106, _wallop-slider.scss */
+  /* line 18, _wallop-slider--special.scss */
   99% {
     opacity: 1; }
 
-  /* line 107, _wallop-slider.scss */
+  /* line 19, _wallop-slider--special.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg); } }
 
 @-webkit-keyframes specialToRight {
-  /* line 114, _wallop-slider.scss */
+  /* line 26, _wallop-slider--special.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 115, _wallop-slider.scss */
+  /* line 27, _wallop-slider--special.scss */
   99% {
     opacity: 1; }
 
-  /* line 116, _wallop-slider.scss */
+  /* line 28, _wallop-slider--special.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg); } }
+
+/* desert scheme ported from vim to google prettify */
+/* line 2, _prettyprint.scss */
+pre.prettyprint {
+  display: block;
+  background-color: #333;
+  border: none !important;
+  padding: 20px 20px 5px !important;
+  word-wrap: break-word;
+  line-height: 22px;
+  font-size: 13px; }
+  @media only screen and (min-width: 480px) {
+    /* line 2, _prettyprint.scss */
+    pre.prettyprint {
+      font-size: 15px; } }
+  /* line 14, _prettyprint.scss */
+  pre.prettyprint > span {
+    margin-bottom: 5px; }
+
+/* line 20, _prettyprint.scss */
+pre .nocode {
+  background-color: none;
+  color: #000; }
+
+/* line 21, _prettyprint.scss */
+pre .str {
+  color: #ffa0a0; }
+
+/* string  - pink */
+/* line 22, _prettyprint.scss */
+pre .kwd {
+  color: #f0e68c;
+  font-weight: bold; }
+
+/* line 23, _prettyprint.scss */
+pre .com {
+  color: #87ceeb; }
+
+/* comment - skyblue */
+/* line 24, _prettyprint.scss */
+pre .typ {
+  color: #98fb98; }
+
+/* type    - lightgreen */
+/* line 25, _prettyprint.scss */
+pre .lit {
+  color: #cd5c5c; }
+
+/* literal - darkred */
+/* line 26, _prettyprint.scss */
+pre .pun {
+  color: #fff; }
+
+/* punctuation */
+/* line 27, _prettyprint.scss */
+pre .pln {
+  color: #fff; }
+
+/* plaintext */
+/* line 28, _prettyprint.scss */
+pre .tag {
+  color: #f0e68c;
+  font-weight: bold; }
+
+/* html/xml tag    - lightyellow */
+/* line 29, _prettyprint.scss */
+pre .atn {
+  color: #bdb76b;
+  font-weight: bold; }
+
+/* attribute name  - khaki */
+/* line 30, _prettyprint.scss */
+pre .atv {
+  color: #ffa0a0; }
+
+/* attribute value - pink */
+/* line 31, _prettyprint.scss */
+pre .dec {
+  color: #98fb98; }
+
+/* decimal         - lightgreen */
+/* Specify class=linenums on a pre to get line numbering */
+/* line 34, _prettyprint.scss */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #AEAEAE; }
+
+/* IE indents via margin-left */
+/* line 35, _prettyprint.scss */
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: none; }
+
+/* Alternate shading for lines */
+@media print {
+  /* line 40, _prettyprint.scss */
+  pre.prettyprint {
+    background-color: none; }
+
+  /* line 41, _prettyprint.scss */
+  pre .str, code .str {
+    color: #060; }
+
+  /* line 42, _prettyprint.scss */
+  pre .kwd, code .kwd {
+    color: #006;
+    font-weight: bold; }
+
+  /* line 43, _prettyprint.scss */
+  pre .com, code .com {
+    color: #600;
+    font-style: italic; }
+
+  /* line 44, _prettyprint.scss */
+  pre .typ, code .typ {
+    color: #404;
+    font-weight: bold; }
+
+  /* line 45, _prettyprint.scss */
+  pre .lit, code .lit {
+    color: #044; }
+
+  /* line 46, _prettyprint.scss */
+  pre .pun, code .pun {
+    color: #440; }
+
+  /* line 47, _prettyprint.scss */
+  pre .pln, code .pln {
+    color: #000; }
+
+  /* line 48, _prettyprint.scss */
+  pre .tag, code .tag {
+    color: #006;
+    font-weight: bold; }
+
+  /* line 49, _prettyprint.scss */
+  pre .atn, code .atn {
+    color: #404; }
+
+  /* line 50, _prettyprint.scss */
+  pre .atv, code .atv {
+    color: #060; } }
