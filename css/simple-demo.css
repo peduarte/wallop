@@ -1,0 +1,116 @@
+/* line 1, simple-demo.scss */
+* {
+  padding: 0;
+  margin: 0; }
+
+/*-----  Responsive  ------*/
+/* line 4, _wallop-slider.scss */
+.wallop-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  -webkit-transform: translateZ(0); }
+
+/* line 11, _wallop-slider.scss */
+.wallop-slider__list {
+  list-style: none; }
+
+/* line 13, _wallop-slider.scss */
+.wallop-slider__item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  /* line 20, _wallop-slider.scss */
+  .wallop-slider__item img {
+    display: block;
+    width: 100%; }
+
+/* line 26, _wallop-slider.scss */
+.wallop-slider__item--current {
+  display: block;
+  position: static; }
+
+/**************************************************
+
+  ANIMATION CONFIG
+
+  What happens here is entirely up to you
+  You can remove all the code below this comment
+  and the slider will still work, but without
+  any animation.
+
+  For demo purposes, I'm only using -webkit prefix.
+
+**************************************************/
+/* line 42, _wallop-slider.scss */
+.wallop-slider__item--show-previous {
+  -webkit-animation: slideFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+/* line 43, _wallop-slider.scss */
+.wallop-slider__item--show-next {
+  -webkit-animation: slideFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+/* line 45, _wallop-slider.scss */
+.wallop-slider__item--hide-previous, .wallop-slider__item--hide-next {
+  display: block; }
+
+/* line 46, _wallop-slider.scss */
+.wallop-slider__item--hide-previous {
+  -webkit-animation: slideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+/* line 47, _wallop-slider.scss */
+.wallop-slider__item--hide-next {
+  -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+/*==========  SLIDE ANIMATIONS  ==========*/
+@-webkit-keyframes slideFromLeft {
+  /* line 53, _wallop-slider.scss */
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0); }
+
+  /* line 54, _wallop-slider.scss */
+  100% {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes slideFromRight {
+  /* line 58, _wallop-slider.scss */
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0); }
+
+  /* line 59, _wallop-slider.scss */
+  100% {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+@-webkit-keyframes slideToLeft {
+  /* line 63, _wallop-slider.scss */
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+
+  /* line 64, _wallop-slider.scss */
+  99% {
+    opacity: 1; }
+
+  /* line 65, _wallop-slider.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0); } }
+
+@-webkit-keyframes slideToRight {
+  /* line 72, _wallop-slider.scss */
+  0% {
+    -webkit-transform: translate3d(0, 0, 0); }
+
+  /* line 73, _wallop-slider.scss */
+  99% {
+    opacity: 1; }
+
+  /* line 74, _wallop-slider.scss */
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0); } }
+
+/* line 6, simple-demo.scss */
+footer {
+  padding: 30px 0; }

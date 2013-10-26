@@ -1,0 +1,24 @@
+$animationDuration: 450ms;
+$animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+/*==========  FADE CONFIG  ==========*/
+.wallop-slider--fade {
+
+	.wallop-slider__item--show-previous { -webkit-animation: fadeIn $animationDuration $animationEasing both; }
+	.wallop-slider__item--show-next { -webkit-animation: fadeIn $animationDuration $animationEasing both; }
+	.wallop-slider__item--hide-previous { -webkit-animation: fadeOut $animationDuration $animationEasing both; }
+	.wallop-slider__item--hide-next { -webkit-animation: fadeOut $animationDuration $animationEasing both; }
+
+}
+
+
+/*==========  FADE ANIMATIONS  ==========*/
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

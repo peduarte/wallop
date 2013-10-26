@@ -1,0 +1,32 @@
+$animationDuration: 450ms;
+$animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+
+/*==========  SPECIAL CONFIG  ==========*/
+.wallop-slider--special {
+
+	.wallop-slider__item--show-previous { -webkit-animation: none }
+	.wallop-slider__item--show-next { -webkit-animation: none }
+	.wallop-slider__item--hide-previous { -webkit-animation: specialToLeft $animationDuration $animationEasing both; }
+	.wallop-slider__item--hide-next { -webkit-animation: specialToRight $animationDuration $animationEasing both; }
+
+}
+
+
+/*==========  SPCECIAL ANIMATIONS  ==========*/
+@-webkit-keyframes specialToLeft {
+  0% { -webkit-transform: translate3d(0, 0, 0); }
+  99% { opacity: 1; }
+  100% {
+    opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want
+    -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg);
+  }
+}
+
+@-webkit-keyframes specialToRight {
+  0% { -webkit-transform: translate3d(0, 0, 0); }
+  99% { opacity: 1; }
+  100% {
+    opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want
+    -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg);
+  }
+}
