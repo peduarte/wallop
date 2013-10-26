@@ -41,7 +41,7 @@ Basic HTML setup
 		  // Create new isntance of WallopSlider
 		  var slider = new WallopSlider('.wallop-slider');
 		</script>
-      	</body>
+	</body>
       	
 
 ### Online Demo
