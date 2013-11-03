@@ -13,13 +13,17 @@
     }
 
     @mixin media-query($media-query) {
-        @if $media-query == medium {
-            @media only screen and (min-width:$medium) { @content; }
-        }
+      @if $media-query == mobile {
+          @media only screen and (max-width:$medium - 1) { @content; }
+      }
 
-        @if $media-query == large {
-            @media only screen and (min-width:$large) { @content; }
-        }
+      @if $media-query == medium {
+          @media only screen and (min-width:$medium) { @content; }
+      }
+
+      @if $media-query == large {
+          @media only screen and (min-width:$large) { @content; }
+      }
     }
 
     @mixin keyframe ($animation-name){

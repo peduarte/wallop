@@ -1,6 +1,3 @@
-$animationDuration: 450ms;
-$animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
-
 .wallop-slider {
     position: relative; // Required
     overflow: hidden; // Required
@@ -23,58 +20,7 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
   }
 }
 
-.wallop-slider__item--current { display: block; position: static; } // Required
-
-
-/**************************************************
-
-  ANIMATION CONFIG
-
-  What happens here is entirely up to you
-  You can remove all the code below this comment
-  and the slider will still work, but without
-  any animation.
-
-  For demo purposes, I'm only using -webkit prefix.
-
-**************************************************/
-
-.wallop-slider__item--show-previous { -webkit-animation: slideFromLeft $animationDuration $animationEasing both; }
-.wallop-slider__item--show-next { -webkit-animation: slideFromRight $animationDuration $animationEasing both; }
-
-.wallop-slider__item--hide-previous, .wallop-slider__item--hide-next { display: block; } // Required
-.wallop-slider__item--hide-previous { -webkit-animation: slideToLeft $animationDuration $animationEasing both; }
-.wallop-slider__item--hide-next { -webkit-animation: slideToRight $animationDuration $animationEasing both; }
-
-
-/*==========  SLIDE ANIMATIONS  ==========*/
-
-@-webkit-keyframes slideFromLeft {
-  0% { -webkit-transform: translate3d(-100%, 0, 0); }
-  100% { -webkit-transform: translate3d(0, 0, 0); }
+.wallop-slider__item--current {
+  display: block; // Required
+  position: static; // Required
 }
-
-@-webkit-keyframes slideFromRight {
-  0% { -webkit-transform: translate3d(100%, 0, 0); }
-  100% { -webkit-transform: translate3d(0, 0, 0); }
-}
-
-@-webkit-keyframes slideToLeft {
-  0% { -webkit-transform: translate3d(0, 0, 0); }
-  99% { opacity: 1; }
-  100% {
-    opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want
-    -webkit-transform: translate3d(-100%, 0, 0);
-  }
-}
-
-@-webkit-keyframes slideToRight {
-  0% { -webkit-transform: translate3d(0, 0, 0); }
-  99% { opacity: 1; }
-  100% {
-    opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want
-    -webkit-transform: translate3d(100%, 0, 0);
-  }
-}
-
-

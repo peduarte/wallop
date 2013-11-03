@@ -41,47 +41,51 @@ p {
   margin: 20px 0;
   letter-spacing: .2px;
   word-spacing: 4px; }
+  /* line 41, _global.scss */
+  footer p {
+    margin: 0;
+    font-size: 16px; }
 
-/* line 42, _global.scss */
+/* line 47, _global.scss */
 blockquote {
   margin: 2%;
   background: #1f1e22;
   padding: 20px;
   font-size: 18px; }
 
-/* line 49, _global.scss */
+/* line 54, _global.scss */
 h2 {
   margin-bottom: 20px; }
 
-/* line 53, _global.scss */
+/* line 58, _global.scss */
 h3 {
   font-size: 18px;
   margin-top: 30px;
   margin-bottom: 10px; }
 
-/* line 59, _global.scss */
+/* line 64, _global.scss */
 pre {
   margin-bottom: 10px; }
 
-/* line 63, _global.scss */
+/* line 68, _global.scss */
 .container {
   margin: 30px auto 60px;
   max-width: 960px; }
 
-/* line 68, _global.scss */
+/* line 73, _global.scss */
 .photo-slider {
   margin-bottom: 20px;
   display: inline-block;
   max-width: 612px; }
 
-/* line 74, _global.scss */
+/* line 79, _global.scss */
 .small-slider {
   max-width: 320px;
   display: inline-block;
   vertical-align: top;
   margin: 10px; }
 
-/* line 81, _global.scss */
+/* line 86, _global.scss */
 .btn {
   font-family: 'Voltaire', Arial;
   background: #ffffff;
@@ -94,7 +98,7 @@ pre {
   line-height: 10px;
   margin-top: 20px; }
   @media only screen and (min-width: 480px) {
-    /* line 81, _global.scss */
+    /* line 86, _global.scss */
     .btn {
       margin-top: -10px;
       position: absolute;
@@ -105,222 +109,221 @@ pre {
       -ms-transition: opacity 200ms ease;
       -o-transition: opacity 200ms ease;
       transition: opacity 200ms ease; }
-      /* line 101, _global.scss */
+      /* line 106, _global.scss */
       .wallop-slider:hover .btn {
         opacity: .75; }
-        /* line 104, _global.scss */
+        /* line 109, _global.scss */
         .wallop-slider:hover .btn:hover {
           opacity: 1; } }
-  /* line 110, _global.scss */
+  /* line 115, _global.scss */
   .btn:hover {
     cursor: pointer; }
-  /* line 114, _global.scss */
+  /* line 119, _global.scss */
   .btn[disabled] {
     opacity: .4; }
-    /* line 116, _global.scss */
+    /* line 121, _global.scss */
     .btn[disabled], .btn[disabled]:hover {
       cursor: default; }
     @media only screen and (min-width: 480px) {
-      /* line 114, _global.scss */
+      /* line 119, _global.scss */
       .btn[disabled] {
         visibility: hidden; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 127, _global.scss */
+  /* line 132, _global.scss */
   .btn--previous {
     left: 10px; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 133, _global.scss */
+  /* line 138, _global.scss */
   .btn--next {
     right: 10px; } }
 
-/* line 139, _global.scss */
+/* line 144, _global.scss */
 footer {
   padding-bottom: 30px; }
 
-/* line 4, wallop-slider.scss */
+/* line 1, wallop-slider.scss */
 .wallop-slider {
   position: relative;
   overflow: hidden;
   width: 100%;
   -webkit-transform: translateZ(0); }
 
-/* line 11, wallop-slider.scss */
+/* line 8, wallop-slider.scss */
 .wallop-slider__list {
   list-style: none; }
 
-/* line 13, wallop-slider.scss */
+/* line 10, wallop-slider.scss */
 .wallop-slider__item {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; }
-  /* line 20, wallop-slider.scss */
+  /* line 17, wallop-slider.scss */
   .wallop-slider__item img {
     display: block;
     width: 100%; }
 
-/* line 26, wallop-slider.scss */
+/* line 23, wallop-slider.scss */
 .wallop-slider__item--current {
   display: block;
   position: static; }
 
-/**************************************************
-
-  ANIMATION CONFIG
-
-  What happens here is entirely up to you
-  You can remove all the code below this comment
-  and the slider will still work, but without
-  any animation.
-
-  For demo purposes, I'm only using -webkit prefix.
-
-**************************************************/
-/* line 42, wallop-slider.scss */
-.wallop-slider__item--show-previous {
+/*==========  FADE CONFIG  ==========*/
+/* line 7, _wallop-slider--slide.scss */
+.wallop-slider--slide .wallop-slider__item--show-previous {
   -webkit-animation: slideFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-
-/* line 43, wallop-slider.scss */
-.wallop-slider__item--show-next {
+/* line 8, _wallop-slider--slide.scss */
+.wallop-slider--slide .wallop-slider__item--show-next {
   -webkit-animation: slideFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-
-/* line 45, wallop-slider.scss */
-.wallop-slider__item--hide-previous, .wallop-slider__item--hide-next {
+/* line 10, _wallop-slider--slide.scss */
+.wallop-slider--slide .wallop-slider__item--hide-previous, .wallop-slider--slide .wallop-slider__item--hide-next {
   display: block; }
-
-/* line 46, wallop-slider.scss */
-.wallop-slider__item--hide-previous {
+/* line 11, _wallop-slider--slide.scss */
+.wallop-slider--slide .wallop-slider__item--hide-previous {
   -webkit-animation: slideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-
-/* line 47, wallop-slider.scss */
-.wallop-slider__item--hide-next {
+/* line 12, _wallop-slider--slide.scss */
+.wallop-slider--slide .wallop-slider__item--hide-next {
   -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromLeft {
-  /* line 53, wallop-slider.scss */
+  /* line 19, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(-100%, 0, 0); }
 
-  /* line 54, wallop-slider.scss */
+  /* line 20, _wallop-slider--slide.scss */
   100% {
     -webkit-transform: translate3d(0, 0, 0); } }
 
 @-webkit-keyframes slideFromRight {
-  /* line 58, wallop-slider.scss */
+  /* line 24, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(100%, 0, 0); }
 
-  /* line 59, wallop-slider.scss */
+  /* line 25, _wallop-slider--slide.scss */
   100% {
     -webkit-transform: translate3d(0, 0, 0); } }
 
 @-webkit-keyframes slideToLeft {
-  /* line 63, wallop-slider.scss */
+  /* line 29, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 64, wallop-slider.scss */
+  /* line 30, _wallop-slider--slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 65, wallop-slider.scss */
+  /* line 31, _wallop-slider--slide.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0); } }
 
 @-webkit-keyframes slideToRight {
-  /* line 72, wallop-slider.scss */
+  /* line 38, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 73, wallop-slider.scss */
+  /* line 39, _wallop-slider--slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 74, wallop-slider.scss */
+  /* line 40, _wallop-slider--slide.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0); } }
 
 /*==========  FADE CONFIG  ==========*/
-/* line 7, _wallop-slider--fade.scss */
-.wallop-slider--fade .wallop-slider__item--show-previous {
-  -webkit-animation: fadeIn 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 /* line 8, _wallop-slider--fade.scss */
-.wallop-slider--fade .wallop-slider__item--show-next {
-  -webkit-animation: fadeIn 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 9, _wallop-slider--fade.scss */
+.wallop-slider--fade .wallop-slider__item--hide-previous,
+.wallop-slider--fade .wallop-slider__item--hide-next {
+  display: block; }
+/* line 10, _wallop-slider--fade.scss */
 .wallop-slider--fade .wallop-slider__item--hide-previous {
   -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 10, _wallop-slider--fade.scss */
+/* line 11, _wallop-slider--fade.scss */
 .wallop-slider--fade .wallop-slider__item--hide-next {
   -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  FADE ANIMATIONS  ==========*/
-@-webkit-keyframes fadeIn {
-  /* line 17, _wallop-slider--fade.scss */
-  0% {
-    opacity: 0; }
-
-  /* line 18, _wallop-slider--fade.scss */
-  100% {
-    opacity: 1; } }
-
 @-webkit-keyframes fadeOut {
-  /* line 22, _wallop-slider--fade.scss */
+  /* line 18, _wallop-slider--fade.scss */
   0% {
     opacity: 1; }
 
-  /* line 23, _wallop-slider--fade.scss */
+  /* line 19, _wallop-slider--fade.scss */
   100% {
     opacity: 0; } }
 
 /*==========  SPECIAL CONFIG  ==========*/
-/* line 7, _wallop-slider--special.scss */
-.wallop-slider--special .wallop-slider__item--show-previous {
-  -webkit-animation: none; }
 /* line 8, _wallop-slider--special.scss */
-.wallop-slider--special .wallop-slider__item--show-next {
-  -webkit-animation: none; }
-/* line 9, _wallop-slider--special.scss */
+.wallop-slider--special .wallop-slider__item--hide-previous,
+.wallop-slider--special .wallop-slider__item--hide-next {
+  display: block; }
+/* line 10, _wallop-slider--special.scss */
 .wallop-slider--special .wallop-slider__item--hide-previous {
   -webkit-animation: specialToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 10, _wallop-slider--special.scss */
+/* line 11, _wallop-slider--special.scss */
 .wallop-slider--special .wallop-slider__item--hide-next {
   -webkit-animation: specialToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  SPCECIAL ANIMATIONS  ==========*/
 @-webkit-keyframes specialToLeft {
-  /* line 17, _wallop-slider--special.scss */
+  /* line 18, _wallop-slider--special.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 18, _wallop-slider--special.scss */
+  /* line 19, _wallop-slider--special.scss */
   99% {
     opacity: 1; }
 
-  /* line 19, _wallop-slider--special.scss */
+  /* line 20, _wallop-slider--special.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg); } }
 
 @-webkit-keyframes specialToRight {
-  /* line 26, _wallop-slider--special.scss */
+  /* line 27, _wallop-slider--special.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 27, _wallop-slider--special.scss */
+  /* line 28, _wallop-slider--special.scss */
   99% {
     opacity: 1; }
 
-  /* line 28, _wallop-slider--special.scss */
+  /* line 29, _wallop-slider--special.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg); } }
+
+@media only screen and (max-width: 479px) {
+  /* line 5, _wallop-slider--mixed.scss */
+  .wallop-slider--mixed-animations .wallop-slider__item--hide-previous, .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
+    display: block; }
+  /* line 6, _wallop-slider--mixed.scss */
+  .wallop-slider--mixed-animations .wallop-slider__item--hide-previous {
+    -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  /* line 7, _wallop-slider--mixed.scss */
+  .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
+    -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; } }
+@media only screen and (min-width: 480px) {
+  /* line 12, _wallop-slider--mixed.scss */
+  .wallop-slider--mixed-animations .wallop-slider__item--show-previous {
+    -webkit-animation: slideFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  /* line 13, _wallop-slider--mixed.scss */
+  .wallop-slider--mixed-animations .wallop-slider__item--show-next {
+    -webkit-animation: slideFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  /* line 14, _wallop-slider--mixed.scss */
+  .wallop-slider--mixed-animations .wallop-slider__item--hide-previous, .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
+    display: block; }
+  /* line 15, _wallop-slider--mixed.scss */
+  .wallop-slider--mixed-animations .wallop-slider__item--hide-previous {
+    -webkit-animation: slideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  /* line 16, _wallop-slider--mixed.scss */
+  .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
+    -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; } }
 
 /* desert scheme ported from vim to google prettify */
 /* line 2, _prettyprint.scss */

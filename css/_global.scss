@@ -37,6 +37,11 @@ p {
   margin: 20px 0;
   letter-spacing: .2px;
   word-spacing: 4px;
+
+  footer & {
+    margin: 0;
+    font-size: 16px;
+  }
 }
 
 blockquote {

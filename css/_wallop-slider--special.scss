@@ -4,8 +4,9 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 /*==========  SPECIAL CONFIG  ==========*/
 .wallop-slider--special {
 
-	.wallop-slider__item--show-previous { -webkit-animation: none }
-	.wallop-slider__item--show-next { -webkit-animation: none }
+  .wallop-slider__item--hide-previous,
+  .wallop-slider__item--hide-next { display: block; }
+
 	.wallop-slider__item--hide-previous { -webkit-animation: specialToLeft $animationDuration $animationEasing both; }
 	.wallop-slider__item--hide-next { -webkit-animation: specialToRight $animationDuration $animationEasing both; }
 

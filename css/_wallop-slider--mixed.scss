@@ -1,0 +1,19 @@
+.wallop-slider--mixed-animations {
+
+	// For mobile use the fade animation - defined in _wallop-slider--fade.scss
+	@include media-query(mobile) {
+		.wallop-slider__item--hide-previous, .wallop-slider__item--hide-next { display: block; } // Required
+		.wallop-slider__item--hide-previous { -webkit-animation: fadeOut $animationDuration $animationEasing both; }
+		.wallop-slider__item--hide-next { -webkit-animation: fadeOut $animationDuration $animationEasing both; }
+	}
+
+	// For desktop use the slide animation - defined in _wallop-slider--slide.scss
+	@include media-query(medium) {
+		.wallop-slider__item--show-previous { -webkit-animation: slideFromLeft $animationDuration $animationEasing both; }
+		.wallop-slider__item--show-next { -webkit-animation: slideFromRight $animationDuration $animationEasing both; }
+		.wallop-slider__item--hide-previous, .wallop-slider__item--hide-next { display: block; } // Required
+		.wallop-slider__item--hide-previous { -webkit-animation: slideToLeft $animationDuration $animationEasing both; }
+		.wallop-slider__item--hide-next { -webkit-animation: slideToRight $animationDuration $animationEasing both; }
+	}
+
+}
