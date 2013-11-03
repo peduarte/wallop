@@ -45,8 +45,12 @@
 
     <section>
       <h2>Usage:</h2>
-      <h3>Basic</h3>
 
+      <h3>Download</h3>
+      <p>Download the WallopSlider files <a href="#">here</a></p>
+
+
+      <h3>Basic</h3>
       <pre class="prettyprint">
 &lt;head&gt;
   &lt;!-- Include CSS --&gt;
@@ -73,18 +77,18 @@
 &lt;!-- Include Javascript --&gt;
 &lt;script src="path-to-wallopSlider.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-  // Create new isntance of WallopSlider
+  // Create new instance of WallopSlider
   var slider = new WallopSlider('.wallop-slider');
 &lt;/script&gt;
       </pre>
       <p><a href="simple-demo.html">Standalone demo page</a></p>
-      <p>This is the most basic set up of WallopSlider, as you can see the demo page is not using any custom CSS and it is responsive by nature</p>
+      <p>This is the most basic set up of WallopSlider, as you can see the demo page is not using any custom CSS and it is responsive by nature.</p>
 
 
       <h3>Options</h3>
       <pre class="prettyprint">
 &lt;script&gt;
-  // Create new isntance of WallopSlider
+  // Create new instance of WallopSlider
   var slider = new WallopSlider('.wallop-slider', {
     wSBtnPreviousClass: 'wallop-slider__btn--previous',
     wSBtnNextClass: 'wallop-slider__btn--next',
@@ -113,11 +117,50 @@
 
     <section>
       <h2>Extensions</h2>
-      <p>The basic wallop-slider.scss has the typical slide animation, but to extend the animation to something of your own is really easy, so I've put together a few extensions here that you can use</p>
+      <p>The basic <em>wallop-slider.css</em> has no animation, but to extend the animation to something of your own is really easy, so I've put together a few extensions here that you can use</p>
       <ul>
-        <li><a href="https://github.com/peduarte/wallop-slider/blob/master/css/_wallop-slider--fade.scss">Fade</a></li>
-        <li><a href="https://github.com/peduarte/wallop-slider/blob/master/css/_wallop-slider--special.scss">Special</a></li>
+        <li><a href="https://github.com/peduarte/wallop-slider/blob/exercise/css/wallop-slider--slide.css">Slide</a></li>
+        <li><a href="https://github.com/peduarte/wallop-slider/blob/exercise/css/wallop-slider--fade.css">Fade</a></li>
+        <li><a href="https://github.com/peduarte/wallop-slider/blob/exercise/css/wallop-slider--custom.css">Custom - Use this as a template</a></li>
       </ul>
+    </section>
+
+    <section>
+      <h2>Geek info and that</h2>
+      <p>Recently there has been a lot of talk about progressive enhancement, mobile first, responsive sites, performace optimisation and a whole lot of other stuff that we all do. Or at least like to think we do.</p>
+      <p>There are shit loads of sliders/carousels out there, seriously. More sliders than anything else. More sliders than fucking developers. So that's why I decided to also make one, why not? Surely one more won't hurt anyone.</p>
+
+      <blockquote><strong>!important note:</strong> before you start to hate me and think that I'm saying this is how sliders should be built, take a deep breath… this slider is simply a concept, and now I'm going to explain why I decided to build this…</blockquote>
+
+      <h3>Simple JavaScript</h3>
+
+      <p>Unless you are making the most complex slider in the world, I see absolutely no need for your slider to be so JavaScript heavy. I wanted to make a slider which JavaScript is only used to:</p>
+      <ul>
+        <li>listen to the click event on the previous/next buttons</li>
+        <li>add HTML classes to the right elements</li>
+        <li>add disabled attribute to the relevant button</li>
+      </ul>
+
+      <h3>Giving the power back to CSS</h3>
+      <p>I wanted to have a slider which I could have different animations for different breakpoints, and I wanted to be able to do this with ease, and not have to hack around someone else's plugin... or write complex JavaScript and attach window resize listeners.</p>
+
+      <p>The animations are fully controlled with CSS. By default, <em>wallop-slider.css</em> contains no transitions at all (progressive enhacement?). The default styles are super simple and fluid (mobile first?), no hardcoded pixel values or none of that nonsense.</p>
+
+      <h3>Custom animations</h3>
+      <p>WallopSlider adds five different HTML classes for you:</p>
+
+      <ul>
+        <li><strong>wallop-slider__item--current:</strong> added to the current item</li>
+        <li><strong>wallop-slider__item--show-previous:</strong> added to the item before the current item when the previous button is clicked</li>
+        <li><strong>wallop-slider__item--show-next:</strong> added to the item after the current item when the next button is clicked</li>
+        <li><strong>wallop-slider__item--hide-previous:</strong> added to the current item when the next button is clicked</li>
+        <li><strong>wallop-slider__item--hide-next:</strong> added to the current item when the previous button is clicked</li>
+      </ul>
+
+      <blockquote>Tip: if you want to animate the hiding classes (…--hide-previous & …--hide-next) you'll need to reset them to display: block;</blockquote>
+
+      <p>With the classes above you should be able to do pretty much any animation you wish. Hopefully.</p>
+
     </section>
 
   </div>

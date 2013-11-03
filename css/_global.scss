@@ -7,6 +7,7 @@ body {
   color: #ffffff;
   padding: 0 5%;
   font-size: 22px;
+  line-height: 120%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -31,8 +32,18 @@ section {
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 28px;
+  margin: 20px 0;
+  letter-spacing: .2px;
+  word-spacing: 4px;
+}
+
+blockquote {
+  margin: 2%;
+  background: darken(#2B2A30, 5%);
+  padding: 20px;
+  font-size: 18px;
 }
 
 h2 {

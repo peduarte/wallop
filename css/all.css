@@ -12,65 +12,76 @@ body {
   color: #ffffff;
   padding: 0 5%;
   font-size: 22px;
+  line-height: 120%;
   -webkit-font-smoothing: antialiased; }
 
-/* line 13, _global.scss */
+/* line 14, _global.scss */
 h1 {
   font-weight: 400;
   padding: 60px 0 20px;
   font-size: 54px;
   line-height: 1; }
 
-/* line 20, _global.scss */
+/* line 21, _global.scss */
 a {
   color: #ffffff; }
 
-/* line 24, _global.scss */
+/* line 25, _global.scss */
 section {
   text-align: left;
   padding-bottom: 60px; }
-  /* line 28, _global.scss */
+  /* line 29, _global.scss */
   section ul {
     list-style: inside; }
 
-/* line 33, _global.scss */
+/* line 34, _global.scss */
 p {
-  font-size: 18px;
-  line-height: 28px; }
+  font-size: 20px;
+  line-height: 28px;
+  margin: 20px 0;
+  letter-spacing: .2px;
+  word-spacing: 4px; }
 
-/* line 38, _global.scss */
+/* line 42, _global.scss */
+blockquote {
+  margin: 2%;
+  background: #1f1e22;
+  padding: 20px;
+  font-size: 18px; }
+
+/* line 49, _global.scss */
 h2 {
   margin-bottom: 20px; }
 
-/* line 42, _global.scss */
+/* line 53, _global.scss */
 h3 {
   font-size: 18px;
   margin-top: 30px;
   margin-bottom: 10px; }
 
-/* line 48, _global.scss */
+/* line 59, _global.scss */
 pre {
   margin-bottom: 10px; }
 
-/* line 52, _global.scss */
+/* line 63, _global.scss */
 .container {
   margin: 30px auto 60px;
   max-width: 960px; }
 
-/* line 57, _global.scss */
+/* line 68, _global.scss */
 .photo-slider {
   margin-bottom: 20px;
   display: inline-block;
   max-width: 612px; }
 
-/* line 63, _global.scss */
+/* line 74, _global.scss */
 .small-slider {
   max-width: 320px;
   display: inline-block;
   vertical-align: top;
   margin: 10px; }
 
-/* line 70, _global.scss */
+/* line 81, _global.scss */
 .btn {
   font-family: 'Voltaire', Arial;
   background: #ffffff;
@@ -83,7 +94,7 @@ pre {
   line-height: 10px;
   margin-top: 20px; }
   @media only screen and (min-width: 480px) {
-    /* line 70, _global.scss */
+    /* line 81, _global.scss */
     .btn {
       margin-top: -10px;
       position: absolute;
@@ -94,37 +105,37 @@ pre {
       -ms-transition: opacity 200ms ease;
       -o-transition: opacity 200ms ease;
       transition: opacity 200ms ease; }
-      /* line 90, _global.scss */
+      /* line 101, _global.scss */
       .wallop-slider:hover .btn {
         opacity: .75; }
-        /* line 93, _global.scss */
+        /* line 104, _global.scss */
         .wallop-slider:hover .btn:hover {
           opacity: 1; } }
-  /* line 99, _global.scss */
+  /* line 110, _global.scss */
   .btn:hover {
     cursor: pointer; }
-  /* line 103, _global.scss */
+  /* line 114, _global.scss */
   .btn[disabled] {
     opacity: .4; }
-    /* line 105, _global.scss */
+    /* line 116, _global.scss */
     .btn[disabled], .btn[disabled]:hover {
       cursor: default; }
     @media only screen and (min-width: 480px) {
-      /* line 103, _global.scss */
+      /* line 114, _global.scss */
       .btn[disabled] {
         visibility: hidden; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 116, _global.scss */
+  /* line 127, _global.scss */
   .btn--previous {
     left: 10px; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 122, _global.scss */
+  /* line 133, _global.scss */
   .btn--next {
     right: 10px; } }
 
-/* line 128, _global.scss */
+/* line 139, _global.scss */
 footer {
   padding-bottom: 30px; }
 
@@ -325,130 +336,130 @@ pre.prettyprint {
     /* line 2, _prettyprint.scss */
     pre.prettyprint {
       font-size: 15px; } }
-  /* line 14, _prettyprint.scss */
+  /* line 15, _prettyprint.scss */
   pre.prettyprint > span {
     margin-bottom: 5px; }
 
-/* line 20, _prettyprint.scss */
+/* line 21, _prettyprint.scss */
 pre .nocode {
   background-color: none;
   color: #000; }
 
-/* line 21, _prettyprint.scss */
+/* line 22, _prettyprint.scss */
 pre .str {
   color: #ffa0a0; }
 
 /* string  - pink */
-/* line 22, _prettyprint.scss */
+/* line 23, _prettyprint.scss */
 pre .kwd {
   color: #f0e68c;
   font-weight: bold; }
 
-/* line 23, _prettyprint.scss */
+/* line 24, _prettyprint.scss */
 pre .com {
   color: #87ceeb; }
 
 /* comment - skyblue */
-/* line 24, _prettyprint.scss */
+/* line 25, _prettyprint.scss */
 pre .typ {
   color: #98fb98; }
 
 /* type    - lightgreen */
-/* line 25, _prettyprint.scss */
+/* line 26, _prettyprint.scss */
 pre .lit {
   color: #cd5c5c; }
 
 /* literal - darkred */
-/* line 26, _prettyprint.scss */
+/* line 27, _prettyprint.scss */
 pre .pun {
   color: #fff; }
 
 /* punctuation */
-/* line 27, _prettyprint.scss */
+/* line 28, _prettyprint.scss */
 pre .pln {
   color: #fff; }
 
 /* plaintext */
-/* line 28, _prettyprint.scss */
+/* line 29, _prettyprint.scss */
 pre .tag {
   color: #f0e68c;
   font-weight: bold; }
 
 /* html/xml tag    - lightyellow */
-/* line 29, _prettyprint.scss */
+/* line 30, _prettyprint.scss */
 pre .atn {
   color: #bdb76b;
   font-weight: bold; }
 
 /* attribute name  - khaki */
-/* line 30, _prettyprint.scss */
+/* line 31, _prettyprint.scss */
 pre .atv {
   color: #ffa0a0; }
 
 /* attribute value - pink */
-/* line 31, _prettyprint.scss */
+/* line 32, _prettyprint.scss */
 pre .dec {
   color: #98fb98; }
 
 /* decimal         - lightgreen */
 /* Specify class=linenums on a pre to get line numbering */
-/* line 34, _prettyprint.scss */
+/* line 35, _prettyprint.scss */
 ol.linenums {
   margin-top: 0;
   margin-bottom: 0;
   color: #AEAEAE; }
 
 /* IE indents via margin-left */
-/* line 35, _prettyprint.scss */
+/* line 36, _prettyprint.scss */
 li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
   list-style-type: none; }
 
 /* Alternate shading for lines */
 @media print {
-  /* line 40, _prettyprint.scss */
+  /* line 41, _prettyprint.scss */
   pre.prettyprint {
     background-color: none; }
 
-  /* line 41, _prettyprint.scss */
+  /* line 42, _prettyprint.scss */
   pre .str, code .str {
     color: #060; }
 
-  /* line 42, _prettyprint.scss */
+  /* line 43, _prettyprint.scss */
   pre .kwd, code .kwd {
     color: #006;
     font-weight: bold; }
 
-  /* line 43, _prettyprint.scss */
+  /* line 44, _prettyprint.scss */
   pre .com, code .com {
     color: #600;
     font-style: italic; }
 
-  /* line 44, _prettyprint.scss */
+  /* line 45, _prettyprint.scss */
   pre .typ, code .typ {
     color: #404;
     font-weight: bold; }
 
-  /* line 45, _prettyprint.scss */
+  /* line 46, _prettyprint.scss */
   pre .lit, code .lit {
     color: #044; }
 
-  /* line 46, _prettyprint.scss */
+  /* line 47, _prettyprint.scss */
   pre .pun, code .pun {
     color: #440; }
 
-  /* line 47, _prettyprint.scss */
+  /* line 48, _prettyprint.scss */
   pre .pln, code .pln {
     color: #000; }
 
-  /* line 48, _prettyprint.scss */
+  /* line 49, _prettyprint.scss */
   pre .tag, code .tag {
     color: #006;
     font-weight: bold; }
 
-  /* line 49, _prettyprint.scss */
+  /* line 50, _prettyprint.scss */
   pre .atn, code .atn {
     color: #404; }
 
-  /* line 50, _prettyprint.scss */
+  /* line 51, _prettyprint.scss */
   pre .atv, code .atv {
     color: #060; } }
