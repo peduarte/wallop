@@ -4,12 +4,14 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 /*==========  FADE CONFIG  ==========*/
 .wallop-slider--slide {
 
-	.wallop-slider__item--show-previous { -webkit-animation: slideFromLeft $animationDuration $animationEasing both; }
-	.wallop-slider__item--show-next { -webkit-animation: slideFromRight $animationDuration $animationEasing both; }
+  /* the 10ms animation-delay fixed some weird rendering issues with iPhone */
+
+	.wallop-slider__item--show-previous { -webkit-animation: slideFromLeft $animationDuration 10ms $animationEasing both; }
+	.wallop-slider__item--show-next { -webkit-animation: slideFromRight $animationDuration 10ms $animationEasing both; }
 
 	.wallop-slider__item--hide-previous, .wallop-slider__item--hide-next { display: block; } // Required
-	.wallop-slider__item--hide-previous { -webkit-animation: slideToLeft $animationDuration $animationEasing both; }
-	.wallop-slider__item--hide-next { -webkit-animation: slideToRight $animationDuration $animationEasing both; }
+	.wallop-slider__item--hide-previous { -webkit-animation: slideToLeft $animationDuration 10ms $animationEasing both; }
+	.wallop-slider__item--hide-next { -webkit-animation: slideToRight $animationDuration 10ms $animationEasing both; }
 
 }
 

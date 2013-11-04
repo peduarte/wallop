@@ -172,65 +172,68 @@ footer {
   position: static; }
 
 /*==========  FADE CONFIG  ==========*/
-/* line 7, _wallop-slider--slide.scss */
-.wallop-slider--slide .wallop-slider__item--show-previous {
-  -webkit-animation: slideFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 8, _wallop-slider--slide.scss */
-.wallop-slider--slide .wallop-slider__item--show-next {
-  -webkit-animation: slideFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 10, _wallop-slider--slide.scss */
-.wallop-slider--slide .wallop-slider__item--hide-previous, .wallop-slider--slide .wallop-slider__item--hide-next {
-  display: block; }
-/* line 11, _wallop-slider--slide.scss */
-.wallop-slider--slide .wallop-slider__item--hide-previous {
-  -webkit-animation: slideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 12, _wallop-slider--slide.scss */
-.wallop-slider--slide .wallop-slider__item--hide-next {
-  -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+/* line 5, _wallop-slider--slide.scss */
+.wallop-slider--slide {
+  /* the 10ms animation-delay fixed some weird rendering issues with iPhone */ }
+  /* line 9, _wallop-slider--slide.scss */
+  .wallop-slider--slide .wallop-slider__item--show-previous {
+    -webkit-animation: slideFromLeft 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  /* line 10, _wallop-slider--slide.scss */
+  .wallop-slider--slide .wallop-slider__item--show-next {
+    -webkit-animation: slideFromRight 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  /* line 12, _wallop-slider--slide.scss */
+  .wallop-slider--slide .wallop-slider__item--hide-previous, .wallop-slider--slide .wallop-slider__item--hide-next {
+    display: block; }
+  /* line 13, _wallop-slider--slide.scss */
+  .wallop-slider--slide .wallop-slider__item--hide-previous {
+    -webkit-animation: slideToLeft 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  /* line 14, _wallop-slider--slide.scss */
+  .wallop-slider--slide .wallop-slider__item--hide-next {
+    -webkit-animation: slideToRight 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromLeft {
-  /* line 19, _wallop-slider--slide.scss */
+  /* line 21, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(-100%, 0, 0); }
 
-  /* line 20, _wallop-slider--slide.scss */
+  /* line 22, _wallop-slider--slide.scss */
   100% {
     -webkit-transform: translate3d(0, 0, 0); } }
 
 @-webkit-keyframes slideFromRight {
-  /* line 24, _wallop-slider--slide.scss */
+  /* line 26, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(100%, 0, 0); }
 
-  /* line 25, _wallop-slider--slide.scss */
+  /* line 27, _wallop-slider--slide.scss */
   100% {
     -webkit-transform: translate3d(0, 0, 0); } }
 
 @-webkit-keyframes slideToLeft {
-  /* line 29, _wallop-slider--slide.scss */
+  /* line 31, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 30, _wallop-slider--slide.scss */
+  /* line 32, _wallop-slider--slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 31, _wallop-slider--slide.scss */
+  /* line 33, _wallop-slider--slide.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0); } }
 
 @-webkit-keyframes slideToRight {
-  /* line 38, _wallop-slider--slide.scss */
+  /* line 40, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 39, _wallop-slider--slide.scss */
+  /* line 41, _wallop-slider--slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 40, _wallop-slider--slide.scss */
+  /* line 42, _wallop-slider--slide.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0); } }
@@ -394,7 +397,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   border-radius: .3em;
   border: 0.13em solid #545454;
   /* #545454 */
-  box-shadow: 1px 1px .3em -.1em black inset;
+  box-shadow: 1px 1px 0.3em -0.1em black inset;
   padding: .15em .2em .05em; }
 
 /* line 73, _prism.scss */
