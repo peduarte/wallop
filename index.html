@@ -53,13 +53,13 @@
       <h2>Usage:</h2>
 
       <h3>Basic</h3>
-      <pre class="prettyprint">
+      <pre class="language-markup"><code class="language-markup">
 &lt;head&gt;
   &lt;!-- Include CSS --&gt;
   &lt;link rel="stylesheet" href="path-to-wallop-slider.css"&gt;
 &lt;/head&gt;
-      </pre>
-      <pre class="prettyprint">
+      </code></pre>
+      <pre class="language-markup"><code class="language-markup">
 &lt;div class="wallop-slider"&gt;
   &lt;ul class="wallop-slider__list"&gt;
     &lt;li class="wallop-slider__item wallop-slider__item--current"&gt;
@@ -82,13 +82,13 @@
   // Create new instance of WallopSlider
   var slider = new WallopSlider('.wallop-slider');
 &lt;/script&gt;
-      </pre>
+      </code></pre>
       <p><a href="simple-demo.html">Standalone demo page</a></p>
       <p>This is the most basic set up of WallopSlider, as you can see the demo page is not using any custom CSS and it is responsive by nature.</p>
 
 
       <h3>Options</h3>
-      <pre class="prettyprint">
+      <pre class="language-markup"><code class="language-markup">
 &lt;script&gt;
   // Create new instance of WallopSlider
   var slider = new WallopSlider('.wallop-slider', {
@@ -102,7 +102,7 @@
     wSHideNextClass: 'wallop-slider__item--hide-next'
   });
 &lt;/script&gt;
-      </pre>
+      </code></pre>
       <p>WallopSlider uses BEM Class Methodology but if you don't like that then you can pass your own classes through the options object.</p>
 
     </section>
@@ -176,7 +176,8 @@
 
   <script src="scripts/WallopSlider.js"></script>
   <script src="scripts/script.js"></script>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script src="scripts/prism.js"></script>
+  <!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>-->
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

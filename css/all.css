@@ -325,144 +325,211 @@ footer {
   .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
     -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; } }
 
-/* desert scheme ported from vim to google prettify */
-/* line 2, _prettyprint.scss */
-pre.prettyprint {
-  display: block;
-  background-color: #333;
-  border: none !important;
-  padding: 20px 20px 5px !important;
-  word-wrap: break-word;
-  line-height: 22px;
-  font-size: 13px; }
-  @media only screen and (min-width: 480px) {
-    /* line 2, _prettyprint.scss */
-    pre.prettyprint {
-      font-size: 15px; } }
-  /* line 15, _prettyprint.scss */
-  pre.prettyprint > span {
-    margin-bottom: 5px; }
+/**
+ * prism.js Twilight theme
+ * Based (more or less) on the Twilight theme originally of Textmate fame.
+ * @author Remy Bach
+ */
+/* line 7, _prism.scss */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: white;
+  direction: ltr;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-size: 18px;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none; }
 
-/* line 21, _prettyprint.scss */
-pre .nocode {
-  background-color: none;
-  color: #000; }
+/* line 29, _prism.scss */
+pre[class*="language-"],
+:not(pre) > code[class*="language-"] {
+  background: #141414;
+  /* #141414 */ }
 
-/* line 22, _prettyprint.scss */
-pre .str {
-  color: #ffa0a0; }
+/* Code blocks */
+/* line 34, _prism.scss */
+pre[class*="language-"] {
+  margin: .5em 0;
+  overflow: auto;
+  padding: 1em; }
 
-/* string  - pink */
-/* line 23, _prettyprint.scss */
-pre .kwd {
-  color: #f0e68c;
+/* line 42, _prism.scss */
+pre[class*="language-"]::selection {
+  /* Safari */
+  background: #27292a;
+  /* #282A2B */ }
+
+/* line 45, _prism.scss */
+pre[class*="language-"]::selection {
+  /* Firefox */
+  background: #27292a;
+  /* #282A2B */ }
+
+/* Text Selection colour */
+/* line 51, _prism.scss */
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: rgba(237, 237, 237, 0.15);
+  /* #EDEDED */ }
+
+/* line 57, _prism.scss */
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: rgba(237, 237, 237, 0.15);
+  /* #EDEDED */ }
+
+/* Inline code */
+/* line 63, _prism.scss */
+:not(pre) > code[class*="language-"] {
+  border-radius: .3em;
+  border: 0.13em solid #545454;
+  /* #545454 */
+  box-shadow: 1px 1px .3em -.1em black inset;
+  padding: .15em .2em .05em; }
+
+/* line 73, _prism.scss */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #787878;
+  /* #777777 */ }
+
+/* line 77, _prism.scss */
+.token.punctuation {
+  opacity: .7; }
+
+/* line 81, _prism.scss */
+.namespace {
+  opacity: .7; }
+
+/* line 87, _prism.scss */
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #cf694a;
+  /* #CF6A4C */ }
+
+/* line 96, _prism.scss */
+.token.keyword,
+.token.property,
+.token.selector,
+.token.constant,
+.token.symbol,
+.token.builtin {
+  color: #f9ee9a;
+  /* #F9EE98 */ }
+
+/* line 107, _prism.scss */
+.token.attr-name,
+.token.attr-value,
+.token.string,
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: #919e6b;
+  /* #8F9D6A */ }
+
+/* line 111, _prism.scss */
+.token.atrule {
+  color: #7386a5;
+  /* #7587A6 */ }
+
+/* line 116, _prism.scss */
+.token.regex,
+.token.important {
+  color: #e9c163;
+  /* #E9C062 */ }
+
+/* line 120, _prism.scss */
+.token.important {
   font-weight: bold; }
 
-/* line 24, _prettyprint.scss */
-pre .com {
-  color: #87ceeb; }
+/* line 124, _prism.scss */
+.token.entity {
+  cursor: help; }
 
-/* comment - skyblue */
-/* line 25, _prettyprint.scss */
-pre .typ {
-  color: #98fb98; }
+/* line 127, _prism.scss */
+pre[data-line] {
+  padding: 1em 0 1em 3em;
+  position: relative; }
 
-/* type    - lightgreen */
-/* line 26, _prettyprint.scss */
-pre .lit {
-  color: #cd5c5c; }
+/* Markup */
+/* line 135, _prism.scss */
+.language-markup .token.tag,
+.language-markup .token.attr-name,
+.language-markup .token.punctuation {
+  color: #ad895c;
+  /* #AC885B */ }
 
-/* literal - darkred */
-/* line 27, _prettyprint.scss */
-pre .pun {
-  color: #fff; }
+/* Make the tokens sit above the line highlight so the colours don't look faded. */
+/* line 140, _prism.scss */
+.token {
+  position: relative;
+  z-index: 1; }
 
-/* punctuation */
-/* line 28, _prettyprint.scss */
-pre .pln {
-  color: #fff; }
+/* line 144, _prism.scss */
+.line-highlight {
+  background: -moz-linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
+  /* #545454 */
+  background: -o-linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
+  /* #545454 */
+  background: -webkit-linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
+  /* #545454 */
+  background: rgba(84, 84, 84, 0.25);
+  /* #545454 */
+  background: linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
+  /* #545454 */
+  border-bottom: 1px dashed #545454;
+  /* #545454 */
+  border-top: 1px dashed #545454;
+  /* #545454 */
+  left: 0;
+  line-height: inherit;
+  margin-top: 0.75em;
+  /* Same as .prism’s padding-top */
+  padding: inherit 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  white-space: pre;
+  z-index: 0; }
 
-/* plaintext */
-/* line 29, _prettyprint.scss */
-pre .tag {
-  color: #f0e68c;
-  font-weight: bold; }
+/* line 163, _prism.scss */
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  background-color: #8794a6;
+  /* #8794A6 */
+  border-radius: 999px;
+  box-shadow: 0 1px white;
+  color: #f5f2f0;
+  /* #F5F2F0 */
+  content: attr(data-start);
+  font: bold 65%/1.5 sans-serif;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  position: absolute;
+  text-align: center;
+  text-shadow: none;
+  top: .4em;
+  vertical-align: .3em; }
 
-/* html/xml tag    - lightyellow */
-/* line 30, _prettyprint.scss */
-pre .atn {
-  color: #bdb76b;
-  font-weight: bold; }
-
-/* attribute name  - khaki */
-/* line 31, _prettyprint.scss */
-pre .atv {
-  color: #ffa0a0; }
-
-/* attribute value - pink */
-/* line 32, _prettyprint.scss */
-pre .dec {
-  color: #98fb98; }
-
-/* decimal         - lightgreen */
-/* Specify class=linenums on a pre to get line numbering */
-/* line 35, _prettyprint.scss */
-ol.linenums {
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #AEAEAE; }
-
-/* IE indents via margin-left */
-/* line 36, _prettyprint.scss */
-li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
-  list-style-type: none; }
-
-/* Alternate shading for lines */
-@media print {
-  /* line 41, _prettyprint.scss */
-  pre.prettyprint {
-    background-color: none; }
-
-  /* line 42, _prettyprint.scss */
-  pre .str, code .str {
-    color: #060; }
-
-  /* line 43, _prettyprint.scss */
-  pre .kwd, code .kwd {
-    color: #006;
-    font-weight: bold; }
-
-  /* line 44, _prettyprint.scss */
-  pre .com, code .com {
-    color: #600;
-    font-style: italic; }
-
-  /* line 45, _prettyprint.scss */
-  pre .typ, code .typ {
-    color: #404;
-    font-weight: bold; }
-
-  /* line 46, _prettyprint.scss */
-  pre .lit, code .lit {
-    color: #044; }
-
-  /* line 47, _prettyprint.scss */
-  pre .pun, code .pun {
-    color: #440; }
-
-  /* line 48, _prettyprint.scss */
-  pre .pln, code .pln {
-    color: #000; }
-
-  /* line 49, _prettyprint.scss */
-  pre .tag, code .tag {
-    color: #006;
-    font-weight: bold; }
-
-  /* line 50, _prettyprint.scss */
-  pre .atn, code .atn {
-    color: #404; }
-
-  /* line 51, _prettyprint.scss */
-  pre .atv, code .atv {
-    color: #060; } }
+/* line 179, _prism.scss */
+.line-highlight[data-end]:after {
+  bottom: .4em;
+  content: attr(data-end);
+  top: auto; }
