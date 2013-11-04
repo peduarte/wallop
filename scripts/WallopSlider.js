@@ -65,7 +65,8 @@ WallopSlider = (function() {
 
   // Method to add classes to the right elements depending on the index passed
   WallopProto.goTo = function (index) {
-    if (index >= this.allItemsArrayLength || index < 0) { return; }
+    index = Number(index);
+    if (index >= this.allItemsArrayLength || index < 0 || index === this.currentItemIndex) { return; }
 
     this.removeAllHelperSettings();
 

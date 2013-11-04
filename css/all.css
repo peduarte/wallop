@@ -140,6 +140,10 @@ pre {
     right: 10px; } }
 
 /* line 144, _global.scss */
+.goto {
+  padding: 5px; }
+
+/* line 148, _global.scss */
 footer {
   padding-bottom: 30px; }
 
