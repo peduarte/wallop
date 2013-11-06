@@ -1,0 +1,43 @@
+$animationDuration: 550ms;
+$animationEasing: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
+/*==========  FOLD CONFIG  ==========*/
+.wallop-slider--fold {
+
+  .wallop-slider__list {
+    -webkit-perspective: 1000;
+  }
+
+  .wallop-slider__item--show-previous {
+    -webkit-transform: translateZ(0);
+    -webkit-transform-origin: center left;
+    -webkit-animation: foldFromLeft $animationDuration $animationEasing both;
+    z-index: 2;
+  }
+
+  .wallop-slider__item--show-next {
+    -webkit-transform: translateZ(0);
+    -webkit-transform-origin: center right;
+    -webkit-animation: foldFromRight $animationDuration $animationEasing both;
+    z-index: 1;
+  }
+
+  .wallop-slider__item--hide-previous,
+  .wallop-slider__item--hide-next {
+    display: block;
+  }
+
+}
+
+/*==========  FOLD ANIMATIONS  ==========*/
+@-webkit-keyframes foldFromLeft {
+  0% {
+    -webkit-transform: rotateY(-90deg);
+  }
+}
+
+@-webkit-keyframes foldFromRight {
+  0% {
+    -webkit-transform: rotateY(90deg);
+  }
+}

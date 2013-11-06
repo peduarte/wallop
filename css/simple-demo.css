@@ -30,7 +30,7 @@
 /* line 23, wallop-slider.scss */
 .wallop-slider__item--current {
   display: block;
-  position: static; }
+  position: relative; }
 
 /* line 6, simple-demo.scss */
 footer {
