@@ -199,45 +199,29 @@ footer {
 @-webkit-keyframes slideFromLeft {
   /* line 21, _wallop-slider--slide.scss */
   0% {
-    -webkit-transform: translate3d(-100%, 0, 0); }
-
-  /* line 22, _wallop-slider--slide.scss */
-  100% {
-    -webkit-transform: translate3d(0, 0, 0); } }
+    -webkit-transform: translate3d(-100%, 0, 0); } }
 
 @-webkit-keyframes slideFromRight {
-  /* line 26, _wallop-slider--slide.scss */
+  /* line 25, _wallop-slider--slide.scss */
   0% {
-    -webkit-transform: translate3d(100%, 0, 0); }
-
-  /* line 27, _wallop-slider--slide.scss */
-  100% {
-    -webkit-transform: translate3d(0, 0, 0); } }
+    -webkit-transform: translate3d(100%, 0, 0); } }
 
 @-webkit-keyframes slideToLeft {
-  /* line 31, _wallop-slider--slide.scss */
-  0% {
-    -webkit-transform: translate3d(0, 0, 0); }
-
-  /* line 32, _wallop-slider--slide.scss */
+  /* line 29, _wallop-slider--slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 33, _wallop-slider--slide.scss */
+  /* line 30, _wallop-slider--slide.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0); } }
 
 @-webkit-keyframes slideToRight {
-  /* line 40, _wallop-slider--slide.scss */
-  0% {
-    -webkit-transform: translate3d(0, 0, 0); }
-
-  /* line 41, _wallop-slider--slide.scss */
+  /* line 37, _wallop-slider--slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 42, _wallop-slider--slide.scss */
+  /* line 38, _wallop-slider--slide.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0); } }
@@ -270,26 +254,26 @@ footer {
     -webkit-transform: translate3d(0, -100%, 0); } }
 
 @-webkit-keyframes slideFromBottom {
-  /* line 29, _wallop-slider--vertical-slide.scss */
+  /* line 27, _wallop-slider--vertical-slide.scss */
   0% {
     -webkit-transform: translate3d(0, 100%, 0); } }
 
 @-webkit-keyframes slideToTop {
-  /* line 35, _wallop-slider--vertical-slide.scss */
+  /* line 31, _wallop-slider--vertical-slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 38, _wallop-slider--vertical-slide.scss */
+  /* line 32, _wallop-slider--vertical-slide.scss */
   100% {
     -webkit-transform: translate3d(0, -100%, 0);
     opacity: 0; } }
 
 @-webkit-keyframes slideToBottom {
-  /* line 46, _wallop-slider--vertical-slide.scss */
+  /* line 40, _wallop-slider--vertical-slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 49, _wallop-slider--vertical-slide.scss */
+  /* line 41, _wallop-slider--vertical-slide.scss */
   100% {
     -webkit-transform: translate3d(0, 100%, 0);
     opacity: 0; } }
@@ -309,45 +293,41 @@ footer {
 /*==========  FADE ANIMATIONS  ==========*/
 @-webkit-keyframes fadeOut {
   /* line 18, _wallop-slider--fade.scss */
-  0% {
-    opacity: 1; }
-
-  /* line 19, _wallop-slider--fade.scss */
   100% {
     opacity: 0; } }
 
 /*==========  FOLD CONFIG  ==========*/
-/* line 8, _wallop-slider--fold.scss */
+/* line 7, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__list {
   -webkit-perspective: 1000; }
-/* line 12, _wallop-slider--fold.scss */
+/* line 11, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__item--current {
   position: relative; }
-/* line 16, _wallop-slider--fold.scss */
+/* line 15, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__item--show-previous {
   -webkit-transform: translateZ(0);
   -webkit-transform-origin: center left;
   -webkit-animation: foldFromLeft 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   z-index: 2; }
-/* line 23, _wallop-slider--fold.scss */
+/* line 22, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__item--show-next {
   -webkit-transform: translateZ(0);
   -webkit-transform-origin: center right;
   -webkit-animation: foldFromRight 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   z-index: 1; }
-/* line 31, _wallop-slider--fold.scss */
+/* line 30, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__item--hide-previous,
 .wallop-slider--fold .wallop-slider__item--hide-next {
   display: block; }
 
 /*==========  FOLD ANIMATIONS  ==========*/
 @-webkit-keyframes foldFromLeft {
-  /* line 39, _wallop-slider--fold.scss */
+  /* line 38, _wallop-slider--fold.scss */
   0% {
     -webkit-transform: rotateY(-90deg); } }
 
 @-webkit-keyframes foldFromRight {
-  /* line 45, _wallop-slider--fold.scss */
+  /* line 44, _wallop-slider--fold.scss */
   0% {
     -webkit-transform: rotateY(90deg); } }
 
@@ -412,30 +392,30 @@ footer {
     -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg); } }
 
 @media only screen and (max-width: 479px) {
-  /* line 5, _wallop-slider--mixed.scss */
-  .wallop-slider--mixed-animations .wallop-slider__item--hide-previous, .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
+  /* line 5, _wallop-slider--targeted.scss */
+  .wallop-slider--targeted .wallop-slider__item--hide-previous, .wallop-slider--targeted .wallop-slider__item--hide-next {
     display: block; }
-  /* line 6, _wallop-slider--mixed.scss */
-  .wallop-slider--mixed-animations .wallop-slider__item--hide-previous {
+  /* line 6, _wallop-slider--targeted.scss */
+  .wallop-slider--targeted .wallop-slider__item--hide-previous {
     -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 7, _wallop-slider--mixed.scss */
-  .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
+  /* line 7, _wallop-slider--targeted.scss */
+  .wallop-slider--targeted .wallop-slider__item--hide-next {
     -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; } }
 @media only screen and (min-width: 480px) {
-  /* line 12, _wallop-slider--mixed.scss */
-  .wallop-slider--mixed-animations .wallop-slider__item--show-previous {
+  /* line 12, _wallop-slider--targeted.scss */
+  .wallop-slider--targeted .wallop-slider__item--show-previous {
     -webkit-animation: slideFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 13, _wallop-slider--mixed.scss */
-  .wallop-slider--mixed-animations .wallop-slider__item--show-next {
+  /* line 13, _wallop-slider--targeted.scss */
+  .wallop-slider--targeted .wallop-slider__item--show-next {
     -webkit-animation: slideFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 14, _wallop-slider--mixed.scss */
-  .wallop-slider--mixed-animations .wallop-slider__item--hide-previous, .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
+  /* line 14, _wallop-slider--targeted.scss */
+  .wallop-slider--targeted .wallop-slider__item--hide-previous, .wallop-slider--targeted .wallop-slider__item--hide-next {
     display: block; }
-  /* line 15, _wallop-slider--mixed.scss */
-  .wallop-slider--mixed-animations .wallop-slider__item--hide-previous {
+  /* line 15, _wallop-slider--targeted.scss */
+  .wallop-slider--targeted .wallop-slider__item--hide-previous {
     -webkit-animation: slideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 16, _wallop-slider--mixed.scss */
-  .wallop-slider--mixed-animations .wallop-slider__item--hide-next {
+  /* line 16, _wallop-slider--targeted.scss */
+  .wallop-slider--targeted .wallop-slider__item--hide-next {
     -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; } }
 
 /**

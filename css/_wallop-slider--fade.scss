@@ -15,6 +15,5 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
 /*==========  FADE ANIMATIONS  ==========*/
 @-webkit-keyframes fadeOut {
-  0% { opacity: 1; }
   100% { opacity: 0; }
 }

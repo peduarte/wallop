@@ -19,16 +19,13 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 /*==========  SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromLeft {
   0% { -webkit-transform: translate3d(-100%, 0, 0); }
-  100% { -webkit-transform: translate3d(0, 0, 0); }
 }
 
 @-webkit-keyframes slideFromRight {
   0% { -webkit-transform: translate3d(100%, 0, 0); }
-  100% { -webkit-transform: translate3d(0, 0, 0); }
 }
 
 @-webkit-keyframes slideToLeft {
-  0% { -webkit-transform: translate3d(0, 0, 0); }
   99% { opacity: 1; }
   100% {
     opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want
@@ -37,7 +34,6 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 }
 
 @-webkit-keyframes slideToRight {
-  0% { -webkit-transform: translate3d(0, 0, 0); }
   99% { opacity: 1; }
   100% {
     opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want

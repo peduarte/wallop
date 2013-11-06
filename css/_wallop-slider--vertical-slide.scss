@@ -20,21 +20,15 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
 /*==========  VERTICAL SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromTop {
-  0% {
-    -webkit-transform: translate3d(0, -100%, 0);
-  }
+  0% { -webkit-transform: translate3d(0, -100%, 0); }
 }
 
 @-webkit-keyframes slideFromBottom {
-  0% {
-    -webkit-transform: translate3d(0, 100%, 0);
-  }
+  0% { -webkit-transform: translate3d(0, 100%, 0); }
 }
 
 @-webkit-keyframes slideToTop {
-  99% {
-    opacity: 1;
-  }
+  99% { opacity: 1; }
   100% {
     -webkit-transform: translate3d(0, -100%, 0);
     opacity: 0;
@@ -43,9 +37,7 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
 
 @-webkit-keyframes slideToBottom {
-  99% {
-    opacity: 1;
-  }
+  99% { opacity: 1; }
   100% {
     -webkit-transform: translate3d(0, 100%, 0);
     opacity: 0;
