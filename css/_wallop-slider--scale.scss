@@ -1,0 +1,23 @@
+$animationDuration: 350ms;
+$animationEasing: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+
+
+/*==========  SCALE CONFIG  ==========*/
+.wallop-slider--scale {
+
+  .wallop-slider__item--hide-previous,
+  .wallop-slider__item--hide-next { display: block; }
+
+  .wallop-slider__item--hide-previous { -webkit-animation: scaleOut $animationDuration $animationEasing both; }
+  .wallop-slider__item--hide-next { -webkit-animation: scaleOut $animationDuration $animationEasing both; }
+
+}
+
+
+/*==========  SCALE ANIMATIONS  ==========*/
+@-webkit-keyframes scaleOut {
+  100% {
+    -webkit-transform: scale(1.6);
+    opacity: 0;
+  }
+}

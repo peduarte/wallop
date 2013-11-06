@@ -351,43 +351,62 @@ footer {
   0% {
     -webkit-transform: rotateY(90deg); } }
 
-/*==========  SPECIAL CONFIG  ==========*/
-/* line 8, _wallop-slider--special.scss */
-.wallop-slider--special .wallop-slider__item--hide-previous,
-.wallop-slider--special .wallop-slider__item--hide-next {
+/*==========  SCALE CONFIG  ==========*/
+/* line 9, _wallop-slider--scale.scss */
+.wallop-slider--scale .wallop-slider__item--hide-previous,
+.wallop-slider--scale .wallop-slider__item--hide-next {
   display: block; }
-/* line 10, _wallop-slider--special.scss */
-.wallop-slider--special .wallop-slider__item--hide-previous {
-  -webkit-animation: specialToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 11, _wallop-slider--special.scss */
-.wallop-slider--special .wallop-slider__item--hide-next {
-  -webkit-animation: specialToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+/* line 11, _wallop-slider--scale.scss */
+.wallop-slider--scale .wallop-slider__item--hide-previous {
+  -webkit-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
+/* line 12, _wallop-slider--scale.scss */
+.wallop-slider--scale .wallop-slider__item--hide-next {
+  -webkit-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
+
+/*==========  SCALE ANIMATIONS  ==========*/
+@-webkit-keyframes scaleOut {
+  /* line 19, _wallop-slider--scale.scss */
+  100% {
+    -webkit-transform: scale(1.6);
+    opacity: 0; } }
+
+/*==========  SPECIAL CONFIG  ==========*/
+/* line 8, _wallop-slider--rotate.scss */
+.wallop-slider--rotate .wallop-slider__item--hide-previous,
+.wallop-slider--rotate .wallop-slider__item--hide-next {
+  display: block; }
+/* line 10, _wallop-slider--rotate.scss */
+.wallop-slider--rotate .wallop-slider__item--hide-previous {
+  -webkit-animation: rotateToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+/* line 11, _wallop-slider--rotate.scss */
+.wallop-slider--rotate .wallop-slider__item--hide-next {
+  -webkit-animation: rotateToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  SPCECIAL ANIMATIONS  ==========*/
-@-webkit-keyframes specialToLeft {
-  /* line 18, _wallop-slider--special.scss */
+@-webkit-keyframes rotateToLeft {
+  /* line 18, _wallop-slider--rotate.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 19, _wallop-slider--special.scss */
+  /* line 19, _wallop-slider--rotate.scss */
   99% {
     opacity: 1; }
 
-  /* line 20, _wallop-slider--special.scss */
+  /* line 20, _wallop-slider--rotate.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg); } }
 
-@-webkit-keyframes specialToRight {
-  /* line 27, _wallop-slider--special.scss */
+@-webkit-keyframes rotateToRight {
+  /* line 27, _wallop-slider--rotate.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 28, _wallop-slider--special.scss */
+  /* line 28, _wallop-slider--rotate.scss */
   99% {
     opacity: 1; }
 
-  /* line 29, _wallop-slider--special.scss */
+  /* line 29, _wallop-slider--rotate.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg); } }
