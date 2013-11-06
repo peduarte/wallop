@@ -4,6 +4,8 @@ $animationEasing: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 /*==========  FOLD CONFIG  ==========*/
 .wallop-slider--fold {
 
+  position: relative;
+
   .wallop-slider__list {
     -webkit-perspective: 1000;
   }

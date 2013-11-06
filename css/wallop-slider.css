@@ -24,4 +24,4 @@
 /* line 23, wallop-slider.scss */
 .wallop-slider__item--current {
   display: block;
-  position: relative; }
+  position: static; }

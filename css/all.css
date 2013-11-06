@@ -173,7 +173,7 @@ footer {
 /* line 23, wallop-slider.scss */
 .wallop-slider__item--current {
   display: block;
-  position: relative; }
+  position: static; }
 
 /*==========  FADE CONFIG  ==========*/
 /* line 5, _wallop-slider--slide.scss */
@@ -317,34 +317,37 @@ footer {
     opacity: 0; } }
 
 /*==========  FOLD CONFIG  ==========*/
-/* line 7, _wallop-slider--fold.scss */
-.wallop-slider--fold .wallop-slider__list {
-  -webkit-perspective: 1000; }
-/* line 11, _wallop-slider--fold.scss */
-.wallop-slider--fold .wallop-slider__item--show-previous {
-  -webkit-transform: translateZ(0);
-  -webkit-transform-origin: center left;
-  -webkit-animation: foldFromLeft 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-  z-index: 2; }
-/* line 18, _wallop-slider--fold.scss */
-.wallop-slider--fold .wallop-slider__item--show-next {
-  -webkit-transform: translateZ(0);
-  -webkit-transform-origin: center right;
-  -webkit-animation: foldFromRight 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-  z-index: 1; }
-/* line 26, _wallop-slider--fold.scss */
-.wallop-slider--fold .wallop-slider__item--hide-previous,
-.wallop-slider--fold .wallop-slider__item--hide-next {
-  display: block; }
+/* line 5, _wallop-slider--fold.scss */
+.wallop-slider--fold {
+  position: relative; }
+  /* line 9, _wallop-slider--fold.scss */
+  .wallop-slider--fold .wallop-slider__list {
+    -webkit-perspective: 1000; }
+  /* line 13, _wallop-slider--fold.scss */
+  .wallop-slider--fold .wallop-slider__item--show-previous {
+    -webkit-transform: translateZ(0);
+    -webkit-transform-origin: center left;
+    -webkit-animation: foldFromLeft 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    z-index: 2; }
+  /* line 20, _wallop-slider--fold.scss */
+  .wallop-slider--fold .wallop-slider__item--show-next {
+    -webkit-transform: translateZ(0);
+    -webkit-transform-origin: center right;
+    -webkit-animation: foldFromRight 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+    z-index: 1; }
+  /* line 28, _wallop-slider--fold.scss */
+  .wallop-slider--fold .wallop-slider__item--hide-previous,
+  .wallop-slider--fold .wallop-slider__item--hide-next {
+    display: block; }
 
 /*==========  FOLD ANIMATIONS  ==========*/
 @-webkit-keyframes foldFromLeft {
-  /* line 34, _wallop-slider--fold.scss */
+  /* line 36, _wallop-slider--fold.scss */
   0% {
     -webkit-transform: rotateY(-90deg); } }
 
 @-webkit-keyframes foldFromRight {
-  /* line 40, _wallop-slider--fold.scss */
+  /* line 42, _wallop-slider--fold.scss */
   0% {
     -webkit-transform: rotateY(90deg); } }
 
