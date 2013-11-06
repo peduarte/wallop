@@ -6,6 +6,11 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
   /* the 10ms animation-delay fixed some weird rendering issues with iPhone */
 
+  .wallop-slider__list {
+    position: relative;
+    overflow: hidden;
+  }
+
   .wallop-slider__item--show-next { -webkit-animation: slideFromTop $animationDuration 10ms $animationEasing both; }
   .wallop-slider__item--show-previous { -webkit-animation: slideFromBottom $animationDuration 10ms $animationEasing both;}
 

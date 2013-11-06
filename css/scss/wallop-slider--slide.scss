@@ -28,7 +28,7 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 @-webkit-keyframes slideToLeft {
   99% { opacity: 1; }
   100% {
-    opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want
+    opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want.
     -webkit-transform: translate3d(-100%, 0, 0);
   }
 }
@@ -36,7 +36,7 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 @-webkit-keyframes slideToRight {
   99% { opacity: 1; }
   100% {
-    opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want
+    opacity: 0; // Make it hidden so if user resizes there's no overlap. Call it a hack it you want.
     -webkit-transform: translate3d(100%, 0, 0);
   }
 }

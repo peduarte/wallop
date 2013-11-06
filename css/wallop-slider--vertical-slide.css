@@ -1,0 +1,42 @@
+/*==========  VERTICAL SLIDE CONFIG  ==========*/
+.wallop-slider--vertical-slide {
+  /* the 10ms animation-delay fixed some weird rendering issues with iPhone */ }
+  .wallop-slider--vertical-slide .wallop-slider__list {
+    position: relative;
+    overflow: hidden; }
+  .wallop-slider--vertical-slide .wallop-slider__item--show-next {
+    -webkit-animation: slideFromTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  .wallop-slider--vertical-slide .wallop-slider__item--show-previous {
+    -webkit-animation: slideFromBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  .wallop-slider--vertical-slide .wallop-slider__item--hide-previous,
+  .wallop-slider--vertical-slide .wallop-slider__item--hide-next {
+    display: block; }
+  .wallop-slider--vertical-slide .wallop-slider__item--hide-previous {
+    -webkit-animation: slideToBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  .wallop-slider--vertical-slide .wallop-slider__item--hide-next {
+    -webkit-animation: slideToTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+
+/*==========  VERTICAL SLIDE ANIMATIONS  ==========*/
+@-webkit-keyframes slideFromTop {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0); } }
+
+@-webkit-keyframes slideFromBottom {
+  0% {
+    -webkit-transform: translate3d(0, 100%, 0); } }
+
+@-webkit-keyframes slideToTop {
+  99% {
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    opacity: 0; } }
+
+@-webkit-keyframes slideToBottom {
+  99% {
+    opacity: 1; }
+
+  100% {
+    -webkit-transform: translate3d(0, 100%, 0);
+    opacity: 0; } }

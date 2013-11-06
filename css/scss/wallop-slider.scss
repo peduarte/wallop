@@ -1,11 +1,13 @@
 .wallop-slider {
-    position: relative; // Required
-    overflow: hidden; // Required
     width: 100%; // Recommended
     -webkit-transform: translateZ(0); // Recommended - Force Hardware Acceleration
 }
 
-.wallop-slider__list { list-style: none; } // Recommended - to remove bullets
+.wallop-slider__list {
+  list-style: none; // Recommended - to remove bullets
+  position: relative; // Required
+  overflow: hidden; // Required
+}
 
 .wallop-slider__item {
   display: none; // Required

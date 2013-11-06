@@ -1,2 +1,2 @@
-sass -lf css:css
-sass -l --watch css:css
+sass -f css/scss:css
+sass --watch css/scss:css

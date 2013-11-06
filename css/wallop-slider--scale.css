@@ -1,0 +1,14 @@
+/*==========  SCALE CONFIG  ==========*/
+.wallop-slider--scale .wallop-slider__item--hide-previous,
+.wallop-slider--scale .wallop-slider__item--hide-next {
+  display: block; }
+.wallop-slider--scale .wallop-slider__item--hide-previous {
+  -webkit-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
+.wallop-slider--scale .wallop-slider__item--hide-next {
+  -webkit-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
+
+/*==========  SCALE ANIMATIONS  ==========*/
+@-webkit-keyframes scaleOut {
+  100% {
+    -webkit-transform: scale(1.6);
+    opacity: 0; } }

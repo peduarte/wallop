@@ -1,27 +1,22 @@
-/* line 1, wallop-slider.scss */
 .wallop-slider {
-  position: relative;
-  overflow: hidden;
   width: 100%;
   -webkit-transform: translateZ(0); }
 
-/* line 8, wallop-slider.scss */
 .wallop-slider__list {
-  list-style: none; }
+  list-style: none;
+  position: relative;
+  overflow: hidden; }
 
-/* line 10, wallop-slider.scss */
 .wallop-slider__item {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; }
-  /* line 17, wallop-slider.scss */
   .wallop-slider__item img {
     display: block;
     width: 100%; }
 
-/* line 23, wallop-slider.scss */
 .wallop-slider__item--current {
   display: block;
   position: static; }

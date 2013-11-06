@@ -1,10 +1,8 @@
 /*-----  Responsive  ------*/
-/* line 1, _global.scss */
 * {
   margin: 0;
   padding: 0; }
 
-/* line 3, _global.scss */
 body {
   font-family: 'Voltaire', Arial;
   text-align: center;
@@ -15,77 +13,63 @@ body {
   line-height: 120%;
   -webkit-font-smoothing: antialiased; }
 
-/* line 14, _global.scss */
 h1 {
   font-weight: 400;
   padding: 60px 0 20px;
   font-size: 54px;
   line-height: 1; }
 
-/* line 21, _global.scss */
 a {
   color: #ffffff; }
 
-/* line 25, _global.scss */
 section {
   text-align: left;
   padding-bottom: 60px; }
-  /* line 29, _global.scss */
   section ul {
     list-style: inside; }
 
-/* line 34, _global.scss */
 p {
   font-size: 20px;
   line-height: 28px;
   margin: 20px 0;
   letter-spacing: .2px;
   word-spacing: 4px; }
-  /* line 41, _global.scss */
   footer p {
     margin: 0;
     font-size: 16px; }
 
-/* line 47, _global.scss */
 blockquote {
   margin: 2%;
   background: #1f1e22;
   padding: 20px;
   font-size: 18px; }
 
-/* line 54, _global.scss */
 h2 {
   margin-bottom: 20px; }
 
-/* line 58, _global.scss */
 h3 {
   font-size: 18px;
   margin-top: 30px;
   margin-bottom: 10px; }
 
-/* line 64, _global.scss */
 pre {
   margin-bottom: 10px; }
 
-/* line 68, _global.scss */
 .container {
   margin: 30px auto 60px;
   max-width: 960px; }
 
-/* line 73, _global.scss */
 .photo-slider {
   margin-bottom: 20px;
   display: inline-block;
   max-width: 612px; }
 
-/* line 79, _global.scss */
 .small-slider {
   max-width: 320px;
   display: inline-block;
   vertical-align: top;
   margin: 10px; }
 
-/* line 86, _global.scss */
 .btn {
   font-family: 'Voltaire', Arial;
   background: #ffffff;
@@ -98,7 +82,6 @@ pre {
   line-height: 10px;
   margin-top: 20px; }
   @media only screen and (min-width: 480px) {
-    /* line 86, _global.scss */
     .btn {
       margin-top: -10px;
       position: absolute;
@@ -109,312 +92,245 @@ pre {
       -ms-transition: opacity 200ms ease;
       -o-transition: opacity 200ms ease;
       transition: opacity 200ms ease; }
-      /* line 106, _global.scss */
       .wallop-slider:hover .btn {
         opacity: .75; }
-        /* line 109, _global.scss */
         .wallop-slider:hover .btn:hover {
           opacity: 1; } }
-  /* line 115, _global.scss */
   .btn:hover {
     cursor: pointer; }
-  /* line 119, _global.scss */
   .btn[disabled] {
     opacity: .4; }
-    /* line 121, _global.scss */
     .btn[disabled], .btn[disabled]:hover {
       cursor: default; }
     @media only screen and (min-width: 480px) {
-      /* line 119, _global.scss */
       .btn[disabled] {
         visibility: hidden; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 132, _global.scss */
   .btn--previous {
     left: 10px; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 138, _global.scss */
   .btn--next {
     right: 10px; } }
 
-/* line 144, _global.scss */
 .goto {
   padding: 5px; }
 
-/* line 148, _global.scss */
 footer {
   padding-bottom: 30px; }
 
-/* line 1, wallop-slider.scss */
 .wallop-slider {
-  position: relative;
-  overflow: hidden;
   width: 100%;
   -webkit-transform: translateZ(0); }
 
-/* line 8, wallop-slider.scss */
 .wallop-slider__list {
-  list-style: none; }
+  list-style: none;
+  position: relative;
+  overflow: hidden; }
 
-/* line 10, wallop-slider.scss */
 .wallop-slider__item {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; }
-  /* line 17, wallop-slider.scss */
   .wallop-slider__item img {
     display: block;
     width: 100%; }
 
-/* line 23, wallop-slider.scss */
 .wallop-slider__item--current {
   display: block;
   position: static; }
 
 /*==========  FADE CONFIG  ==========*/
-/* line 5, _wallop-slider--slide.scss */
 .wallop-slider--slide {
   /* the 10ms animation-delay fixed some weird rendering issues with iPhone */ }
-  /* line 9, _wallop-slider--slide.scss */
   .wallop-slider--slide .wallop-slider__item--show-previous {
     -webkit-animation: slideFromLeft 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 10, _wallop-slider--slide.scss */
   .wallop-slider--slide .wallop-slider__item--show-next {
     -webkit-animation: slideFromRight 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 12, _wallop-slider--slide.scss */
   .wallop-slider--slide .wallop-slider__item--hide-previous, .wallop-slider--slide .wallop-slider__item--hide-next {
     display: block; }
-  /* line 13, _wallop-slider--slide.scss */
   .wallop-slider--slide .wallop-slider__item--hide-previous {
     -webkit-animation: slideToLeft 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 14, _wallop-slider--slide.scss */
   .wallop-slider--slide .wallop-slider__item--hide-next {
     -webkit-animation: slideToRight 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromLeft {
-  /* line 21, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(-100%, 0, 0); } }
 
 @-webkit-keyframes slideFromRight {
-  /* line 25, _wallop-slider--slide.scss */
   0% {
     -webkit-transform: translate3d(100%, 0, 0); } }
 
 @-webkit-keyframes slideToLeft {
-  /* line 29, _wallop-slider--slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 30, _wallop-slider--slide.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0); } }
 
 @-webkit-keyframes slideToRight {
-  /* line 37, _wallop-slider--slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 38, _wallop-slider--slide.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0); } }
 
 /*==========  VERTICAL SLIDE CONFIG  ==========*/
-/* line 5, _wallop-slider--vertical-slide.scss */
 .wallop-slider--vertical-slide {
   /* the 10ms animation-delay fixed some weird rendering issues with iPhone */ }
-  /* line 9, _wallop-slider--vertical-slide.scss */
+  .wallop-slider--vertical-slide .wallop-slider__list {
+    position: relative;
+    overflow: hidden; }
   .wallop-slider--vertical-slide .wallop-slider__item--show-next {
     -webkit-animation: slideFromTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 10, _wallop-slider--vertical-slide.scss */
   .wallop-slider--vertical-slide .wallop-slider__item--show-previous {
     -webkit-animation: slideFromBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 13, _wallop-slider--vertical-slide.scss */
   .wallop-slider--vertical-slide .wallop-slider__item--hide-previous,
   .wallop-slider--vertical-slide .wallop-slider__item--hide-next {
     display: block; }
-  /* line 15, _wallop-slider--vertical-slide.scss */
   .wallop-slider--vertical-slide .wallop-slider__item--hide-previous {
     -webkit-animation: slideToBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 16, _wallop-slider--vertical-slide.scss */
   .wallop-slider--vertical-slide .wallop-slider__item--hide-next {
     -webkit-animation: slideToTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  VERTICAL SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromTop {
-  /* line 23, _wallop-slider--vertical-slide.scss */
   0% {
     -webkit-transform: translate3d(0, -100%, 0); } }
 
 @-webkit-keyframes slideFromBottom {
-  /* line 27, _wallop-slider--vertical-slide.scss */
   0% {
     -webkit-transform: translate3d(0, 100%, 0); } }
 
 @-webkit-keyframes slideToTop {
-  /* line 31, _wallop-slider--vertical-slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 32, _wallop-slider--vertical-slide.scss */
   100% {
     -webkit-transform: translate3d(0, -100%, 0);
     opacity: 0; } }
 
 @-webkit-keyframes slideToBottom {
-  /* line 40, _wallop-slider--vertical-slide.scss */
   99% {
     opacity: 1; }
 
-  /* line 41, _wallop-slider--vertical-slide.scss */
   100% {
     -webkit-transform: translate3d(0, 100%, 0);
     opacity: 0; } }
 
 /*==========  FADE CONFIG  ==========*/
-/* line 8, _wallop-slider--fade.scss */
 .wallop-slider--fade .wallop-slider__item--hide-previous,
 .wallop-slider--fade .wallop-slider__item--hide-next {
   display: block; }
-/* line 10, _wallop-slider--fade.scss */
 .wallop-slider--fade .wallop-slider__item--hide-previous {
   -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 11, _wallop-slider--fade.scss */
 .wallop-slider--fade .wallop-slider__item--hide-next {
   -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  FADE ANIMATIONS  ==========*/
 @-webkit-keyframes fadeOut {
-  /* line 18, _wallop-slider--fade.scss */
   100% {
     opacity: 0; } }
 
 /*==========  FOLD CONFIG  ==========*/
-/* line 7, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__list {
   -webkit-perspective: 1000; }
-/* line 11, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__item--current {
   position: relative; }
-/* line 15, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__item--show-previous {
   -webkit-transform: translateZ(0);
   -webkit-transform-origin: center left;
   -webkit-animation: foldFromLeft 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   z-index: 2; }
-/* line 22, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__item--show-next {
   -webkit-transform: translateZ(0);
   -webkit-transform-origin: center right;
   -webkit-animation: foldFromRight 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   z-index: 1; }
-/* line 30, _wallop-slider--fold.scss */
 .wallop-slider--fold .wallop-slider__item--hide-previous,
 .wallop-slider--fold .wallop-slider__item--hide-next {
   display: block; }
 
 /*==========  FOLD ANIMATIONS  ==========*/
 @-webkit-keyframes foldFromLeft {
-  /* line 38, _wallop-slider--fold.scss */
   0% {
     -webkit-transform: rotateY(-90deg); } }
 
 @-webkit-keyframes foldFromRight {
-  /* line 44, _wallop-slider--fold.scss */
   0% {
     -webkit-transform: rotateY(90deg); } }
 
 /*==========  SCALE CONFIG  ==========*/
-/* line 9, _wallop-slider--scale.scss */
 .wallop-slider--scale .wallop-slider__item--hide-previous,
 .wallop-slider--scale .wallop-slider__item--hide-next {
   display: block; }
-/* line 11, _wallop-slider--scale.scss */
 .wallop-slider--scale .wallop-slider__item--hide-previous {
   -webkit-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
-/* line 12, _wallop-slider--scale.scss */
 .wallop-slider--scale .wallop-slider__item--hide-next {
   -webkit-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both; }
 
 /*==========  SCALE ANIMATIONS  ==========*/
 @-webkit-keyframes scaleOut {
-  /* line 19, _wallop-slider--scale.scss */
   100% {
     -webkit-transform: scale(1.6);
     opacity: 0; } }
 
 /*==========  SPECIAL CONFIG  ==========*/
-/* line 8, _wallop-slider--rotate.scss */
 .wallop-slider--rotate .wallop-slider__item--hide-previous,
 .wallop-slider--rotate .wallop-slider__item--hide-next {
   display: block; }
-/* line 10, _wallop-slider--rotate.scss */
 .wallop-slider--rotate .wallop-slider__item--hide-previous {
   -webkit-animation: rotateToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-/* line 11, _wallop-slider--rotate.scss */
 .wallop-slider--rotate .wallop-slider__item--hide-next {
   -webkit-animation: rotateToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  SPCECIAL ANIMATIONS  ==========*/
 @-webkit-keyframes rotateToLeft {
-  /* line 18, _wallop-slider--rotate.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 19, _wallop-slider--rotate.scss */
   99% {
     opacity: 1; }
 
-  /* line 20, _wallop-slider--rotate.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0) rotate(90deg); } }
 
 @-webkit-keyframes rotateToRight {
-  /* line 27, _wallop-slider--rotate.scss */
   0% {
     -webkit-transform: translate3d(0, 0, 0); }
 
-  /* line 28, _wallop-slider--rotate.scss */
   99% {
     opacity: 1; }
 
-  /* line 29, _wallop-slider--rotate.scss */
   100% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0) rotate(-90deg); } }
 
+/*-----  Responsive  ------*/
 @media only screen and (max-width: 479px) {
-  /* line 5, _wallop-slider--targeted.scss */
   .wallop-slider--targeted .wallop-slider__item--hide-previous, .wallop-slider--targeted .wallop-slider__item--hide-next {
     display: block; }
-  /* line 6, _wallop-slider--targeted.scss */
   .wallop-slider--targeted .wallop-slider__item--hide-previous {
     -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 7, _wallop-slider--targeted.scss */
   .wallop-slider--targeted .wallop-slider__item--hide-next {
     -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; } }
 @media only screen and (min-width: 480px) {
-  /* line 12, _wallop-slider--targeted.scss */
   .wallop-slider--targeted .wallop-slider__item--show-previous {
     -webkit-animation: slideFromLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 13, _wallop-slider--targeted.scss */
   .wallop-slider--targeted .wallop-slider__item--show-next {
     -webkit-animation: slideFromRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 14, _wallop-slider--targeted.scss */
   .wallop-slider--targeted .wallop-slider__item--hide-previous, .wallop-slider--targeted .wallop-slider__item--hide-next {
     display: block; }
-  /* line 15, _wallop-slider--targeted.scss */
   .wallop-slider--targeted .wallop-slider__item--hide-previous {
     -webkit-animation: slideToLeft 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
-  /* line 16, _wallop-slider--targeted.scss */
   .wallop-slider--targeted .wallop-slider__item--hide-next {
     -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; } }
 
@@ -423,7 +339,6 @@ footer {
  * Based (more or less) on the Twilight theme originally of Textmate fame.
  * @author Remy Bach
  */
-/* line 7, _prism.scss */
 code[class*="language-"],
 pre[class*="language-"] {
   color: white;
@@ -441,40 +356,34 @@ pre[class*="language-"] {
   -ms-hyphens: none;
   hyphens: none; }
 
-/* line 29, _prism.scss */
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
   background: #141414;
   /* #141414 */ }
 
 /* Code blocks */
-/* line 34, _prism.scss */
 pre[class*="language-"] {
   margin: .5em 0;
   overflow: auto;
   padding: 1em; }
 
-/* line 42, _prism.scss */
 pre[class*="language-"]::selection {
   /* Safari */
   background: #27292a;
   /* #282A2B */ }
 
-/* line 45, _prism.scss */
 pre[class*="language-"]::selection {
   /* Firefox */
   background: #27292a;
   /* #282A2B */ }
 
 /* Text Selection colour */
-/* line 51, _prism.scss */
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
   text-shadow: none;
   background: rgba(237, 237, 237, 0.15);
   /* #EDEDED */ }
 
-/* line 57, _prism.scss */
 pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
 code[class*="language-"]::selection, code[class*="language-"] ::selection {
   text-shadow: none;
@@ -482,7 +391,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   /* #EDEDED */ }
 
 /* Inline code */
-/* line 63, _prism.scss */
 :not(pre) > code[class*="language-"] {
   border-radius: .3em;
   border: 0.13em solid #545454;
@@ -490,7 +398,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   box-shadow: 1px 1px 0.3em -0.1em black inset;
   padding: .15em .2em .05em; }
 
-/* line 73, _prism.scss */
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -498,22 +405,18 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   color: #787878;
   /* #777777 */ }
 
-/* line 77, _prism.scss */
 .token.punctuation {
   opacity: .7; }
 
-/* line 81, _prism.scss */
 .namespace {
   opacity: .7; }
 
-/* line 87, _prism.scss */
 .token.tag,
 .token.boolean,
 .token.number {
   color: #cf694a;
   /* #CF6A4C */ }
 
-/* line 96, _prism.scss */
 .token.keyword,
 .token.property,
 .token.selector,
@@ -523,7 +426,6 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   color: #f9ee9a;
   /* #F9EE98 */ }
 
-/* line 107, _prism.scss */
 .token.attr-name,
 .token.attr-value,
 .token.string,
@@ -536,32 +438,26 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   color: #919e6b;
   /* #8F9D6A */ }
 
-/* line 111, _prism.scss */
 .token.atrule {
   color: #7386a5;
   /* #7587A6 */ }
 
-/* line 116, _prism.scss */
 .token.regex,
 .token.important {
   color: #e9c163;
   /* #E9C062 */ }
 
-/* line 120, _prism.scss */
 .token.important {
   font-weight: bold; }
 
-/* line 124, _prism.scss */
 .token.entity {
   cursor: help; }
 
-/* line 127, _prism.scss */
 pre[data-line] {
   padding: 1em 0 1em 3em;
   position: relative; }
 
 /* Markup */
-/* line 135, _prism.scss */
 .language-markup .token.tag,
 .language-markup .token.attr-name,
 .language-markup .token.punctuation {
@@ -569,12 +465,10 @@ pre[data-line] {
   /* #AC885B */ }
 
 /* Make the tokens sit above the line highlight so the colours don't look faded. */
-/* line 140, _prism.scss */
 .token {
   position: relative;
   z-index: 1; }
 
-/* line 144, _prism.scss */
 .line-highlight {
   background: -moz-linear-gradient(left, rgba(84, 84, 84, 0.1) 70%, rgba(84, 84, 84, 0));
   /* #545454 */
@@ -601,7 +495,6 @@ pre[data-line] {
   white-space: pre;
   z-index: 0; }
 
-/* line 163, _prism.scss */
 .line-highlight:before,
 .line-highlight[data-end]:after {
   background-color: #8794a6;
@@ -621,7 +514,6 @@ pre[data-line] {
   top: .4em;
   vertical-align: .3em; }
 
-/* line 179, _prism.scss */
 .line-highlight[data-end]:after {
   bottom: .4em;
   content: attr(data-end);
