@@ -230,14 +230,55 @@ footer {
 .wallop-slider--fade .wallop-slider__item--hide-next {
   display: block; }
 .wallop-slider--fade .wallop-slider__item--hide-previous {
-  -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  -webkit-animation: fadeOut 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 .wallop-slider--fade .wallop-slider__item--hide-next {
-  -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  -webkit-animation: fadeOut 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  FADE ANIMATIONS  ==========*/
 @-webkit-keyframes fadeOut {
   100% {
     opacity: 0; } }
+
+/*==========  FADE CONFIG  ==========*/
+.wallop-slider--new .wallop-slider__list {
+  overflow: visible;
+  -webkit-perspective: 1000;
+  -webkit-perspective-origin: center center; }
+.wallop-slider--new .wallop-slider__item {
+  -webkit-transition: all 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-transform: translateZ(0); }
+.wallop-slider--new .wallop-slider__item--current + .wallop-slider__item,
+.wallop-slider--new .wallop-slider__item--hide-next {
+  display: block;
+  -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg);
+  -webkit-transform-origin: left center; }
+.wallop-slider--new .wallop-slider__item--before-current {
+  display: block;
+  -webkit-transform: translate3d(-100%, 0, 0) rotateY(18deg);
+  -webkit-transform-origin: right center; }
+.wallop-slider--new .wallop-slider__item--before-before {
+  display: block;
+  -webkit-transform: translate3d(-200%, 0, 0) rotateY(18deg);
+  -webkit-transform-origin: right center; }
+.wallop-slider--new .wallop-slider__item--hide-next + .wallop-slider__item {
+  display: block;
+  -webkit-transform: translate3d(200%, 0, 0) rotateY(-18deg);
+  -webkit-transform-origin: left center; }
+.wallop-slider--new .wallop-slider__item--show-next + .wallop-slider__item {
+  display: block;
+  -webkit-animation: showNext 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  -webkit-transform-origin: left center; }
+.wallop-slider--new .wallop-slider__item--hide-previous {
+  -webkit-transform: translate3d(-100%, 0, 0) rotateY(18deg);
+  -webkit-transform-origin: right center; }
+
+/*==========  FADE ANIMATIONS  ==========*/
+@-webkit-keyframes showNext {
+  0% {
+    -webkit-transform: translate3d(200%, 0, 0); }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg); } }
 
 /*==========  FOLD CONFIG  ==========*/
 .wallop-slider--fold .wallop-slider__list {
