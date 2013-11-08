@@ -230,55 +230,14 @@ footer {
 .wallop-slider--fade .wallop-slider__item--hide-next {
   display: block; }
 .wallop-slider--fade .wallop-slider__item--hide-previous {
-  -webkit-animation: fadeOut 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 .wallop-slider--fade .wallop-slider__item--hide-next {
-  -webkit-animation: fadeOut 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
+  -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; }
 
 /*==========  FADE ANIMATIONS  ==========*/
 @-webkit-keyframes fadeOut {
   100% {
     opacity: 0; } }
-
-/*==========  FADE CONFIG  ==========*/
-.wallop-slider--new .wallop-slider__list {
-  overflow: visible;
-  -webkit-perspective: 1000;
-  -webkit-perspective-origin: center center; }
-.wallop-slider--new .wallop-slider__item {
-  -webkit-transition: all 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  -webkit-transform: translateZ(0); }
-.wallop-slider--new .wallop-slider__item--current + .wallop-slider__item,
-.wallop-slider--new .wallop-slider__item--hide-next {
-  display: block;
-  -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg);
-  -webkit-transform-origin: left center; }
-.wallop-slider--new .wallop-slider__item--before-current {
-  display: block;
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(18deg);
-  -webkit-transform-origin: right center; }
-.wallop-slider--new .wallop-slider__item--before-before {
-  display: block;
-  -webkit-transform: translate3d(-200%, 0, 0) rotateY(18deg);
-  -webkit-transform-origin: right center; }
-.wallop-slider--new .wallop-slider__item--hide-next + .wallop-slider__item {
-  display: block;
-  -webkit-transform: translate3d(200%, 0, 0) rotateY(-18deg);
-  -webkit-transform-origin: left center; }
-.wallop-slider--new .wallop-slider__item--show-next + .wallop-slider__item {
-  display: block;
-  -webkit-animation: showNext 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -webkit-transform-origin: left center; }
-.wallop-slider--new .wallop-slider__item--hide-previous {
-  -webkit-transform: translate3d(-100%, 0, 0) rotateY(18deg);
-  -webkit-transform-origin: right center; }
-
-/*==========  FADE ANIMATIONS  ==========*/
-@-webkit-keyframes showNext {
-  0% {
-    -webkit-transform: translate3d(200%, 0, 0); }
-
-  100% {
-    -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg); } }
 
 /*==========  FOLD CONFIG  ==========*/
 .wallop-slider--fold .wallop-slider__list {
@@ -375,6 +334,58 @@ footer {
   .wallop-slider--targeted .wallop-slider__item--hide-next {
     -webkit-animation: slideToRight 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both; } }
 
+/*==========  EXPERIMENTAL CONFIG  ==========*/
+.wallop-slider--experimental .wallop-slider__list {
+  overflow: visible;
+  -webkit-perspective: 1000; }
+.wallop-slider--experimental .wallop-slider__item {
+  -webkit-transition: all 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-transform: translateZ(0); }
+.wallop-slider--experimental .wallop-slider__item--current {
+  position: relative; }
+.wallop-slider--experimental .wallop-slider__item--current + .wallop-slider__item,
+.wallop-slider--experimental .wallop-slider__item--hide-next {
+  display: block;
+  -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg);
+  -webkit-transform-origin: left center; }
+.wallop-slider--experimental .wallop-slider__item--before-current {
+  display: block;
+  -webkit-transform: translate3d(-100%, 0, 0) rotateY(18deg);
+  -webkit-transform-origin: right center; }
+.wallop-slider--experimental .wallop-slider__item--before-before {
+  display: block;
+  -webkit-transform: translate3d(-200%, 0, 0) rotateY(18deg);
+  -webkit-transform-origin: right center; }
+.wallop-slider--experimental .wallop-slider__item--hide-next + .wallop-slider__item {
+  display: block;
+  -webkit-transform-origin: left center; }
+.wallop-slider--experimental .wallop-slider__item--show-next + .wallop-slider__item {
+  display: block;
+  -webkit-animation: showNext 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  -webkit-transform-origin: left center; }
+.wallop-slider--experimental .wallop-slider__item--hide-next + .wallop-slider__item {
+  display: block;
+  -webkit-animation: hideNext 650ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  -webkit-transform-origin: left center; }
+.wallop-slider--experimental .wallop-slider__item--hide-previous {
+  -webkit-transform: translate3d(-100%, 0, 0) rotateY(18deg);
+  -webkit-transform-origin: right center; }
+
+/*==========  EXPERIMENTAL ANIMATIONS  ==========*/
+@-webkit-keyframes showNext {
+  0% {
+    -webkit-transform: translate3d(200%, 0, 0); }
+
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg); } }
+
+@-webkit-keyframes hideNext {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg); }
+
+  100% {
+    -webkit-transform: translate3d(200%, 0, 0) rotateY(-18deg); } }
+
 /**
  * prism.js Twilight theme
  * Based (more or less) on the Twilight theme originally of Textmate fame.
@@ -436,7 +447,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   border-radius: .3em;
   border: 0.13em solid #545454;
   /* #545454 */
-  box-shadow: 1px 1px 0.3em -0.1em black inset;
+  box-shadow: 1px 1px .3em -.1em black inset;
   padding: .15em .2em .05em; }
 
 .token.comment,
