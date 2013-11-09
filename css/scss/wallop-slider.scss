@@ -1,6 +1,8 @@
+@import '_utils';
+
 .wallop-slider {
     width: 100%; // Recommended
-    -webkit-transform: translateZ(0); // Recommended - Force Hardware Acceleration
+    @include prefixr(transform, translateZ(0)); // Recommended - Force Hardware Acceleration
 }
 
 .wallop-slider__list {

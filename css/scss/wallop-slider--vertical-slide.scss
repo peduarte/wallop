@@ -1,3 +1,5 @@
+@import '_utils';
+
 $animationDuration: 450ms;
 $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
 
@@ -11,40 +13,39 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
     overflow: hidden;
   }
 
-  .wallop-slider__item--show-next { -webkit-animation: slideFromTop $animationDuration 10ms $animationEasing both; }
-  .wallop-slider__item--show-previous { -webkit-animation: slideFromBottom $animationDuration 10ms $animationEasing both;}
+  .wallop-slider__item--show-next { @include prefixr(animation, slideFromTop $animationDuration 10ms $animationEasing both); }
+  .wallop-slider__item--show-previous { @include prefixr(animation, slideFromBottom $animationDuration 10ms $animationEasing both); }
 
   .wallop-slider__item--hide-previous,
   .wallop-slider__item--hide-next { display: block; }
 
-  .wallop-slider__item--hide-previous { -webkit-animation: slideToBottom $animationDuration 10ms $animationEasing both; }
-  .wallop-slider__item--hide-next { -webkit-animation: slideToTop $animationDuration 10ms $animationEasing both; }
+  .wallop-slider__item--hide-previous { @include prefixr(animation, slideToBottom $animationDuration 10ms $animationEasing both); }
+  .wallop-slider__item--hide-next { @include prefixr(animation, slideToTop $animationDuration 10ms $animationEasing both); }
 
 }
 
 
 /*==========  VERTICAL SLIDE ANIMATIONS  ==========*/
-@-webkit-keyframes slideFromTop {
-  0% { -webkit-transform: translate3d(0, -100%, 0); }
+@include keyframes(slideFromTop) {
+  0% { @include prefixr(transform, translate3d(0, -100%, 0)); }
 }
 
-@-webkit-keyframes slideFromBottom {
-  0% { -webkit-transform: translate3d(0, 100%, 0); }
+@include keyframes(slideFromBottom) {
+  0% { @include prefixr(transform, translate3d(0, 100%, 0)); }
 }
 
-@-webkit-keyframes slideToTop {
+@include keyframes(slideToTop) {
   99% { opacity: 1; }
   100% {
-    -webkit-transform: translate3d(0, -100%, 0);
+    @include prefixr(transform, translate3d(0, -100%, 0));
     opacity: 0;
   }
 }
 
-
-@-webkit-keyframes slideToBottom {
+@include keyframes(slideToBottom) {
   99% { opacity: 1; }
   100% {
-    -webkit-transform: translate3d(0, 100%, 0);
+    @include prefixr(transform, translate3d(0, 100%, 0));
     opacity: 0;
   }
 }
