@@ -29,6 +29,7 @@ WallopSlider = (function() {
     };
 
     this.selector = selector;
+    this.$selector = document.querySelector(this.selector);
     this.options = extend(this.options, options);
     this.event = null;
 
@@ -81,7 +82,7 @@ WallopSlider = (function() {
 
     // Update event currentItemIndex property and dispatch it
     this.event.detail.currentItemIndex = this.currentItemIndex;
-    document.querySelector(this.selector).dispatchEvent(this.event);
+    this.$selector.dispatchEvent(this.event);
   };
 
   // Callback for when previous button is clicked
@@ -101,13 +102,15 @@ WallopSlider = (function() {
     this.buttonNext.addEventListener('click', function () { _this.onNextButtonClicked(); });
   };
 
+  WallopProto.on = function (eventName, callback) {
+    this.$selector.addEventListener('change', function(event) {
+      return callback(event);
+    }, false);
+  };
 
-
-
-  // Helper functions
   WallopProto.createCustomEvent = function () {
     var _this = this;
-    this.event = new CustomEvent('goToEnded', {
+    this.event = new CustomEvent('change', {
       detail: {
         currentItemIndex: Number(_this.currentItemIndex)
       },
@@ -115,6 +118,10 @@ WallopSlider = (function() {
       cancelable: true
     });
   };
+
+
+
+  // Helper functions
 
   function $$(element) {
     if (!element) { return; }
