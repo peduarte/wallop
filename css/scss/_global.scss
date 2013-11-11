@@ -76,6 +76,11 @@ pre {
   max-width: 612px;
 }
 
+// Added here because this is not required
+.wallop-slider {
+  position: relative
+}
+
 .small-slider {
   max-width: 320px;
   display: inline-block;
@@ -99,6 +104,7 @@ pre {
   @include media-query(medium) {
     margin-top: -10px;
     position: absolute;
+    z-index: 3;
     top: 50%;
     opacity: 0;
     @include prefixr(transition, opacity 200ms ease);

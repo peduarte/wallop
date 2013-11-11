@@ -2,7 +2,6 @@
 
 .wallop-slider {
     width: 100%; // Recommended
-    @include prefixr(transform, translateZ(0)); // Recommended - Force Hardware Acceleration
 }
 
 .wallop-slider__list {
