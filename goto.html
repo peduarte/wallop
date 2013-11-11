@@ -31,11 +31,11 @@
 
   <section>
     <h2>Public API demo</h2>
-    <button class="goto" data-goto-slide="0">Slide 1</button>
-    <button class="goto" data-goto-slide="1">Slide 2</button>
-    <button class="goto" data-goto-slide="2">Slide 3</button>
-    <button class="goto" data-goto-slide="3">Slide 4</button>
-    <button class="goto" data-goto-slide="4">Slide 5</button>
+    <button class="goto" data-goto-slide="1">Slide 1</button>
+    <button class="goto" data-goto-slide="2">Slide 2</button>
+    <button class="goto" data-goto-slide="3">Slide 3</button>
+    <button class="goto" data-goto-slide="4">Slide 4</button>
+    <button class="goto" data-goto-slide="5">Slide 5</button>
   </section>
 
   <section>
@@ -54,8 +54,6 @@
   // goTo API Usage
   var goToBtnClicked = function () {
     var slideNumber = this.getAttribute('data-goto-slide');
-
-    // Important note: the goTo Methods takes an index beginning from 0
     photoSlider.goTo(slideNumber);
   };
 

@@ -70,7 +70,7 @@ WallopSlider = (function() {
 
   // Method to add classes to the right elements depending on the index passed
   WallopProto.goTo = function (index) {
-    index = Number(index);
+    index = Number(index - 1);
     if (index >= this.allItemsArrayLength || index < 0 || index === this.currentItemIndex) { return; }
 
     this.removeAllHelperSettings();
@@ -89,12 +89,12 @@ WallopSlider = (function() {
 
   // Callback for when previous button is clicked
   WallopProto.onPreviousButtonClicked = function () {
-    this.goTo(this.currentItemIndex - 1);
+    this.goTo((this.currentItemIndex + 1) - 1);
   };
 
   // Callback for when next button is clicked
   WallopProto.onNextButtonClicked = function () {
-    this.goTo(this.currentItemIndex + 1);
+    this.goTo((this.currentItemIndex + 1) + 1);
   };
 
   // Attach click handlers
@@ -104,12 +104,18 @@ WallopSlider = (function() {
     this.buttonNext.addEventListener('click', function () { _this.onNextButtonClicked(); });
   };
 
+  // Method so it is nicer for the user to use custom events
   WallopProto.on = function (eventName, callback) {
-    this.$selector.addEventListener('change', function(event) {
+    if (eventName !== 'change') {
+      throw new Error('the only available event is "change"');
+    }
+
+    this.$selector.addEventListener(eventName, function(event) {
       return callback(event);
     }, false);
   };
 
+  // Create custom Event
   WallopProto.createCustomEvent = function () {
     var _this = this;
     this.event = new CustomEvent('change', {
