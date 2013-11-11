@@ -1,7 +1,7 @@
 /**
 * wallopSlider.js
 *
-* @fileoverview Simple Slider Class Handler
+* @fileoverview Simple Slider Class
 *
 * @author Pedro Duarte
 * @author http://pedroduarte.me
@@ -32,6 +32,8 @@ WallopSlider = (function() {
     this.$selector = document.querySelector(this.selector);
     this.options = extend(this.options, options);
     this.event = null;
+
+
 
     // "Global vars"
     this.allItemsArray = Array.prototype.slice.call(document.querySelectorAll(this.selector + ' .' + this.options.wSItemClass));
@@ -122,7 +124,9 @@ WallopSlider = (function() {
 
 
 
-  // Helper functions
+  /**
+   * Helper functions
+   */
 
   function $$(element) {
     if (!element) { return; }
