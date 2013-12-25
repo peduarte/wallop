@@ -25,7 +25,8 @@ WallopSlider = (function() {
       wSShowPreviousClass: 'wallop-slider__item--show-previous',
       wSShowNextClass: 'wallop-slider__item--show-next',
       wSHidePreviousClass: 'wallop-slider__item--hide-previous',
-      wSHideNextClass: 'wallop-slider__item--hide-next'
+      wSHideNextClass: 'wallop-slider__item--hide-next',
+      wSCarousel: false
     };
 
     this.selector = selector;
@@ -50,7 +51,7 @@ WallopSlider = (function() {
 
   // Update prev/next disabled attribute
   WallopProto.updatePagination = function () {
-    if ((this.currentItemIndex + 1) === this.allItemsArrayLength) {
+    if ((this.currentItemIndex + 1) === this.allItemsArrayLength && this.options.wSCarousel !== true) {
       this.buttonNext.setAttribute('disabled');
     } else if (this.currentItemIndex === 0) {
       this.buttonPrevious.setAttribute('disabled');
@@ -94,7 +95,11 @@ WallopSlider = (function() {
 
   // Callback for when next button is clicked
   WallopProto.onNextButtonClicked = function () {
-    this.goTo((this.currentItemIndex + 1) + 1);
+    if(this.currentItemIndex + 1 === this.allItemsArrayLength && this.options.wSCarousel === true) {
+      this.goTo(1);
+    } else {
+      this.goTo((this.currentItemIndex + 1) + 1);
+    }
   };
 
   // Attach click handlers
