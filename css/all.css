@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -220,7 +221,6 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 @-moz-keyframes slideFromLeft {
   0% {
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -229,7 +229,6 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 @-ms-keyframes slideFromLeft {
   0% {
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -238,7 +237,6 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 @keyframes slideFromLeft {
   0% {
     -webkit-transform: translate3d(-100%, 0, 0);
@@ -247,7 +245,6 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 @-webkit-keyframes slideFromRight {
   0% {
     -webkit-transform: translate3d(100%, 0, 0);
@@ -256,7 +253,6 @@ footer {
     transform: translate3d(100%, 0, 0);
   }
 }
-
 @-moz-keyframes slideFromRight {
   0% {
     -webkit-transform: translate3d(100%, 0, 0);
@@ -265,7 +261,6 @@ footer {
     transform: translate3d(100%, 0, 0);
   }
 }
-
 @-ms-keyframes slideFromRight {
   0% {
     -webkit-transform: translate3d(100%, 0, 0);
@@ -274,7 +269,6 @@ footer {
     transform: translate3d(100%, 0, 0);
   }
 }
-
 @keyframes slideFromRight {
   0% {
     -webkit-transform: translate3d(100%, 0, 0);
@@ -283,7 +277,6 @@ footer {
     transform: translate3d(100%, 0, 0);
   }
 }
-
 @-webkit-keyframes slideToLeft {
   99% {
     opacity: 1;
@@ -297,7 +290,6 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 @-moz-keyframes slideToLeft {
   99% {
     opacity: 1;
@@ -311,7 +303,6 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 @-ms-keyframes slideToLeft {
   99% {
     opacity: 1;
@@ -325,7 +316,6 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 @keyframes slideToLeft {
   99% {
     opacity: 1;
@@ -339,7 +329,6 @@ footer {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
 @-webkit-keyframes slideToRight {
   99% {
     opacity: 1;
@@ -353,7 +342,6 @@ footer {
     transform: translate3d(100%, 0, 0);
   }
 }
-
 @-moz-keyframes slideToRight {
   99% {
     opacity: 1;
@@ -367,7 +355,6 @@ footer {
     transform: translate3d(100%, 0, 0);
   }
 }
-
 @-ms-keyframes slideToRight {
   99% {
     opacity: 1;
@@ -381,7 +368,6 @@ footer {
     transform: translate3d(100%, 0, 0);
   }
 }
-
 @keyframes slideToRight {
   99% {
     opacity: 1;
@@ -395,7 +381,6 @@ footer {
     transform: translate3d(100%, 0, 0);
   }
 }
-
 /*==========  VERTICAL SLIDE CONFIG  ==========*/
 .wallop-slider--vertical-slide {
   /* the 10ms animation-delay fixed some weird rendering issues with iPhone */
@@ -442,7 +427,6 @@ footer {
     transform: translate3d(0, -100%, 0);
   }
 }
-
 @-moz-keyframes slideFromTop {
   0% {
     -webkit-transform: translate3d(0, -100%, 0);
@@ -451,7 +435,6 @@ footer {
     transform: translate3d(0, -100%, 0);
   }
 }
-
 @-ms-keyframes slideFromTop {
   0% {
     -webkit-transform: translate3d(0, -100%, 0);
@@ -460,7 +443,6 @@ footer {
     transform: translate3d(0, -100%, 0);
   }
 }
-
 @keyframes slideFromTop {
   0% {
     -webkit-transform: translate3d(0, -100%, 0);
@@ -469,7 +451,6 @@ footer {
     transform: translate3d(0, -100%, 0);
   }
 }
-
 @-webkit-keyframes slideFromBottom {
   0% {
     -webkit-transform: translate3d(0, 100%, 0);
@@ -478,7 +459,6 @@ footer {
     transform: translate3d(0, 100%, 0);
   }
 }
-
 @-moz-keyframes slideFromBottom {
   0% {
     -webkit-transform: translate3d(0, 100%, 0);
@@ -487,7 +467,6 @@ footer {
     transform: translate3d(0, 100%, 0);
   }
 }
-
 @-ms-keyframes slideFromBottom {
   0% {
     -webkit-transform: translate3d(0, 100%, 0);
@@ -496,7 +475,6 @@ footer {
     transform: translate3d(0, 100%, 0);
   }
 }
-
 @keyframes slideFromBottom {
   0% {
     -webkit-transform: translate3d(0, 100%, 0);
@@ -505,7 +483,6 @@ footer {
     transform: translate3d(0, 100%, 0);
   }
 }
-
 @-webkit-keyframes slideToTop {
   99% {
     opacity: 1;
@@ -519,7 +496,6 @@ footer {
     opacity: 0;
   }
 }
-
 @-moz-keyframes slideToTop {
   99% {
     opacity: 1;
@@ -533,7 +509,6 @@ footer {
     opacity: 0;
   }
 }
-
 @-ms-keyframes slideToTop {
   99% {
     opacity: 1;
@@ -547,7 +522,6 @@ footer {
     opacity: 0;
   }
 }
-
 @keyframes slideToTop {
   99% {
     opacity: 1;
@@ -561,7 +535,6 @@ footer {
     opacity: 0;
   }
 }
-
 @-webkit-keyframes slideToBottom {
   99% {
     opacity: 1;
@@ -575,7 +548,6 @@ footer {
     opacity: 0;
   }
 }
-
 @-moz-keyframes slideToBottom {
   99% {
     opacity: 1;
@@ -589,7 +561,6 @@ footer {
     opacity: 0;
   }
 }
-
 @-ms-keyframes slideToBottom {
   99% {
     opacity: 1;
@@ -603,7 +574,6 @@ footer {
     opacity: 0;
   }
 }
-
 @keyframes slideToBottom {
   99% {
     opacity: 1;
@@ -617,7 +587,6 @@ footer {
     opacity: 0;
   }
 }
-
 /*==========  FADE CONFIG  ==========*/
 .wallop-slider--fade .wallop-slider__item--hide-previous,
 .wallop-slider--fade .wallop-slider__item--hide-next {
@@ -634,25 +603,21 @@ footer {
     opacity: 0;
   }
 }
-
 @-moz-keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-
 @-ms-keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-
 @keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-
 /*==========  FOLD CONFIG  ==========*/
 .wallop-slider--fold .wallop-slider__list {
   -webkit-perspective: 1000;
@@ -702,51 +667,67 @@ footer {
 @-webkit-keyframes foldFromLeft {
   0% {
     -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
   }
 }
-
 @-moz-keyframes foldFromLeft {
   0% {
     -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
   }
 }
-
 @-ms-keyframes foldFromLeft {
   0% {
     -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
   }
 }
-
 @keyframes foldFromLeft {
   0% {
     -webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
   }
 }
-
 @-webkit-keyframes foldFromRight {
   0% {
     -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
   }
 }
-
 @-moz-keyframes foldFromRight {
   0% {
     -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
   }
 }
-
 @-ms-keyframes foldFromRight {
   0% {
     -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
   }
 }
-
 @keyframes foldFromRight {
   0% {
     -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
   }
 }
-
 /*==========  SCALE CONFIG  ==========*/
 .wallop-slider--scale .wallop-slider__item--hide-previous,
 .wallop-slider--scale .wallop-slider__item--hide-next {
@@ -767,7 +748,6 @@ footer {
     opacity: 0;
   }
 }
-
 @-moz-keyframes scaleOut {
   100% {
     -webkit-transform: scale(1.6);
@@ -777,7 +757,6 @@ footer {
     opacity: 0;
   }
 }
-
 @-ms-keyframes scaleOut {
   100% {
     -webkit-transform: scale(1.6);
@@ -787,7 +766,6 @@ footer {
     opacity: 0;
   }
 }
-
 @keyframes scaleOut {
   100% {
     -webkit-transform: scale(1.6);
@@ -797,7 +775,6 @@ footer {
     opacity: 0;
   }
 }
-
 /*==========  SPECIAL CONFIG  ==========*/
 .wallop-slider--rotate .wallop-slider__item--hide-previous,
 .wallop-slider--rotate .wallop-slider__item--hide-next {
@@ -830,7 +807,6 @@ footer {
     transform: translate3d(-100%, 0, 0) rotate(90deg);
   }
 }
-
 @-moz-keyframes rotateToLeft {
   99% {
     opacity: 1;
@@ -844,7 +820,6 @@ footer {
     transform: translate3d(-100%, 0, 0) rotate(90deg);
   }
 }
-
 @-ms-keyframes rotateToLeft {
   99% {
     opacity: 1;
@@ -858,7 +833,6 @@ footer {
     transform: translate3d(-100%, 0, 0) rotate(90deg);
   }
 }
-
 @keyframes rotateToLeft {
   99% {
     opacity: 1;
@@ -872,7 +846,6 @@ footer {
     transform: translate3d(-100%, 0, 0) rotate(90deg);
   }
 }
-
 @-webkit-keyframes rotateToRight {
   99% {
     opacity: 1;
@@ -886,7 +859,6 @@ footer {
     transform: translate3d(100%, 0, 0) rotate(-90deg);
   }
 }
-
 @-moz-keyframes rotateToRight {
   99% {
     opacity: 1;
@@ -900,7 +872,6 @@ footer {
     transform: translate3d(100%, 0, 0) rotate(-90deg);
   }
 }
-
 @-ms-keyframes rotateToRight {
   99% {
     opacity: 1;
@@ -914,7 +885,6 @@ footer {
     transform: translate3d(100%, 0, 0) rotate(-90deg);
   }
 }
-
 @keyframes rotateToRight {
   99% {
     opacity: 1;
@@ -928,7 +898,6 @@ footer {
     transform: translate3d(100%, 0, 0) rotate(-90deg);
   }
 }
-
 @media only screen and (min-width: 480px) {
   .wallop-slider--targeted .wallop-slider__item--hide-previous,
   .wallop-slider--targeted .wallop-slider__item--hide-next {
@@ -946,25 +915,21 @@ footer {
     opacity: 0;
   }
 }
-
 @-moz-keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-
 @-ms-keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-
 @keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-
 /*==========  EXPERIMENTAL CONFIG  ==========*/
 .wallop-slider--experimental .wallop-slider__list {
   overflow: visible;
@@ -1022,7 +987,6 @@ footer {
     -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg);
   }
 }
-
 @-webkit-keyframes hideNext {
   0% {
     -webkit-transform: translate3d(100%, 0, 0) rotateY(-18deg);
@@ -1032,7 +996,6 @@ footer {
     -webkit-transform: translate3d(200%, 0, 0) rotateY(-18deg);
   }
 }
-
 /**
  * prism.js Twilight theme
  * Based (more or less) on the Twilight theme originally of Textmate fame.
@@ -1101,7 +1064,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
   border-radius: .3em;
   border: 0.13em solid #545454;
   /* #545454 */
-  box-shadow: 1px 1px 0.3em -0.1em black inset;
+  box-shadow: 1px 1px .3em -.1em black inset;
   padding: .15em .2em .05em;
 }
 

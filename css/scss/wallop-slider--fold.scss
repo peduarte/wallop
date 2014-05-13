@@ -38,12 +38,12 @@ $animationEasing: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 /*==========  FOLD ANIMATIONS  ==========*/
 @include keyframes(foldFromLeft) {
   0% {
-    -webkit-transform: rotateY(-90deg);
+    @include prefixr(transform, rotateY(-90deg));
   }
 }
 
 @include keyframes(foldFromRight) {
   0% {
-    -webkit-transform: rotateY(90deg);
+    @include prefixr(transform, rotateY(90deg));
   }
 }
