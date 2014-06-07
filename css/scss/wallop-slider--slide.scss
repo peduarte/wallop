@@ -1,7 +1,7 @@
 @import '_utils';
 
-$animationDuration: 450ms;
-$animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$animationDuration: 350ms;
+$animationEasing: linear;
 /*==========  SLIDE CONFIG  ==========*/
 /* the 10ms animation-delay fixed some weird rendering issues with iPhone */
 .wallop-slider--slide {
