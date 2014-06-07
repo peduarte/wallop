@@ -1,7 +1,7 @@
 @import '_utils';
 
-$animationDuration: 450ms;
-$animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$animationDuration: 350ms;
+$animationEasing: linear;
 
 /*==========  VERTICAL SLIDE CONFIG  ==========*/
 .wallop-slider--vertical-slide {

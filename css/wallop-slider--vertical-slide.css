@@ -7,32 +7,32 @@
   overflow: hidden;
 }
 .wallop-slider--vertical-slide .wallop-slider__item--show-next {
-  -webkit-animation: slideFromTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -moz-animation: slideFromTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -ms-animation: slideFromTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: slideFromTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  -webkit-animation: slideFromTop 350ms 10ms linear both;
+  -moz-animation: slideFromTop 350ms 10ms linear both;
+  -ms-animation: slideFromTop 350ms 10ms linear both;
+  animation: slideFromTop 350ms 10ms linear both;
 }
 .wallop-slider--vertical-slide .wallop-slider__item--show-previous {
-  -webkit-animation: slideFromBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -moz-animation: slideFromBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -ms-animation: slideFromBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: slideFromBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  -webkit-animation: slideFromBottom 350ms 10ms linear both;
+  -moz-animation: slideFromBottom 350ms 10ms linear both;
+  -ms-animation: slideFromBottom 350ms 10ms linear both;
+  animation: slideFromBottom 350ms 10ms linear both;
 }
 .wallop-slider--vertical-slide .wallop-slider__item--hide-previous,
 .wallop-slider--vertical-slide .wallop-slider__item--hide-next {
   display: block;
 }
 .wallop-slider--vertical-slide .wallop-slider__item--hide-previous {
-  -webkit-animation: slideToBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -moz-animation: slideToBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -ms-animation: slideToBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: slideToBottom 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  -webkit-animation: slideToBottom 350ms 10ms linear both;
+  -moz-animation: slideToBottom 350ms 10ms linear both;
+  -ms-animation: slideToBottom 350ms 10ms linear both;
+  animation: slideToBottom 350ms 10ms linear both;
 }
 .wallop-slider--vertical-slide .wallop-slider__item--hide-next {
-  -webkit-animation: slideToTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -moz-animation: slideToTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  -ms-animation: slideToTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
-  animation: slideToTop 450ms 10ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  -webkit-animation: slideToTop 350ms 10ms linear both;
+  -moz-animation: slideToTop 350ms 10ms linear both;
+  -ms-animation: slideToTop 350ms 10ms linear both;
+  animation: slideToTop 350ms 10ms linear both;
 }
 
 /*==========  VERTICAL SLIDE ANIMATIONS  ==========*/
