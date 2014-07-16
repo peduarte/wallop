@@ -14,10 +14,10 @@ Include the script and stylesheet on your page and initialize it.
 
 ```
 <head>
-<link rel=stylesheet href=path/to/wallop-slider.css>
+<link rel=stylesheet href=path/to/WallopSlider.css>
 </head>
 <body>
-<script src=></script>
+<script src=path/to/WallopSlider.js></script>
 <script>var slider = new WallopSlider('.wallop-slider');</script>
 </body>
 ```
