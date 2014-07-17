@@ -1,1 +1,1 @@
-sass --watch css/scss:css --style expanded
+sass --watch site/css/scss:css --style expanded

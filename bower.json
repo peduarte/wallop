@@ -6,7 +6,7 @@
     "Pedro (http://www.pedroduarte.me/)"
   ],
   "description": "Simple, dependency free slider with its transitions controlled via CSS",
-  "main": "./scripts/WallopSlider.js",
+  "main": "./dist/WallopSlider.js",
   "keywords": [
     "slider",
     "dependency",
@@ -21,6 +21,9 @@
     "bower_components",
     "test",
     "tests",
-    "site"
+    "site",
+    "deploy.sh",
+    "sass.sh",
+    ".editorconfig"
   ]
 }
