@@ -50,7 +50,7 @@ Let's say you want to go to the second slide when you click on your button.
 
 ```
 document.querySelector('.button').addEventListener('click', function () {
-  slider.toGo(2);
+  slider.goTo(2);
 });
 
 ```
