@@ -34,7 +34,7 @@ Include the script and stylesheet on your page and initialize it.
 | wSShowNextClass     | 'wallop-slider__item--show-next'     | string  |
 | wSHidePreviousClass | 'wallop-slider__item--hide-previous' | string  |
 | wSHideNextClass     | 'wallop-slider__item--hide-next'     | string  |
-| wsCarousel          | false                                | boolean |
+| wSCarousel          | false                                | boolean |
 
 Usage: 
 
@@ -50,7 +50,7 @@ Let's say you want to go to the second slide when you click on your button.
 
 ```
 document.querySelector('.button').addEventListener('click', function () {
-  slider.toGo(2);
+  slider.goTo(2);
 });
 
 ```
