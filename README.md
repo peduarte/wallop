@@ -63,5 +63,11 @@ $('.button').click(function () {
 });
 ```
 
----
-Built by Pedro Duarte
+## Author and license
+
+WallopSlide has been built by Pedro Duarte.
+
+WallopSlide is free software released under the MIT licence.
+
+See the `COPYING.MIT` file or <http://opensource.org/licenses/MIT>
+for more details.
