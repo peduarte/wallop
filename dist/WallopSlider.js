@@ -5,6 +5,9 @@
 *
 * @author Pedro Duarte
 * @author http://pedroduarte.me
+*
+* @licence: http://opensource.org/licenses/MIT MIT
+* @source: https://github.com/peduarte/wallop-slider
 */
 
 //------------------------------------------------------------------------------------------------------------
