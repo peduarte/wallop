@@ -5,112 +5,173 @@
 *
 * @author Pedro Duarte
 * @author http://pedroduarte.me
+*
+* Changelog
+*   - goTo index now starts at 0 to match the change event
+*   - added checks in case there is no previous/next buttons
+*   - added a default current item in case there is none
+*   - fixed carousel
+*   - rename to SuitCSS syntax
+*   - added next and previous methods
+*   - rename option keys
+*   - added preventDefault on click callbacks in case the buttons are anchor tags
+*   - add exports check in case it's being used in browserify for example
+*   - stop multiple instances with the same selector - needs testing!
+*   - fixed a bug with multiple sliders of the same class and with carousel option = true
+*   - changes the selecor argument to take an actual selector rather than selector name
+*
+* To do
+*   - make a polymer version (?)
+*   - write tests
 */
 
 //------------------------------------------------------------------------------------------------------------
-var WallopSlider = WallopSlider || {};
+(function(global){
 
-WallopSlider = (function() {
-
-  function Wallop(selector, options) {
+  function WallopSlider(selector, options) {
     if (!selector) {
-      throw new Error('selector missing, eg: new WallopSlider(".selector")');
+      throw new Error('Selector missing, eg: new WallopSlider(".selector")');
+    }
+
+    for (var i = 0; i < selectorPool.length; i++) {
+      console.log('selectorPool[i] -> ', selectorPool[i]);
+      if (selectorPool[i] === selector) {
+        throw new Error('An instance of WallopSlider with this selector already exists: ' + selectorPool[i]);
+      }
     }
 
     this.options = {
-      wSBtnPreviousClass: 'wallop-slider__btn--previous',
-      wSBtnNextClass: 'wallop-slider__btn--next',
-      wSItemClass: 'wallop-slider__item',
-      wSCurrentItemClass: 'wallop-slider__item--current',
-      wSShowPreviousClass: 'wallop-slider__item--show-previous',
-      wSShowNextClass: 'wallop-slider__item--show-next',
-      wSHidePreviousClass: 'wallop-slider__item--hide-previous',
-      wSHideNextClass: 'wallop-slider__item--hide-next',
-      wSCarousel: false
+      btnPreviousClass: 'WallopSlider-btn--previous',
+      btnNextClass: 'WallopSlider-btn--next',
+      itemClass: 'WallopSlider-item',
+      currentItemClass: 'WallopSlider-item--current',
+      showPreviousClass: 'WallopSlider-item--show-previous',
+      showNextClass: 'WallopSlider-item--show-next',
+      hidePreviousClass: 'WallopSlider-item--hide-previous',
+      hideNextClass: 'WallopSlider-item--hide-next',
+      carousel: false
     };
 
-    this.selector = selector;
-    this.$selector = document.querySelector(this.selector);
+
+    // In case the selector passed is an array of selector, we get the first one.
+    // Just because we can.
+    this.$selector = selector.length > 0 ? selector[0] : selector;
+
     this.options = extend(this.options, options);
     this.event = null;
 
-
-
     // "Global vars"
-    this.allItemsArray = Array.prototype.slice.call(document.querySelectorAll(this.selector + ' .' + this.options.wSItemClass));
-    this.allItemsArrayLength = this.allItemsArray.length;
-    this.currentItemIndex = this.allItemsArray.indexOf(document.querySelector(this.selector + ' .' + this.options.wSCurrentItemClass));
-    this.buttonPrevious = document.querySelector(this.selector + ' .' + this.options.wSBtnPreviousClass);
-    this.buttonNext = document.querySelector(this.selector + ' .' + this.options.wSBtnNextClass);
+    this.allItemsArray = Array.prototype.slice.call(this.$selector.querySelectorAll(' .' + this.options.itemClass));
+    this.allItemsArrayLength = this.allItemsArray.length - 1; // otherwise starts from 1. weird?
+    this.currentItemIndex = this.allItemsArray.indexOf(this.$selector.querySelector(' .' + this.options.currentItemClass));
+    this.buttonPrevious = this.$selector.querySelector(' .' + this.options.btnPreviousClass);
+    this.buttonNext = this.$selector.querySelector(' .' + this.options.btnNextClass);
 
     this.bindEvents();
     this.createCustomEvent();
+
+    // If there is no active item, start at 0
+    // wrapped in timeout function so event can
+    // be listened from outside at anytime
+    if (this.currentItemIndex < 0) {
+      var _this = this;
+      setTimeout(function() {
+        _this.currentItemIndex = 0;
+        _this.goTo(_this.currentItemIndex);
+      }, 0);
+    }
   }
 
-  var WallopProto = Wallop.prototype;
+  var selectorPool = [];
+
+  var WS = WallopSlider.prototype;
 
   // Update prev/next disabled attribute
-  WallopProto.updatePagination = function () {
-    if ((this.currentItemIndex + 1) === this.allItemsArrayLength && this.options.wSCarousel !== true) {
+  WS.updateButtonStates = function () {
+    if (!this.buttonPrevious && !this.buttonNext) { return; }
+
+    if (this.currentItemIndex === this.allItemsArrayLength && this.options.carousel !== true) {
       this.buttonNext.setAttribute('disabled', 'disabled');
-    } else if (this.currentItemIndex === 0) {
+    } else if (this.currentItemIndex === 0 && this.options.carousel !== true) {
       this.buttonPrevious.setAttribute('disabled', 'disabled');
     }
   };
 
-  // Reset all settings by removing classes and attributes added by goTo() & updatePagination()
-  WallopProto.removeAllHelperSettings = function () {
-    removeClass(this.allItemsArray[this.currentItemIndex], this.options.wSCurrentItemClass);
-    removeClass($$(this.options.wSHidePreviousClass)[0], this.options.wSHidePreviousClass);
-    removeClass($$(this.options.wSHideNextClass)[0], this.options.wSHideNextClass);
-    removeClass($$(this.options.wSShowPreviousClass)[0], this.options.wSShowPreviousClass);
-    removeClass($$(this.options.wSShowNextClass)[0], this.options.wSShowNextClass);
+  // Reset all settings by removing classes and attributes added by goTo() & updateButtonStates()
+  WS.removeAllHelperSettings = function () {
+    removeClass(this.allItemsArray[this.currentItemIndex], this.options.currentItemClass);
+    removeClass($$(this.options.hidePreviousClass)[0], this.options.hidePreviousClass);
+    removeClass($$(this.options.hideNextClass)[0], this.options.hideNextClass);
+    removeClass($$(this.options.showPreviousClass)[0], this.options.showPreviousClass);
+    removeClass($$(this.options.showNextClass)[0], this.options.showNextClass);
+
+    if (!this.buttonPrevious && !this.buttonNext) { return; }
+
     this.buttonPrevious.removeAttribute('disabled');
     this.buttonNext.removeAttribute('disabled');
   };
 
   // Method to add classes to the right elements depending on the index passed
-  WallopProto.goTo = function (index) {
-    index = Number(index - 1);
-    if (index >= this.allItemsArrayLength || index < 0 || index === this.currentItemIndex) { return; }
+  WS.goTo = function (index) {
+    // Check if it's a carousel and if so, change index to be last item when clicking previous on first item
+    if (this.options.carousel && index === -1) {
+      index = this.allItemsArrayLength - 1;
+    } else if (index > this.allItemsArrayLength || index < 0) { return; }
+
 
     this.removeAllHelperSettings();
 
-    addClass(this.allItemsArray[this.currentItemIndex], index > this.currentItemIndex ? this.options.wSHidePreviousClass : this.options.wSHideNextClass);
-    addClass(this.allItemsArray[index], this.options.wSCurrentItemClass + ' ' + (index > this.currentItemIndex ? this.options.wSShowNextClass : this.options.wSShowPreviousClass));
+    addClass(this.allItemsArray[this.currentItemIndex], index > this.currentItemIndex ? this.options.hidePreviousClass : this.options.hideNextClass);
+    addClass(this.allItemsArray[index], this.options.currentItemClass + ' ' + (index > this.currentItemIndex ? this.options.showNextClass : this.options.showPreviousClass));
 
     this.currentItemIndex = index;
 
-    this.updatePagination();
+    this.updateButtonStates();
 
-    // Update event currentItemIndex property and dispatch it
     this.event.detail.currentItemIndex = this.currentItemIndex;
     this.$selector.dispatchEvent(this.event);
   };
 
-  // Callback for when previous button is clicked
-  WallopProto.onPreviousButtonClicked = function () {
-    this.goTo((this.currentItemIndex + 1) - 1);
+  // Previous item handler
+  WS.previous = function () {
+    if (this.options.carousel && this.currentItemIndex === 0) {
+      this.goTo(this.allItemsArrayLength);
+    } else {
+      this.goTo(this.currentItemIndex - 1);
+    }
   };
 
-  // Callback for when next button is clicked
-  WallopProto.onNextButtonClicked = function () {
-    if(this.currentItemIndex + 1 === this.allItemsArrayLength && this.options.wSCarousel === true) {
-      this.goTo(1);
+  // Next item handler
+  WS.next = function () {
+    if (this.currentItemIndex >= this.allItemsArrayLength && this.options.carousel === true) {
+      this.goTo(0);
     } else {
-      this.goTo((this.currentItemIndex + 1) + 1);
+      this.goTo(this.currentItemIndex + 1);
     }
   };
 
   // Attach click handlers
-  WallopProto.bindEvents = function () {
+  WS.bindEvents = function () {
+
+    selectorPool.push(this.$selector);
+
+    if (!this.buttonPrevious && !this.buttonNext) { return; }
+
     var _this = this;
-    this.buttonPrevious.addEventListener('click', function () { _this.onPreviousButtonClicked(); });
-    this.buttonNext.addEventListener('click', function () { _this.onNextButtonClicked(); });
+    this.buttonPrevious.addEventListener('click', function (event) {
+      event.preventDefault();
+      _this.previous();
+    });
+
+    this.buttonNext.addEventListener('click', function (event) {
+      event.preventDefault();
+      _this.next();
+    });
+
   };
 
   // Method so it is nicer for the user to use custom events
-  WallopProto.on = function (eventName, callback) {
+  WS.on = function (eventName, callback) {
     if (eventName !== 'change') {
       throw new Error('the only available event is "change"');
     }
@@ -121,11 +182,11 @@ WallopSlider = (function() {
   };
 
   // Create custom Event
-  WallopProto.createCustomEvent = function () {
+  WS.createCustomEvent = function () {
     var _this = this;
     this.event = new CustomEvent('change', {
       detail: {
-        parentSelector: _this.selector,
+        parentSelector: _this.$selector,
         currentItemIndex: Number(_this.currentItemIndex)
       },
       bubbles: true,
@@ -163,16 +224,25 @@ WallopSlider = (function() {
 
   // Pollyfill for CustomEvent() Constructor - thanks to Internet Explorer
   // https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent#Polyfill
-  function CustomEvent (event, params) {
+  function CustomEvent(event, params) {
     params = params || { bubbles: false, cancelable: false, detail: undefined };
-    var evt = document.createEvent( 'CustomEvent' );
-    evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+    var evt = document.createEvent('CustomEvent');
+    evt.initCustomEvent(event, params.bubbles, params.cancelable, params.detail);
     return evt;
   }
 
   CustomEvent.prototype = window.CustomEvent.prototype;
   window.CustomEvent = CustomEvent;
 
-  return Wallop;
+  // Exports to multiple environments
+  if(typeof define === 'function' && define.amd){ //AMD
+    define(function () { return WallopSlider; });
+  } else if (typeof module !== 'undefined' && module.exports){ //node
+    module.exports = WallopSlider;
+  } else { // browser
+    // use string because of Google closure compiler ADVANCED_MODE
+    /* jslint sub:true */
+    global['WallopSlider'] = WallopSlider;
+  }
 
-})();
+}(this));

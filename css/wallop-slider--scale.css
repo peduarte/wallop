@@ -1,0 +1,49 @@
+/*==========  SCALE CONFIG  ==========*/
+.wallop-slider--scale .wallop-slider__item--hide-previous,
+.wallop-slider--scale .wallop-slider__item--hide-next {
+  display: block;
+  -webkit-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+  -moz-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+  -ms-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+  animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
+}
+
+/*==========  SCALE ANIMATIONS  ==========*/
+@-webkit-keyframes $animation-name {
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@-moz-keyframes $animation-name {
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@-ms-keyframes $animation-name {
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+@keyframes $animation-name {
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=wallop-slider--scale.css.map */

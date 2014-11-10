@@ -1,4 +1,7 @@
-* { margin: 0; padding: 0; } // dirty reset
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: Arial;
@@ -25,10 +28,9 @@ a {
 section {
   text-align: left;
   padding-bottom: 60px;
-
-  ul {
-    list-style: inside;
-  }
+}
+section ul {
+  list-style: inside;
 }
 
 p {
@@ -37,16 +39,15 @@ p {
   margin: 20px 0;
   letter-spacing: .2px;
   word-spacing: 4px;
-
-  footer & {
-    margin: 0;
-    font-size: 16px;
-  }
+}
+footer p {
+  margin: 0;
+  font-size: 16px;
 }
 
 blockquote {
   margin: 2%;
-  background: darken(#ffffff, 5%);
+  background: #f2f2f2;
   padding: 20px;
   font-size: 18px;
 }
@@ -70,7 +71,6 @@ pre {
   max-width: 960px;
 }
 
-// Added here because this is not required
 .WallopSlider {
   position: relative;
   margin-bottom: 20px;
@@ -96,44 +96,37 @@ pre {
   padding: 10px 10px;
   line-height: 10px;
   margin-top: 20px;
-
-
-  @include media-query(medium) {
+}
+@media only screen and (min-width: 480px) {
+  .btn {
     margin-top: -10px;
     position: absolute;
     z-index: 3;
     top: 50%;
     opacity: .60;
-    @include prefixr(transition, opacity 200ms ease);
-
-
-  }
-
-  &:hover {
-    cursor: pointer;
-
-    opacity: 1 !important;
-  }
-
-  &[disabled] {
-    &,
-    &:hover {
-      cursor: default;
-      opacity: .2 !important;
-    }
-
-
+    -webkit-transition: opacity 200ms ease;
+    -moz-transition: opacity 200ms ease;
+    -ms-transition: opacity 200ms ease;
+    transition: opacity 200ms ease;
   }
 }
+.btn:hover {
+  cursor: pointer;
+  opacity: 1 !important;
+}
+.btn[disabled], .btn[disabled]:hover {
+  cursor: default;
+  opacity: .2 !important;
+}
 
-.btn--previous {
-  @include media-query(medium) {
+@media only screen and (min-width: 480px) {
+  .btn--previous {
     left: 10px;
   }
 }
 
-.btn--next {
-  @include media-query(medium) {
+@media only screen and (min-width: 480px) {
+  .btn--next {
     right: 10px;
   }
 }
@@ -142,10 +135,9 @@ pre {
   padding: 5px;
 }
 
-footer { padding-bottom: 30px; }
-
-
-
+footer {
+  padding-bottom: 30px;
+}
 
 .pagination {
   margin: 20px 0;
@@ -163,3 +155,32 @@ footer { padding-bottom: 30px; }
 .pagination-item--current {
   background-color: tomato;
 }
+
+.WallopSlider {
+  width: 100%;
+}
+
+.WallopSlider-list {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.WallopSlider-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.WallopSlider-item img {
+  display: block;
+  width: 100%;
+}
+
+.WallopSlider-item--current {
+  display: block;
+  position: static;
+}
+
+/*# sourceMappingURL=all.css.map */
