@@ -1,0 +1,27 @@
+.WallopSlider {
+  width: 100%;
+}
+
+.WallopSlider-list {
+  list-style: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.WallopSlider-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.WallopSlider-item img {
+  display: block;
+  width: 100%;
+}
+
+.WallopSlider-item--current {
+  display: block;
+  position: static;
+}
