@@ -1,6 +1,6 @@
 /*==========  FADE CONFIG  ==========*/
-.WallopSlider--fade .WallopSlider-item--hide-previous,
-.WallopSlider--fade .WallopSlider-item--hide-next {
+.Wallop--fade .Wallop-item--hide-previous,
+.Wallop--fade .Wallop-item--hide-next {
   display: block;
   -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   -moz-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;

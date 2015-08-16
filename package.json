@@ -2,10 +2,10 @@
   "name": "wallop-slider",
   "version": "2.0.2",
   "description": "Minimal slider with animations controlled via CSS",
-  "main": "js/WallopSlider.js",
+  "main": "js/Wallop.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "uglify": "./node_modules/.bin/uglifyjs ./js/WallopSlider.js -o ./js/WallopSlider.min.js --comments -m -c "
+    "uglify": "./node_modules/.bin/uglifyjs ./js/Wallop.js -o ./js/Wallop.min.js --comments -m -c "
   },
   "repository": {
     "type": "git",

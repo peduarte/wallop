@@ -1,5 +1,5 @@
 /**
-* WallopSlider.js
+* Wallop.js
 *
 * @fileoverview Minimal Slider with CSS animation
 *
@@ -9,26 +9,26 @@
 */
 (function(global){
 
-  function WallopSlider(selector, options) {
+  function Wallop(selector, options) {
     if (!selector) {
-      throw new Error('Selector missing, eg: new WallopSlider(".selector")');
+      throw new Error('Selector missing, eg: new Wallop(".selector")');
     }
 
     for (var i = 0; i < selectorPool.length; i++) {
       if (selectorPool[i] === selector) {
-        throw new Error('An instance of WallopSlider with this selector already exists.');
+        throw new Error('An instance of Wallop with this selector already exists.');
       }
     }
 
     this.options = {
-      buttonPreviousClass: 'WallopSlider-buttonPrevious',
-      buttonNextClass: 'WallopSlider-buttonNext',
-      itemClass: 'WallopSlider-item',
-      currentItemClass: 'WallopSlider-item--current',
-      showPreviousClass: 'WallopSlider-item--show-previous',
-      showNextClass: 'WallopSlider-item--show-next',
-      hidePreviousClass: 'WallopSlider-item--hide-previous',
-      hideNextClass: 'WallopSlider-item--hide-next',
+      buttonPreviousClass: 'Wallop-buttonPrevious',
+      buttonNextClass: 'Wallop-buttonNext',
+      itemClass: 'Wallop-item',
+      currentItemClass: 'Wallop-item--current',
+      showPreviousClass: 'Wallop-item--show-previous',
+      showNextClass: 'Wallop-item--show-next',
+      hidePreviousClass: 'Wallop-item--hide-previous',
+      hideNextClass: 'Wallop-item--hide-next',
       carousel: true
     };
 
@@ -66,7 +66,7 @@
 
   var selectorPool = [];
 
-  var WS = WallopSlider.prototype;
+  var WS = Wallop.prototype;
 
   // Update prev/next disabled attribute
   WS.updateButtonStates = function () {
@@ -96,10 +96,8 @@
   // Method to add classes to the right elements depending on the index passed
   WS.goTo = function (index) {
     // Check if it's a carousel and if so, change index to be last item when clicking previous on first item
-    if (this.options.carousel && index === -1) {
-      index = this.allItemsArrayLength - 1;
-    } else if (index > this.allItemsArrayLength || index < 0) { return; }
-
+    if (this.options.carousel && index === -1) { index = this.allItemsArrayLength - 1; }
+    else if (index > this.allItemsArrayLength || index < 0) { return; }
 
     this.removeAllHelperSettings();
 
@@ -171,7 +169,7 @@
     var _this = this;
     this.event = new CustomEvent('change', {
       detail: {
-        wallopSliderEl: _this.$selector,
+        wallopEl: _this.$selector,
         currentItemIndex: Number(_this.currentItemIndex)
       },
       bubbles: true,
@@ -221,13 +219,13 @@
 
   // Exports to multiple environments
   if(typeof define === 'function' && define.amd){ //AMD
-    define(function () { return WallopSlider; });
+    define(function () { return Wallop; });
   } else if (typeof module !== 'undefined' && module.exports){ //node
-    module.exports = WallopSlider;
+    module.exports = Wallop;
   } else { // browser
     // use string because of Google closure compiler ADVANCED_MODE
     /* jslint sub:true */
-    global['WallopSlider'] = WallopSlider;
+    global['Wallop'] = Wallop;
   }
 
 }(this));

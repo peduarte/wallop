@@ -2,34 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Wallop Slider</title>
+  <title>Wallop</title>
 
   <meta name="viewport" content="initial-scale=1, user-scalable=no">
 
   <link rel="stylesheet" href="css/example.css">
-  <link rel="stylesheet" href="../css/wallop-slider.css">
-  <link rel="stylesheet" href="../css/wallop-slider--fade.css">
+  <link rel="stylesheet" href="../css/wallop.css">
+  <link rel="stylesheet" href="../css/wallop--fade.css">
 </head>
 <body>
 
   <div class="Container">
-    <h1>Wallop Slider Examples</h1>
+    <h1>Wallop Examples</h1>
     <h2>No Carousel</h2>
 
     <!-- SLIDER STARTS -->
-    <div class="WallopSlider">
+    <div class="Wallop">
 
-      <ul class="WallopSlider-list">
-        <li class="WallopSlider-item WallopSlider-item--current"><img src="imgs/1.jpg"></li>
-        <li class="WallopSlider-item"><img src="imgs/2.jpg"></li>
-        <li class="WallopSlider-item"><img src="imgs/3.jpg"></li>
-        <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
-        <li class="WallopSlider-item"><img src="imgs/5.jpg"></li>
+      <ul class="Wallop-list">
+        <li class="Wallop-item Wallop-item--current"><img src="imgs/1.jpg"></li>
+        <li class="Wallop-item"><img src="imgs/2.jpg"></li>
+        <li class="Wallop-item"><img src="imgs/3.jpg"></li>
+        <li class="Wallop-item"><img src="imgs/4.jpg"></li>
+        <li class="Wallop-item"><img src="imgs/5.jpg"></li>
       </ul>
 
 
-      <button class="WallopSlider-buttonPrevious" disabled="true">Previous</button>
-      <button class="WallopSlider-buttonNext">Next</button>
+      <button class="Wallop-buttonPrevious" disabled="true">Previous</button>
+      <button class="Wallop-buttonNext">Next</button>
     </div>
     <!-- SLIDER ENDS -->
 
@@ -37,11 +37,11 @@
   </div>
 
 
-  <script src="../js/WallopSlider.js"></script>
+  <script src="../js/Wallop.js"></script>
   <script>
-    // New instance of WallopSlider
-    var slider = document.querySelector('.WallopSlider');
-    new WallopSlider(slider, {
+    // New instance of Wallop
+    var slider = document.querySelector('.Wallop');
+    new Wallop(slider, {
       carousel: false
     });
   </script>

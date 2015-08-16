@@ -1,6 +1,6 @@
 /*==========  SCALE CONFIG  ==========*/
-.WallopSlider--scale .WallopSlider-item--hide-previous,
-.WallopSlider--scale .WallopSlider-item--hide-next {
+.Wallop--scale .Wallop-item--hide-previous,
+.Wallop--scale .Wallop-item--hide-next {
   display: block;
   -webkit-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both;
   -moz-animation: scaleOut 350ms cubic-bezier(0.55, 0.055, 0.675, 0.19) both;

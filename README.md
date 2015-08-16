@@ -1,10 +1,10 @@
-# Wallop Slider
+# Wallop
 
-Wallop Slider is a minimal 4kb zero dependency slider.
+Wallop is a minimal 4kb zero dependency slider.
 
 > **Important note**<br>
-> Version 1 of Wallop Slider is not compatible with version 2+.<br>
-> If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/WallopSlider/WallopSlider.js/tree/v1).
+> Version 1 of Wallop is not compatible with version 2+.<br>
+> If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/Wallop/Wallop.js/tree/v1).
 
 
 ## Benefits
@@ -34,7 +34,7 @@ npm install wallop-slider
 With git
 
 ```
-git clone git@github.com:WallopSlider/WallopSlider.js.git
+git clone git@github.com:Wallop/Wallop.js.git
 ```
 
 
@@ -45,40 +45,40 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
 ### CSS
 ```html
 <head>
-  <link rel="stylesheet" href="path/to/wallop-slider.css">
+  <link rel="stylesheet" href="path/to/wallop.css">
 </head>
 ```
 
 ### JavaScript
 ```html
-<script src="path/to/WallopSlider.min.js"></script>
+<script src="path/to/Wallop.min.js"></script>
 <script>
-  var slider = document.querySelector('.WallopSlider');
-  new WallopSlider(slider);
+  var slider = document.querySelector('.Wallop');
+  new Wallop(slider);
 </script>
 ```
 
 ### HTML
 ```html
-<div class="WallopSlider">
-  <ul class="WallopSlider-list">
-    <li class="WallopSlider-item"><img src="imgs/1.jpg"></li>
-    <li class="WallopSlider-item"><img src="imgs/2.jpg"></li>
-    <li class="WallopSlider-item"><img src="imgs/3.jpg"></li>
-    <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
-    <li class="WallopSlider-item"><img src="imgs/5.jpg"></li>
+<div class="Wallop">
+  <ul class="Wallop-list">
+    <li class="Wallop-item"><img src="imgs/1.jpg"></li>
+    <li class="Wallop-item"><img src="imgs/2.jpg"></li>
+    <li class="Wallop-item"><img src="imgs/3.jpg"></li>
+    <li class="Wallop-item"><img src="imgs/4.jpg"></li>
+    <li class="Wallop-item"><img src="imgs/5.jpg"></li>
   </ul>
-  <button class="WallopSlider-buttonPrevious">Previous</button>
-  <button class="WallopSlider-buttonNext">Next</button>
+  <button class="Wallop-buttonPrevious">Previous</button>
+  <button class="Wallop-buttonNext">Next</button>
 </div>
 </div>
 ```
 
 >**#protip**<br>
->You can set the starting slide with a `.WallopSlider-item--current` class. 
+>You can set the starting slide with a `.Wallop-item--current` class.
 
 ## Adding animations
-Wallop Sider has no animations by default, so if you want to animate the slides, you need to extend the default `.WallopSlider` class with an animation modifier and include the respective CSS into your HTML.<br>
+Wallop Sider has no animations by default, so if you want to animate the slides, you need to extend the default `.Wallop` class with an animation modifier and include the respective CSS into your HTML.<br>
 
 I have created a few basic animations which is ready for you to use out-of-the-box, you will find them in the `/css` directory.
 
@@ -92,30 +92,30 @@ I have created a few basic animations which is ready for you to use out-of-the-b
 
 ### Extending with modifier
 ```html
-<div class="WallopSlider WallopSlider--slide">
+<div class="Wallop Wallop--slide">
 ...
 </div>
 ```
 
 ### Available animations
 Here's a list of the available animation modifiers ready for you to use
-- `WallopSlider--slide`
-- `WallopSlider--fade`
-- `WallopSlider--scale`
-- `WallopSlider--rotate`
-- `WallopSlider--fold`
-- `WallopSlider--vertical-slide`
+- `Wallop--slide`
+- `Wallop--fade`
+- `Wallop--scale`
+- `Wallop--rotate`
+- `Wallop--fold`
+- `Wallop--vertical-slide`
 
 ## Options
 Here's a list of options you can pass to Wallop Slider
-- `buttonPreviousClass: 'WallopSlider-buttonPrevious'`
-- `buttonNextClass: 'WallopSlider-buttonNext'`
-- `itemClass: 'WallopSlider-item'`
-- `currentItemClass: 'WallopSlider-item--current'`
-- `showPreviousClass: 'WallopSlider-item--show-previous'`
-- `showNextClass: 'WallopSlider-item--show-next'`
-- `hidePreviousClass: 'WallopSlider-item--hide-previous'`
-- `hideNextClass: 'WallopSlider-item--hide-next'`
+- `buttonPreviousClass: 'Wallop-buttonPrevious'`
+- `buttonNextClass: 'Wallop-buttonNext'`
+- `itemClass: 'Wallop-item'`
+- `currentItemClass: 'Wallop-item--current'`
+- `showPreviousClass: 'Wallop-item--show-previous'`
+- `showNextClass: 'Wallop-item--show-next'`
+- `hidePreviousClass: 'Wallop-item--hide-previous'`
+- `hideNextClass: 'Wallop-item--hide-next'`
 - `carousel: true`
 
 ## API
@@ -124,31 +124,31 @@ Wallop Slider offers a basic API for you to use, so you can control it from your
 ### goTo
 This allows you to go to a specific slide index
 ```js
-var slider = document.querySelector('.WallopSlider');
-var WallopSlider = new WallopSlider(slider);
+var slider = document.querySelector('.Wallop');
+var Wallop = new Wallop(slider);
 
 // Go to 2nd slide
-WallopSlider.goTo(2);
+Wallop.goTo(2);
 ```
 
 ### next
 This allows you to go to the next slide
 ```js
-var slider = document.querySelector('.WallopSlider');
-var WallopSlider = new WallopSlider(slider);
+var slider = document.querySelector('.Wallop');
+var Wallop = new Wallop(slider);
 
 // Go to next slide
-WallopSlider.next();
+Wallop.next();
 ```
 
 ### previous
 This allows you to go to the previous slide
 ```js
-var slider = document.querySelector('.WallopSlider');
-var WallopSlider = new WallopSlider(slider);
+var slider = document.querySelector('.Wallop');
+var Wallop = new Wallop(slider);
 
 // Go to previous slide
-WallopSlider.previous();
+Wallop.previous();
 ```
 
 ## Events
@@ -156,12 +156,12 @@ Wallop Slider dispatches a Custom Event everytime a slide changes, and it return
 
 ### Listening to a slide change
 ```js
-var slider = document.querySelector('.WallopSlider');
-var WallopSlider = new WallopSlider(slider);
+var slider = document.querySelector('.Wallop');
+var Wallop = new Wallop(slider);
 
-WallopSlider.on('change', function(event) {
-  // event.detail.wallopSliderEl
-  // => <div class="WallopSlider">…</div>
+Wallop.on('change', function(event) {
+  // event.detail.wallopEl
+  // => <div class="Wallop">…</div>
 
   // event.detail.currentItemIndex
   // => number

@@ -1,14 +1,14 @@
-.WallopSlider {
+.Wallop {
   width: 100%;
 }
 
-.WallopSlider-list {
+.Wallop-list {
   list-style: none;
   position: relative;
   overflow: hidden;
 }
 
-.WallopSlider-item {
+.Wallop-item {
   display: none;
   position: absolute;
   top: 0;
@@ -16,12 +16,12 @@
   width: 100%;
 }
 
-.WallopSlider-item img {
+.Wallop-item img {
   display: block;
   width: 100%;
 }
 
-.WallopSlider-item--current {
+.Wallop-item--current {
   display: block;
   position: static;
 }

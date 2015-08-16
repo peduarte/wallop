@@ -1,14 +1,14 @@
 /*==========  FOLD CONFIG  ==========*/
-.WallopSlider--fold .WallopSlider-list {
+.Wallop--fold .Wallop-list {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   -ms-perspective: 1000;
   perspective: 1000;
 }
-.WallopSlider--fold .WallopSlider-item--current {
+.Wallop--fold .Wallop-item--current {
   position: relative;
 }
-.WallopSlider--fold .WallopSlider-item--show-previous {
+.Wallop--fold .Wallop-item--show-previous {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -23,7 +23,7 @@
   animation: foldFromLeft 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   z-index: 2;
 }
-.WallopSlider--fold .WallopSlider-item--show-next {
+.Wallop--fold .Wallop-item--show-next {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -38,8 +38,8 @@
   animation: foldFromRight 550ms cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   z-index: 1;
 }
-.WallopSlider--fold .WallopSlider-item--hide-previous,
-.WallopSlider--fold .WallopSlider-item--hide-next {
+.Wallop--fold .Wallop-item--hide-previous,
+.Wallop--fold .Wallop-item--hide-next {
   display: block;
 }
 
