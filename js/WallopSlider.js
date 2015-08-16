@@ -188,7 +188,7 @@
     var _this = this;
     this.event = new CustomEvent('change', {
       detail: {
-        parentSelector: _this.$selector,
+        wallopSliderEl: _this.$selector,
         currentItemIndex: Number(_this.currentItemIndex)
       },
       bubbles: true,
