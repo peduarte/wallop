@@ -1,5 +1,9 @@
 # WallopSlider
 
+# This version of WallopSlider is deprecated!
+## I will no longer be maintaining this version.
+### Version 2 is on its way,
+
 *See [the website](http://pedroduarte.me/wallop-slider) for for more detailed demos and usage.*
 
 ## Getting Started
@@ -36,7 +40,7 @@ Include the script and stylesheet on your page and initialize it.
 | wSHideNextClass     | 'wallop-slider__item--hide-next'     | string  |
 | wSCarousel          | false                                | boolean |
 
-Usage: 
+Usage:
 
 ```
 var slider = new WallopSlider('.wallop-slider',options);
@@ -44,7 +48,7 @@ var slider = new WallopSlider('.wallop-slider',options);
 
 ## API
 
-WallopSlider offers a basic API for you to use, so you can control it from your own buttons or gestures. 
+WallopSlider offers a basic API for you to use, so you can control it from your own buttons or gestures.
 
 Let's say you want to go to the second slide when you click on your button.
 
