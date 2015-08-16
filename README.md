@@ -68,8 +68,8 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
     <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
     <li class="WallopSlider-item"><img src="imgs/5.jpg"></li>
   </ul>
-  <button class="WallopSlider-btn WallopSlider-btn--previous btn btn--previous" disabled="disabled">Previous</button>
-  <button class="WallopSlider-btn WallopSlider-btn--next btn btn--next">Next</button>
+  <button class="WallopSlider-btn WallopSlider-btn--previous" disabled="disabled">Previous</button>
+  <button class="WallopSlider-btn WallopSlider-btn--next">Next</button>
 </div>
 </div>
 ```
