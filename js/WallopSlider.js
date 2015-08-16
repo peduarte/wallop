@@ -1,30 +1,11 @@
 /**
-* wallopSlider.js
+* WallopSlider.js
 *
-* @fileoverview Simple Slider Class
+* @fileoverview Minimal Slider with CSS animation
 *
 * @author Pedro Duarte
 * @author http://pedroduarte.me
 *
-* Changelog
-*   - goTo index now starts at 0 to match the change event
-*   - added checks in case there is no previous/next buttons
-*   - added a default current item in case there is none
-*   - fixed carousel
-*   - rename to SuitCSS syntax
-*   - added next and previous methods
-*   - rename option keys
-*   - added preventDefault on click callbacks in case the buttons are anchor tags
-*   - add exports check in case it's being used in browserify for example
-*   - stop multiple instances with the same selector - needs testing!
-*   - fixed a bug with multiple sliders of the same class and with carousel option = true
-*   - changes the selecor argument to take an actual selector rather than selector name
-*
-* To do
-*   - write tests
-*
-* Notes
-*   - Currently buttons must be inside the WallopSlider container
 */
 
 //------------------------------------------------------------------------------------------------------------
@@ -36,9 +17,8 @@
     }
 
     for (var i = 0; i < selectorPool.length; i++) {
-      console.log('selectorPool[i] -> ', selectorPool[i]);
       if (selectorPool[i] === selector) {
-        throw new Error('An instance of WallopSlider with this selector already exists: ' + selectorPool[i]);
+        throw new Error('An instance of WallopSlider with this selector already exists.');
       }
     }
 
@@ -51,13 +31,16 @@
       showNextClass: 'WallopSlider-item--show-next',
       hidePreviousClass: 'WallopSlider-item--hide-previous',
       hideNextClass: 'WallopSlider-item--hide-next',
-      carousel: false
+      carousel: true
     };
 
 
-    // In case the selector passed is an array of selector, we get the first one.
-    // Just because we can.
-    this.$selector = selector.length > 0 ? selector[0] : selector;
+    if (selector.length > 0) {
+      throw new Error('Selector cannot be an array');
+    } else {
+      this.$selector = selector;
+    }
+
 
     this.options = extend(this.options, options);
     this.event = null;
@@ -73,15 +56,14 @@
     this.createCustomEvent();
 
     // If there is no active item, start at 0
-    // wrapped in timeout function so event can
+    if (this.currentItemIndex < 0) { this.currentItemIndex = 0; }
+
+    // Wrapped in timeout function so event can
     // be listened from outside at anytime
-    if (this.currentItemIndex < 0) {
-      var _this = this;
-      setTimeout(function() {
-        _this.currentItemIndex = 0;
-        _this.goTo(_this.currentItemIndex);
-      }, 0);
-    }
+    var _this = this;
+    setTimeout(function() {
+      _this.goTo(_this.currentItemIndex);
+    }, 0);
   }
 
   var selectorPool = [];

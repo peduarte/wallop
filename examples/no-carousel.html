@@ -14,7 +14,7 @@
 
   <div class="Container">
     <h1>Wallop Slider Examples</h1>
-    <h2>Carousel</h2>
+    <h2>No Carousel</h2>
 
     <!-- SLIDER STARTS -->
     <div class="WallopSlider">
@@ -28,7 +28,7 @@
       </ul>
 
 
-      <button class="WallopSlider-btn WallopSlider-btn--previous btn btn--previous">Previous</button>
+      <button class="WallopSlider-btn WallopSlider-btn--previous btn btn--previous" disabled="true">Previous</button>
       <button class="WallopSlider-btn WallopSlider-btn--next btn btn--next">Next</button>
     </div>
     <!-- SLIDER ENDS -->
@@ -38,13 +38,11 @@
 
 
   <script src="../js/WallopSlider.js"></script>
-  <script src="script.js"></script>
-
   <script>
     // New instance of WallopSlider
     var slider = document.querySelector('.WallopSlider');
     new WallopSlider(slider, {
-      carousel: true
+      carousel: false
     });
   </script>
 

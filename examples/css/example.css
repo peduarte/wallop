@@ -18,3 +18,18 @@
 .WallopSlider--2 {
   float: right;
 }
+
+.WallopSlider-item:before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 40px;
+  text-align: center;
+  line-height: 0;
+}
+
+.WallopSlider-item:nth-child(1):before {content:"0";}
+.WallopSlider-item:nth-child(2):before {content:"1";}
+.WallopSlider-item:nth-child(3):before {content:"2";}
+.WallopSlider-item:nth-child(4):before {content:"3";}
+.WallopSlider-item:nth-child(5):before {content:"4";}

@@ -68,7 +68,7 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
     <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
     <li class="WallopSlider-item"><img src="imgs/5.jpg"></li>
   </ul>
-  <button class="WallopSlider-btn WallopSlider-btn--previous" disabled="disabled">Previous</button>
+  <button class="WallopSlider-btn WallopSlider-btn--previous">Previous</button>
   <button class="WallopSlider-btn WallopSlider-btn--next">Next</button>
 </div>
 </div>
@@ -113,7 +113,7 @@ Here's a list of options you can pass to Wallop Slider
 - `showNextClass: 'WallopSlider-item--show-next'`
 - `hidePreviousClass: 'WallopSlider-item--hide-previous'`
 - `hideNextClass: 'WallopSlider-item--hide-next'`
-- `carousel: false`
+- `carousel: true`
 
 ## API
 Wallop Slider offers a basic API for you to use, so you can control it from your own buttons or gestures.
