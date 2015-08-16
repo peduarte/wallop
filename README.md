@@ -4,7 +4,7 @@ Wallop is a minimal 4kb zero dependency slider.
 
 > **Important note**<br>
 > Version 1 of Wallop is not compatible with version 2+.<br>
-> If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/Wallop/Wallop.js/tree/v1).
+> If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/WallopSlider/Wallop.js/tree/v1).
 
 
 ## Benefits
