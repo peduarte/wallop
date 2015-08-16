@@ -18,6 +18,42 @@ Wallop Slider is a minimal 3kb zero dependency slider.
 - Dependency free
 
 
-## Getting Started
+## Install
+With npm
 
-WIP
+```
+npm install wallop-slider
+```
+
+With bower
+
+```
+npm install wallop-slider
+```
+
+With git
+
+```
+git clone git@github.com:WallopSlider/WallopSlider.js.git
+```
+
+
+
+## Usage
+Once you have downloaded Wallop Slider, the first thing you need to do is include the CSS and the JavaScript.
+
+### CSS
+``` 
+<head>
+  <link rel="stylesheet" href="path/to/wallop-slider.css">
+</head>
+```
+
+### JavaScript
+
+```
+<script src="path/to/wallopSlider.js"></script>
+<script>
+
+</script>
+```
