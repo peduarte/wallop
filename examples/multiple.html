@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wallop Slider</title>
+
+  <meta name="viewport" content="initial-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="css/example.css">
+  <link rel="stylesheet" href="../css/wallop-slider.css">
+  <link rel="stylesheet" href="../css/wallop-slider--fade.css">
+</head>
+<body>
+
+  <div class="Container">
+    <h1>Wallop Slider Examples</h1>
+    <h2>Multiple</h2>
+
+    <!-- SLIDER STARTS -->
+    <div class="WallopSlider WallopSlider--1">
+
+      <ul class="WallopSlider-list">
+        <li class="WallopSlider-item WallopSlider-item--current"><img src="imgs/1.jpg"></li>
+        <li class="WallopSlider-item"><img src="imgs/2.jpg"></li>
+        <li class="WallopSlider-item"><img src="imgs/3.jpg"></li>
+        <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
+        <li class="WallopSlider-item"><img src="imgs/5.jpg"></li>
+      </ul>
+
+
+      <button class="WallopSlider-btn WallopSlider-btn--previous btn btn--previous" disabled="disabled">Previous</button>
+      <button class="WallopSlider-btn WallopSlider-btn--next btn btn--next">Next</button>
+    </div>
+    <!-- SLIDER ENDS -->
+
+    <div class="WallopSlider WallopSlider--2">
+
+      <ul class="WallopSlider-list">
+        <li class="WallopSlider-item WallopSlider-item--current"><img src="imgs/1.jpg"></li>
+        <li class="WallopSlider-item"><img src="imgs/2.jpg"></li>
+        <li class="WallopSlider-item"><img src="imgs/3.jpg"></li>
+        <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
+        <li class="WallopSlider-item"><img src="imgs/5.jpg"></li>
+      </ul>
+
+
+      <button class="WallopSlider-btn WallopSlider-btn--previous btn btn--previous" disabled="disabled">Previous</button>
+      <button class="WallopSlider-btn WallopSlider-btn--next btn btn--next">Next</button>
+    </div>
+    <!-- SLIDER ENDS -->
+
+  </div>
+
+
+  <script src="../js/WallopSlider.js"></script>
+  <script>
+    // New instance of WallopSlider
+    var slider1 = document.querySelector('.WallopSlider--1');
+    new WallopSlider(slider1);
+
+    var slider2 = document.querySelector('.WallopSlider--2');
+    new WallopSlider(slider2);
+  </script>
+
+</body>
+</html>
