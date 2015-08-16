@@ -1,20 +1,14 @@
 # This version of WallopSlider is deprecated!
 ## I will no longer be maintaining this version.
-### Version 2 is on its way,
+V2 is on its way, with a new API, better documentation, new site and loads of bug fixes.
+
+Thanks for your patience.
 
 ---
 
 # WallopSlider
 
-*See [the website](http://pedroduarte.me/wallop-slider) for for more detailed demos and usage.*
-
 ## Getting Started
-
-Clone this repository or install with Bower.
-
-```
-bower install wallop-slider --save
-```
 
 Include the script and stylesheet on your page and initialize it.
 
