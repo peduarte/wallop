@@ -62,7 +62,7 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
 ```html
 <div class="WallopSlider">
   <ul class="WallopSlider-list">
-    <li class="WallopSlider-item WallopSlider-item--current"><img src="imgs/1.jpg"></li>
+    <li class="WallopSlider-item"><img src="imgs/1.jpg"></li>
     <li class="WallopSlider-item"><img src="imgs/2.jpg"></li>
     <li class="WallopSlider-item"><img src="imgs/3.jpg"></li>
     <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
@@ -73,6 +73,9 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
 </div>
 </div>
 ```
+
+>**#protip**<br>
+>You can set the starting slide with a `.WallopSlider-item--current` class. 
 
 ## Adding animations
 Wallop Sider has no animations by default, so if you want to animate the slides, you need to extend the default `.WallopSlider` class with an animation modifier and include the respective CSS into your HTML.<br>
