@@ -157,18 +157,21 @@
 
     selectorPool.push(this.$selector);
 
-    if (!this.buttonPrevious && !this.buttonNext) { return; }
-
     var _this = this;
-    this.buttonPrevious.addEventListener('click', function (event) {
-      event.preventDefault();
-      _this.previous();
-    });
 
-    this.buttonNext.addEventListener('click', function (event) {
-      event.preventDefault();
-      _this.next();
-    });
+    if (this.buttonPrevious) {
+      this.buttonPrevious.addEventListener('click', function (event) {
+        event.preventDefault();
+        _this.previous();
+      });
+    }
+
+    if (this.buttonNext) {
+      this.buttonNext.addEventListener('click', function (event) {
+        event.preventDefault();
+        _this.next();
+      });
+    }
 
   };
 
