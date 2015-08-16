@@ -2,7 +2,7 @@
 
 Wallop Slider is a minimal 3kb zero dependency slider.
 
-> **Important note**<br> 
+> **Important note**<br>
 > Version 1 of Wallop Slider is not compatible with version 2+.<br>
 > If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/WallopSlider/WallopSlider.js/tree/v1).
 
@@ -43,7 +43,7 @@ git clone git@github.com:WallopSlider/WallopSlider.js.git
 Once you have downloaded Wallop Slider, the first thing you need to do is include the CSS and the JavaScript.
 
 ### CSS
-```html 
+```html
 <head>
   <link rel="stylesheet" href="path/to/wallop-slider.css">
 </head>
@@ -68,8 +68,8 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
     <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
     <li class="WallopSlider-item"><img src="imgs/5.jpg"></li>
   </ul>
-  <button class="WallopSlider-btn WallopSlider-btn--previous">Previous</button>
-  <button class="WallopSlider-btn WallopSlider-btn--next">Next</button>
+  <button class="WallopSlider-buttonPrevious">Previous</button>
+  <button class="WallopSlider-buttonNext">Next</button>
 </div>
 </div>
 ```
@@ -105,8 +105,8 @@ Here's a list of the available animation modifiers ready for you to use
 
 ## Options
 Here's a list of options you can pass to Wallop Slider
-- `btnPreviousClass: 'WallopSlider-btn--previous'`
-- `btnNextClass: 'WallopSlider-btn--next'`
+- `buttonPreviousClass: 'WallopSlider-buttonPrevious'`
+- `buttonNextClass: 'WallopSlider-buttonNext'`
 - `itemClass: 'WallopSlider-item'`
 - `currentItemClass: 'WallopSlider-item--current'`
 - `showPreviousClass: 'WallopSlider-item--show-previous'`
@@ -159,7 +159,7 @@ var WallopSlider = new WallopSlider(slider);
 WallopSlider.on('change', function(event) {
   // event.detail.wallopSliderEl
   // => <div class="WallopSlider">…</div>
-  
+
   // event.detail.currentItemIndex
   // => number
 });
@@ -170,7 +170,7 @@ Wallop Slider is a very simple library which basically just adds the right class
 
 Due to its simplicity, Wallop Slider has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.
 
-If you want a slider which provides all these options, I highly recommend David Desandro's [Flickity](http://flickity.metafizzy.co/)
+If you want a slider which provides all these options, I highly recommend David Desandro's [Flickity](http://flickity.metafizzy.co/).
 
 ## Contributing
 Plese see [CONTRIBUTING](#).

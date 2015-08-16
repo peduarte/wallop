@@ -23,8 +23,8 @@
     }
 
     this.options = {
-      btnPreviousClass: 'WallopSlider-btn--previous',
-      btnNextClass: 'WallopSlider-btn--next',
+      buttonPreviousClass: 'WallopSlider-buttonPrevious',
+      buttonNextClass: 'WallopSlider-buttonNext',
       itemClass: 'WallopSlider-item',
       currentItemClass: 'WallopSlider-item--current',
       showPreviousClass: 'WallopSlider-item--show-previous',
@@ -49,8 +49,8 @@
     this.allItemsArray = Array.prototype.slice.call(this.$selector.querySelectorAll(' .' + this.options.itemClass));
     this.allItemsArrayLength = this.allItemsArray.length - 1; // otherwise starts from 1. weird?
     this.currentItemIndex = this.allItemsArray.indexOf(this.$selector.querySelector(' .' + this.options.currentItemClass));
-    this.buttonPrevious = this.$selector.querySelector(' .' + this.options.btnPreviousClass);
-    this.buttonNext = this.$selector.querySelector(' .' + this.options.btnNextClass);
+    this.buttonPrevious = this.$selector.querySelector(' .' + this.options.buttonPreviousClass);
+    this.buttonNext = this.$selector.querySelector(' .' + this.options.buttonNextClass);
 
     this.bindEvents();
     this.createCustomEvent();
