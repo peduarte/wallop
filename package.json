@@ -1,6 +1,6 @@
 {
   "name": "wallop-slider",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Minimal slider with animations controlled via CSS",
   "main": "js/WallopSlider.js",
   "scripts": {
