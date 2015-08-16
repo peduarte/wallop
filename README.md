@@ -1,6 +1,7 @@
 # Wallop
+### Much more than just a slider
 
-Wallop is a minimal 4kb zero dependency slider.
+wallop is a minimal 4kb library for showing & hiding things.
 
 > **Important note**<br>
 > Version 1 of Wallop is not compatible with version 2+.<br>
@@ -122,14 +123,16 @@ Here's a list of options you can pass to Wallop
 Wallop offers a basic API for you to use, so you can control it from your own buttons or gestures.
 
 ### goTo
-This allows you to go to a specific slide index
+This allows you to go to a specific slide index.
 ```js
 var slider = document.querySelector('.Wallop');
 var Wallop = new Wallop(slider);
 
 // Go to 2nd slide
-Wallop.goTo(2);
+Wallop.goTo(1);
 ```
+>**#protip**<br>
+>index starts at 0 👌
 
 ### next
 This allows you to go to the next slide
