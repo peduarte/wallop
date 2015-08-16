@@ -50,10 +50,26 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
 ```
 
 ### JavaScript
-
 ```
-<script src="path/to/wallopSlider.js"></script>
+<script src="path/to/WallopSlider.js"></script>
 <script>
-
+  var slider = document.querySelector('.WallopSlider');
+  new WallopSlider(slider);
 </script>
+```
+
+### HTML
+```
+<div class="WallopSlider">
+  <ul class="WallopSlider-list">
+    <li class="WallopSlider-item WallopSlider-item--current"><img src="imgs/1.jpg"></li>
+    <li class="WallopSlider-item"><img src="imgs/2.jpg"></li>
+    <li class="WallopSlider-item"><img src="imgs/3.jpg"></li>
+    <li class="WallopSlider-item"><img src="imgs/4.jpg"></li>
+    <li class="WallopSlider-item"><img src="imgs/5.jpg"></li>
+  </ul>
+  <button class="WallopSlider-btn WallopSlider-btn--previous btn btn--previous" disabled="disabled">Previous</button>
+  <button class="WallopSlider-btn WallopSlider-btn--next btn btn--next">Next</button>
+</div>
+</div>
 ```
