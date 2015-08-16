@@ -22,13 +22,13 @@ Wallop is a minimal 4kb zero dependency slider.
 With npm
 
 ```
-npm install wallop-slider
+npm install wallop
 ```
 
 With bower
 
 ```
-npm install wallop-slider
+npm install wallop
 ```
 
 With git
@@ -85,8 +85,8 @@ I have created a few basic animations which is ready for you to use out-of-the-b
 ### Including animation CSS
 ```html
 <head>
-  <link rel="stylesheet" href="path/to/wallop-slider.css">
-  <link rel="stylesheet" href="path/to/wallop-slider-animation.css">
+  <link rel="stylesheet" href="path/to/wallop.css">
+  <link rel="stylesheet" href="path/to/wallop-animation.css">
 </head>
 ```
 
