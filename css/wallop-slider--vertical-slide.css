@@ -1,34 +1,34 @@
 /*==========  VERTICAL SLIDE CONFIG  ==========*/
-.wallop-slider--vertical-slide {
+.WallopSlider--vertical-slide {
   /* the 10ms animation-delay fixed some weird rendering issues with iPhone */
 }
-.wallop-slider--vertical-slide .wallop-slider__list {
+.WallopSlider--vertical-slide .WallopSlider-list {
   position: relative;
   overflow: hidden;
 }
-.wallop-slider--vertical-slide .wallop-slider__item--show-next {
+.WallopSlider--vertical-slide .WallopSlider-item--show-next {
   -webkit-animation: slideFromTop 350ms 10ms linear both;
   -moz-animation: slideFromTop 350ms 10ms linear both;
   -ms-animation: slideFromTop 350ms 10ms linear both;
   animation: slideFromTop 350ms 10ms linear both;
 }
-.wallop-slider--vertical-slide .wallop-slider__item--show-previous {
+.WallopSlider--vertical-slide .WallopSlider-item--show-previous {
   -webkit-animation: slideFromBottom 350ms 10ms linear both;
   -moz-animation: slideFromBottom 350ms 10ms linear both;
   -ms-animation: slideFromBottom 350ms 10ms linear both;
   animation: slideFromBottom 350ms 10ms linear both;
 }
-.wallop-slider--vertical-slide .wallop-slider__item--hide-previous,
-.wallop-slider--vertical-slide .wallop-slider__item--hide-next {
+.WallopSlider--vertical-slide .WallopSlider-item--hide-previous,
+.WallopSlider--vertical-slide .WallopSlider-item--hide-next {
   display: block;
 }
-.wallop-slider--vertical-slide .wallop-slider__item--hide-previous {
+.WallopSlider--vertical-slide .WallopSlider-item--hide-previous {
   -webkit-animation: slideToBottom 350ms 10ms linear both;
   -moz-animation: slideToBottom 350ms 10ms linear both;
   -ms-animation: slideToBottom 350ms 10ms linear both;
   animation: slideToBottom 350ms 10ms linear both;
 }
-.wallop-slider--vertical-slide .wallop-slider__item--hide-next {
+.WallopSlider--vertical-slide .WallopSlider-item--hide-next {
   -webkit-animation: slideToTop 350ms 10ms linear both;
   -moz-animation: slideToTop 350ms 10ms linear both;
   -ms-animation: slideToTop 350ms 10ms linear both;

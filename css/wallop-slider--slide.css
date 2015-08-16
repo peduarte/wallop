@@ -1,27 +1,27 @@
 /*==========  SLIDE CONFIG  ==========*/
 /* the 10ms animation-delay fixed some weird rendering issues with iPhone */
-.wallop-slider--slide .wallop-slider__item--show-previous {
+.WallopSlider--slide .WallopSlider-item--show-previous {
   -webkit-animation: slideFromLeft 350ms 10ms linear both;
   -moz-animation: slideFromLeft 350ms 10ms linear both;
   -ms-animation: slideFromLeft 350ms 10ms linear both;
   animation: slideFromLeft 350ms 10ms linear both;
 }
-.wallop-slider--slide .wallop-slider__item--show-next {
+.WallopSlider--slide .WallopSlider-item--show-next {
   -webkit-animation: slideFromRight 350ms 10ms linear both;
   -moz-animation: slideFromRight 350ms 10ms linear both;
   -ms-animation: slideFromRight 350ms 10ms linear both;
   animation: slideFromRight 350ms 10ms linear both;
 }
-.wallop-slider--slide .wallop-slider__item--hide-previous, .wallop-slider--slide .wallop-slider__item--hide-next {
+.WallopSlider--slide .WallopSlider-item--hide-previous, .WallopSlider--slide .WallopSlider-item--hide-next {
   display: block;
 }
-.wallop-slider--slide .wallop-slider__item--hide-previous {
+.WallopSlider--slide .WallopSlider-item--hide-previous {
   -webkit-animation: slideToLeft 350ms 10ms linear both;
   -moz-animation: slideToLeft 350ms 10ms linear both;
   -ms-animation: slideToLeft 350ms 10ms linear both;
   animation: slideToLeft 350ms 10ms linear both;
 }
-.wallop-slider--slide .wallop-slider__item--hide-next {
+.WallopSlider--slide .WallopSlider-item--hide-next {
   -webkit-animation: slideToRight 350ms 10ms linear both;
   -moz-animation: slideToRight 350ms 10ms linear both;
   -ms-animation: slideToRight 350ms 10ms linear both;

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAqBQ,yCAA2C;ECXjD;0DACkC;IAC5B,OAAO,EAAE,KAAK;IDHhB,iBAAoB,EAAE,0DAAM;IACzB,cAAiB,EAAE,0DAAM;IACxB,aAAgB,EAAE,0DAAM;IACpB,SAAY,EAAE,0DAAM;;;;;AAkB5B,kCAEC;ECXL,IAAK;IACH,OAAO,EAAE,CAAC;;;ADYR,+BAEC;ECfL,IAAK;IACH,OAAO,EAAE,CAAC;;;ADgBR,8BAEC;ECnBL,IAAK;IACH,OAAO,EAAE,CAAC;;;ADoBR,0BAEC;ECvBL,IAAK;IACH,OAAO,EAAE,CAAC",
-"sources": ["../site/css/scss/_utils.scss","../site/css/scss/wallop-slider--targeted.scss"],
-"names": [],
-"file": "wallop-slider--targeted.css"
-}

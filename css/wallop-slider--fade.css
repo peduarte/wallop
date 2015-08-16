@@ -1,6 +1,6 @@
 /*==========  FADE CONFIG  ==========*/
-.wallop-slider--fade .wallop-slider__item--hide-previous,
-.wallop-slider--fade .wallop-slider__item--hide-next {
+.WallopSlider--fade .WallopSlider-item--hide-previous,
+.WallopSlider--fade .WallopSlider-item--hide-next {
   display: block;
   -webkit-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   -moz-animation: fadeOut 450ms cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
@@ -9,25 +9,23 @@
 }
 
 /*==========  FADE ANIMATIONS  ==========*/
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-@-moz-keyframes $animation-name {
+@-moz-keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-@-ms-keyframes $animation-name {
+@-ms-keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-@keyframes $animation-name {
+@keyframes fadeOut {
   100% {
     opacity: 0;
   }
 }
-
-/*# sourceMappingURL=wallop-slider--fade.css.map */
