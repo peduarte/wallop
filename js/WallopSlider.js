@@ -7,8 +7,6 @@
 * @author http://pedroduarte.me
 *
 */
-
-//------------------------------------------------------------------------------------------------------------
 (function(global){
 
   function WallopSlider(selector, options) {

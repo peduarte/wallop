@@ -4,7 +4,8 @@
   "description": "Minimal slider with animations controlled via CSS",
   "main": "js/WallopSlider.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uglify": "./node_modules/.bin/uglifyjs ./js/WallopSlider.js -o ./js/WallopSlider.min.js --comments -m -c "
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/WallopSlider/WallopSlider.js/issues"
   },
-  "homepage": "https://github.com/WallopSlider/WallopSlider.js#readme"
+  "homepage": "https://github.com/WallopSlider/WallopSlider.js#readme",
+  "devDependencies": {
+    "uglify-js": "^2.4.24"
+  }
 }
