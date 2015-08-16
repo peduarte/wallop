@@ -73,3 +73,22 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
 </div>
 </div>
 ```
+
+## Adding animations
+Wallop Sider has no animations by default, so if you want to animate the slides, you need to extend the default `.WallopSlider` class with an animation modifier and include the respective CSS into your HTML.<br>
+I have created a few basic animations which is ready for you to use out-of-the-box.
+
+### Including animation CSS
+```html
+<head>
+  <link rel="stylesheet" href="path/to/wallop-slider.css">
+  <link rel="stylesheet" href="path/to/wallop-slider-animation.css">
+</head>
+```
+
+### Extending with modifier
+```html
+<div class="WallopSlider WallopSlider--slide">
+...
+</div>
+```
