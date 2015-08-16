@@ -41,7 +41,7 @@ npm install wallop
 With git
 
 ```
-git clone git@github.com:Wallop/Wallop.js.git
+git clone git@github.com:WallopSlider/Wallop.js.git
 ```
 
 
