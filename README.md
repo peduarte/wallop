@@ -1,6 +1,6 @@
 # Wallop Slider
 
-Wallop Slider is a minimal 3kb zero dependency slider.
+Wallop Slider is a minimal 4kb zero dependency slider.
 
 > **Important note**<br>
 > Version 1 of Wallop Slider is not compatible with version 2+.<br>
@@ -51,7 +51,7 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
 
 ### JavaScript
 ```html
-<script src="path/to/WallopSlider.js"></script>
+<script src="path/to/WallopSlider.min.js"></script>
 <script>
   var slider = document.querySelector('.WallopSlider');
   new WallopSlider(slider);
