@@ -93,3 +93,24 @@ I have created a few basic animations which is ready for you to use out-of-the-b
 ...
 </div>
 ```
+
+### Available animations
+Here's a list of the available animation modifiers ready for you to use
+- `WallopSlider--slide`
+- `WallopSlider--fade`
+- `WallopSlider--scale`
+- `WallopSlider--rotate`
+- `WallopSlider--fold`
+- `WallopSlider--vertical-slide`
+
+## Options
+Here's a list of options you can pass to Wallop Slider
+- `btnPreviousClass: 'WallopSlider-btn--previous'`
+- `btnNextClass: 'WallopSlider-btn--next'`
+- `itemClass: 'WallopSlider-item'`
+- `currentItemClass: 'WallopSlider-item--current'`
+- `showPreviousClass: 'WallopSlider-item--show-previous'`
+- `showNextClass: 'WallopSlider-item--show-next'`
+- `hidePreviousClass: 'WallopSlider-item--hide-previous'`
+- `hideNextClass: 'WallopSlider-item--hide-next'`
+- `carousel: false`
