@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.Container {
+  max-width: 480px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.WallopSlider--1,
+.WallopSlider--2 {
+  float: left;
+  max-width: 45%;
+}
+
+.WallopSlider--2 {
+  float: right;
+}
+
+.Animation-button {
+
+}
