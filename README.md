@@ -40,7 +40,7 @@ git clone git@github.com:Wallop/Wallop.js.git
 
 
 ## Usage
-Once you have downloaded Wallop Slider, the first thing you need to do is include the CSS and the JavaScript.
+Once you have downloaded Wallop, the first thing you need to do is include the CSS and the JavaScript.
 
 ### CSS
 ```html
@@ -78,7 +78,7 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
 >You can set the starting slide with a `.Wallop-item--current` class.
 
 ## Adding animations
-Wallop Sider has no animations by default, so if you want to animate the slides, you need to extend the default `.Wallop` class with an animation modifier and include the respective CSS into your HTML.<br>
+Wallop has no animations by default, so if you want to animate the slides, you need to extend the default `.Wallop` class with an animation modifier and include the respective CSS into your HTML.<br>
 
 I have created a few basic animations which is ready for you to use out-of-the-box, you will find them in the `/css` directory.
 
@@ -107,7 +107,7 @@ Here's a list of the available animation modifiers ready for you to use
 - `Wallop--vertical-slide`
 
 ## Options
-Here's a list of options you can pass to Wallop Slider
+Here's a list of options you can pass to Wallop
 - `buttonPreviousClass: 'Wallop-buttonPrevious'`
 - `buttonNextClass: 'Wallop-buttonNext'`
 - `itemClass: 'Wallop-item'`
@@ -119,7 +119,7 @@ Here's a list of options you can pass to Wallop Slider
 - `carousel: true`
 
 ## API
-Wallop Slider offers a basic API for you to use, so you can control it from your own buttons or gestures.
+Wallop offers a basic API for you to use, so you can control it from your own buttons or gestures.
 
 ### goTo
 This allows you to go to a specific slide index
@@ -152,7 +152,7 @@ Wallop.previous();
 ```
 
 ## Events
-Wallop Slider dispatches a Custom Event everytime a slide changes, and it returns a `detail` object which contains the current slide index and the element you initiated Wallop Slider with.
+Wallop dispatches a Custom Event everytime a slide changes, and it returns a `detail` object which contains the current slide index and the element you initiated Wallop with.
 
 ### Listening to a slide change
 ```js
@@ -169,9 +169,9 @@ Wallop.on('change', function(event) {
 ```
 
 ## Limitiations
-Wallop Slider is a very simple library which basically just adds the right classes in the right places at the right time. Those classes allows you to use CSS to create animations.
+Wallop is a very simple library which basically just adds the right classes in the right places at the right time. Those classes allows you to use CSS to create animations.
 
-Due to its simplicity, Wallop Slider has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.
+Due to its simplicity, Wallop has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.
 
 If you want a slider which provides all these options, I highly recommend David Desandro's [Flickity](http://flickity.metafizzy.co/).
 
