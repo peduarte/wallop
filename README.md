@@ -147,3 +147,20 @@ var WallopSlider = new WallopSlider(slider);
 // Go to previous slide
 WallopSlider.previous();
 ```
+
+## Events
+WallopSlider dispatches a Custom Event everytime a slide changes, and it returns a `detail` object which contains the current slide index and the parent selector.
+
+### Listening to a slide change
+```js
+var slider = document.querySelector('.WallopSlider');
+var WallopSlider = new WallopSlider(slider);
+
+WallopSlider.on('change', function(event) {
+  // event.detail.wallopSliderEl
+  // => <div class="WallopSlider">…</div>
+  
+  // event.detail.currentItemIndex
+  // => number
+});
+```
