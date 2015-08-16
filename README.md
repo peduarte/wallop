@@ -149,7 +149,7 @@ WallopSlider.previous();
 ```
 
 ## Events
-WallopSlider dispatches a Custom Event everytime a slide changes, and it returns a `detail` object which contains the current slide index and the parent selector.
+Wallop Slider dispatches a Custom Event everytime a slide changes, and it returns a `detail` object which contains the current slide index and the element you initiated Wallop Slider with.
 
 ### Listening to a slide change
 ```js
@@ -164,3 +164,16 @@ WallopSlider.on('change', function(event) {
   // => number
 });
 ```
+
+## Limitiations
+Wallop Slider is a very simple library which basically just adds the right classes in the right places at the right time. Those classes allows you to use CSS to create animations.
+
+Due to its simplicity, Wallop Slider has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.
+
+If you want a slider which provides all these options, I highly recommend David Desandro's [Flickity](http://flickity.metafizzy.co/)
+
+## Contributing
+Plese see [CONTRIBUTING](#).
+
+## Licensing
+MIT © 2015 [Pedro Duarte](http://pedroduarte.me)
