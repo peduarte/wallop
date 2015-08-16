@@ -1,8 +1,10 @@
-# WallopSlider
-
 # This version of WallopSlider is deprecated!
 ## I will no longer be maintaining this version.
 ### Version 2 is on its way,
+
+---
+
+# WallopSlider
 
 *See [the website](http://pedroduarte.me/wallop-slider) for for more detailed demos and usage.*
 
