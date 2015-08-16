@@ -114,3 +114,36 @@ Here's a list of options you can pass to Wallop Slider
 - `hidePreviousClass: 'WallopSlider-item--hide-previous'`
 - `hideNextClass: 'WallopSlider-item--hide-next'`
 - `carousel: false`
+
+## API
+Wallop Slider offers a basic API for you to use, so you can control it from your own buttons or gestures.
+
+### goTo
+This allows you to go to a specific slide index
+```js
+var slider = document.querySelector('.WallopSlider');
+var WallopSlider = new WallopSlider(slider);
+
+// Go to 2nd slide
+WallopSlider.goTo(2);
+```
+
+### next
+This allows you to go to the next slide
+```js
+var slider = document.querySelector('.WallopSlider');
+var WallopSlider = new WallopSlider(slider);
+
+// Go to next slide
+WallopSlider.next();
+```
+
+### previous
+This allows you to go to the previous slide
+```js
+var slider = document.querySelector('.WallopSlider');
+var WallopSlider = new WallopSlider(slider);
+
+// Go to previous slide
+WallopSlider.previous();
+```
