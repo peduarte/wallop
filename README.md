@@ -14,7 +14,7 @@ Wallop is a minimal 4kb zero dependency slider.
 - Minimal JavaScript
 - Flexible & Scalable
 - Custom events and API available
-- 3KB minified
+- 4KB minified
 - Dependency free
 
 

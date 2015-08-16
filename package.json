@@ -1,5 +1,5 @@
 {
-  "name": "wallop-slider",
+  "name": "wallop",
   "version": "2.0.2",
   "description": "Minimal slider with animations controlled via CSS",
   "main": "js/Wallop.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WallopSlider/WallopSlider.js.git"
+    "url": "git+https://github.com/WallopSlider/Wallop.js.git"
   },
   "keywords": [
     "slider",
@@ -22,9 +22,9 @@
   "author": "Pedro Duarte <contact@peduarte.com> (http://pedroduarte.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WallopSlider/WallopSlider.js/issues"
+    "url": "https://github.com/WallopSlider/Wallop.js/issues"
   },
-  "homepage": "https://github.com/WallopSlider/WallopSlider.js#readme",
+  "homepage": "https://github.com/WallopSlider/Wallop.js#readme",
   "devDependencies": {
     "uglify-js": "^2.4.24"
   }
