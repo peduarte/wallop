@@ -43,14 +43,14 @@ git clone git@github.com:WallopSlider/WallopSlider.js.git
 Once you have downloaded Wallop Slider, the first thing you need to do is include the CSS and the JavaScript.
 
 ### CSS
-``` 
+```html 
 <head>
   <link rel="stylesheet" href="path/to/wallop-slider.css">
 </head>
 ```
 
 ### JavaScript
-```
+```html
 <script src="path/to/WallopSlider.js"></script>
 <script>
   var slider = document.querySelector('.WallopSlider');
@@ -59,7 +59,7 @@ Once you have downloaded Wallop Slider, the first thing you need to do is includ
 ```
 
 ### HTML
-```
+```html
 <div class="WallopSlider">
   <ul class="WallopSlider-list">
     <li class="WallopSlider-item WallopSlider-item--current"><img src="imgs/1.jpg"></li>
