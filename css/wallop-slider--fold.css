@@ -44,7 +44,7 @@
 }
 
 /*==========  FOLD ANIMATIONS  ==========*/
-@-webkit-keyframes $animation-name {
+@-webkit-keyframes foldFromLeft {
   0% {
     -webkit-transform: rotateY(-90deg);
     -moz-transform: rotateY(-90deg);
@@ -52,7 +52,8 @@
     transform: rotateY(-90deg);
   }
 }
-@-moz-keyframes $animation-name {
+
+@-moz-keyframes foldFromLeft {
   0% {
     -webkit-transform: rotateY(-90deg);
     -moz-transform: rotateY(-90deg);
@@ -60,7 +61,8 @@
     transform: rotateY(-90deg);
   }
 }
-@-ms-keyframes $animation-name {
+
+@-ms-keyframes foldFromLeft {
   0% {
     -webkit-transform: rotateY(-90deg);
     -moz-transform: rotateY(-90deg);
@@ -68,7 +70,8 @@
     transform: rotateY(-90deg);
   }
 }
-@keyframes $animation-name {
+
+@keyframes foldFromLeft {
   0% {
     -webkit-transform: rotateY(-90deg);
     -moz-transform: rotateY(-90deg);
@@ -76,31 +79,8 @@
     transform: rotateY(-90deg);
   }
 }
-@-webkit-keyframes $animation-name {
-  0% {
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
-}
-@-moz-keyframes $animation-name {
-  0% {
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
-}
-@-ms-keyframes $animation-name {
-  0% {
-    -webkit-transform: rotateY(90deg);
-    -moz-transform: rotateY(90deg);
-    -ms-transform: rotateY(90deg);
-    transform: rotateY(90deg);
-  }
-}
-@keyframes $animation-name {
+
+@-webkit-keyframes foldFromRight {
   0% {
     -webkit-transform: rotateY(90deg);
     -moz-transform: rotateY(90deg);
@@ -109,4 +89,29 @@
   }
 }
 
-/*# sourceMappingURL=wallop-slider--fold.css.map */
+@-moz-keyframes foldFromRight {
+  0% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@-ms-keyframes foldFromRight {
+  0% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes foldFromRight {
+  0% {
+    -webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+  }
+}

@@ -9,34 +9,7 @@
 }
 
 /*==========  SCALE ANIMATIONS  ==========*/
-@-webkit-keyframes $animation-name {
-  100% {
-    -webkit-transform: scale(1.6);
-    -moz-transform: scale(1.6);
-    -ms-transform: scale(1.6);
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-@-moz-keyframes $animation-name {
-  100% {
-    -webkit-transform: scale(1.6);
-    -moz-transform: scale(1.6);
-    -ms-transform: scale(1.6);
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-@-ms-keyframes $animation-name {
-  100% {
-    -webkit-transform: scale(1.6);
-    -moz-transform: scale(1.6);
-    -ms-transform: scale(1.6);
-    transform: scale(1.6);
-    opacity: 0;
-  }
-}
-@keyframes $animation-name {
+@-webkit-keyframes scaleOut {
   100% {
     -webkit-transform: scale(1.6);
     -moz-transform: scale(1.6);
@@ -46,4 +19,32 @@
   }
 }
 
-/*# sourceMappingURL=wallop-slider--scale.css.map */
+@-moz-keyframes scaleOut {
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes scaleOut {
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleOut {
+  100% {
+    -webkit-transform: scale(1.6);
+    -moz-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
