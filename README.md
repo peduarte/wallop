@@ -1,11 +1,18 @@
-# Wallop
+# wallop
+### Much more than just a slider
 
-Wallop is a minimal 4kb zero dependency slider.
+wallop is a minimal 4kb library for showing & hiding things.
 
-> **Important note**<br>
-> Version 1 of Wallop is not compatible with version 2+.<br>
+>❗️️**Important note**️<br>
+> Version 1 of *WallopSlider* is not compatible with version 2+.<br>
 > If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/WallopSlider/Wallop.js/tree/v1).
 
+## About
+In a nutshell, wallop takes a collection of HTML elements and Pevious & Next buttons, and adds helper HTML classes in the correct elements based on whether you want to navigate forwards or backwards.
+
+It basically just add the right classes in the right places at the right time.
+
+With those classes, you can do an infite [number of things](#real-life-examples), controlling what's shown or hidden with CSS.
 
 ## Benefits
 - Mobile first
@@ -34,7 +41,7 @@ npm install wallop
 With git
 
 ```
-git clone git@github.com:Wallop/Wallop.js.git
+git clone git@github.com:WallopSlider/Wallop.js.git
 ```
 
 
@@ -121,14 +128,16 @@ Here's a list of options you can pass to Wallop
 Wallop offers a basic API for you to use, so you can control it from your own buttons or gestures.
 
 ### goTo
-This allows you to go to a specific slide index
+This allows you to go to a specific slide index.
 ```js
 var slider = document.querySelector('.Wallop');
 var Wallop = new Wallop(slider);
 
 // Go to 2nd slide
-Wallop.goTo(2);
+Wallop.goTo(1);
 ```
+>**#protip**<br>
+>index starts at 0 👌
 
 ### next
 This allows you to go to the next slide
@@ -166,6 +175,11 @@ Wallop.on('change', function(event) {
   // => number
 });
 ```
+
+## Real life examples
+- **[Google](http://www.google.com/trends/worldcup)** – uses wallop as a slideshow, transitioning the background colour and animating the hero image of each item
+- **[Warp](http://warp.net/news/afx-following-global-premieres-you-can-now-hear-4-tracks-from-the-ep/?o=gallery&index=0)** – uses the power of wallop's API and Custom Events to control the items via the URL and to build a custom pagination
+- **[London Housing Headlines](http://london-housing.uk)** – uses wallop to display a collection of really cool headlines about London's housing crisis 👍
 
 ## Limitiations
 Wallop is a very simple library which basically just adds the right classes in the right places at the right time. Those classes allows you to use CSS to create animations.
