@@ -1,9 +1,4 @@
 .Wallop {
-  width: 100%;
-}
-
-.Wallop-list {
-  list-style: none;
   position: relative;
   overflow: hidden;
 }

@@ -61,13 +61,12 @@ Once you have downloaded Wallop, the first thing you need to do is include the C
 ### HTML
 ```html
 <div class="Wallop">
-  <ul class="Wallop-list">
-    <li class="Wallop-item"><img src="imgs/1.jpg"></li>
-    <li class="Wallop-item"><img src="imgs/2.jpg"></li>
-    <li class="Wallop-item"><img src="imgs/3.jpg"></li>
-    <li class="Wallop-item"><img src="imgs/4.jpg"></li>
-    <li class="Wallop-item"><img src="imgs/5.jpg"></li>
-  </ul>
+  <div class="Wallop-item">…</div>
+  <div class="Wallop-item">…</div>
+  <div class="Wallop-item">…</div>
+  <div class="Wallop-item">…</div>
+  <div class="Wallop-item">…</div>
+
   <button class="Wallop-buttonPrevious">Previous</button>
   <button class="Wallop-buttonNext">Next</button>
 </div>

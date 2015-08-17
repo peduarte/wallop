@@ -32,8 +32,3 @@ body {
 .Wallop-item:nth-child(3):before {content:"2";}
 .Wallop-item:nth-child(4):before {content:"3";}
 .Wallop-item:nth-child(5):before {content:"4";}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
