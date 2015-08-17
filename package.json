@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WallopSlider/Wallop.js.git"
+    "url": "git+https://github.com/peduarte/wallop.git"
   },
   "keywords": [
     "slider",
@@ -22,9 +22,9 @@
   "author": "Pedro Duarte <contact@peduarte.com> (http://pedroduarte.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/WallopSlider/Wallop.js/issues"
+    "url": "https://github.com/peduarte/wallop/issues"
   },
-  "homepage": "https://github.com/WallopSlider/Wallop.js#readme",
+  "homepage": "https://github.com/peduarte/wallop#readme",
   "devDependencies": {
     "uglify-js": "^2.4.24"
   }
