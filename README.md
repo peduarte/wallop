@@ -77,7 +77,6 @@ Once you have downloaded Wallop, the first thing you need to do is include the C
   <button class="Wallop-buttonPrevious">Previous</button>
   <button class="Wallop-buttonNext">Next</button>
 </div>
-</div>
 ```
 
 >**#protip**<br>
