@@ -1,7 +1,7 @@
 {
   "name": "wallop",
-  "version": "2.1.0",
-  "description": "Minimal slider with animations controlled via CSS",
+  "version": "2.1.1",
+  "description": "wallop is a minimal 4kb library for showing & hiding things",
   "main": "js/Wallop.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
