@@ -1,8 +1,7 @@
 # This version of WallopSlider is deprecated!
 ## I will no longer be maintaining this version.
-V2 is on its way, with a new API, better documentation, new site and loads of bug fixes.
 
-Thanks for your patience.
+###I highly recommend you use the new version, [wallop](https://github.com/WallopSlider/Wallop.js)
 
 ---
 
