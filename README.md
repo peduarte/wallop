@@ -181,9 +181,7 @@ Wallop.on('change', function(event) {
 - **[London Housing Headlines](http://london-housing.uk)** – uses wallop to display a collection of really cool headlines about London's housing crisis 👍
 
 ## Limitiations
-Wallop is a very simple library which basically just adds the right classes in the right places at the right time. Those classes allows you to use CSS to create animations.
-
-Due to its simplicity, Wallop has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.
+Due to its simplicity, wallop has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.
 
 If you want a slider which provides all these options, I highly recommend David Desandro's [Flickity](http://flickity.metafizzy.co/).
 
