@@ -5,6 +5,7 @@
   "main": "js/Wallop.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm uglify && npm publish ./",
     "uglify": "./node_modules/.bin/uglifyjs ./js/Wallop.js -o ./js/Wallop.min.js --comments -m -c "
   },
   "repository": {
