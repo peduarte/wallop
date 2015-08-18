@@ -36,6 +36,10 @@
     // New instance of Wallop
     var slider = document.querySelector('.Wallop');
     var Wallop = new Wallop(slider);
+
+    Wallop.on('change', function(e) {
+      console.log('changed -> ', e.detail);
+    });
   </script>
 
 </body>

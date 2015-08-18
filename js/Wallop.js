@@ -54,13 +54,17 @@
     this.createCustomEvent();
 
     // If there is no active item, start at 0
-    if (this.currentItemIndex < 0) { this.currentItemIndex = 0; }
+    if (this.currentItemIndex < 0) {
+      this.currentItemIndex = 0;
+      addClass(this.allItemsArray[this.currentItemIndex], this.options.currentItemClass);
+    }
 
     // Wrapped in timeout function so event can
     // be listened from outside at anytime
     var _this = this;
     setTimeout(function() {
-      _this.goTo(_this.currentItemIndex);
+      _this.event.detail.currentItemIndex = _this.currentItemIndex;
+      _this.$selector.dispatchEvent(_this.event);
     }, 0);
   }
 
@@ -155,10 +159,6 @@
 
   // Method so it is nicer for the user to use custom events
   WS.on = function (eventName, callback) {
-    if (eventName !== 'change') {
-      throw new Error('the only available event is "change"');
-    }
-
     this.$selector.addEventListener(eventName, function(event) {
       return callback(event);
     }, false);
