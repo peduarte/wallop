@@ -56,13 +56,23 @@ Once you have downloaded Wallop, the first thing you need to do is include the C
 </head>
 ```
 
-### JavaScript
+### Old school JavaScript
 ```html
 <script src="path/to/Wallop.min.js"></script>
 <script>
   var slider = document.querySelector('.Wallop');
-  new Wallop(slider);
+  var Wallop = new Wallop(slider);
 </script>
+```
+
+### AMD or commonJS module
+```js
+  var Wallop = require('Wallop');
+```
+
+### ES6
+```js
+  import Wallop from 'Wallop';
 ```
 
 ### HTML
