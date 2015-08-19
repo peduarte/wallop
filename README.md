@@ -41,7 +41,7 @@ bower install wallop
 With git
 
 ```
-git clone git@github.com:WallopSlider/Wallop.js.git
+git clone https://github.com/peduarte/wallop.git
 ```
 
 
