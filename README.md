@@ -35,7 +35,7 @@ npm install wallop
 With bower
 
 ```
-npm install wallop
+bower install wallop
 ```
 
 With git
