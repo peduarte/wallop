@@ -56,7 +56,7 @@ Once you have downloaded Wallop, the first thing you need to do is include the C
 </head>
 ```
 
-### Old school JavaScript
+### JavaScript
 ```html
 <script src="path/to/Wallop.min.js"></script>
 <script>
@@ -65,7 +65,7 @@ Once you have downloaded Wallop, the first thing you need to do is include the C
 </script>
 ```
 
-### AMD or commonJS module
+### commonJS
 ```js
   var Wallop = require('Wallop');
 ```
