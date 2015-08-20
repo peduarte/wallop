@@ -4,7 +4,7 @@
 * @fileoverview Minimal Slider with CSS animation
 *
 * @author Pedro Duarte
-* @author http://pedroduarte.me
+* @author http://pedroduarte.me/wallop
 *
 */
 (function(global){

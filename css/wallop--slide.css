@@ -1,4 +1,12 @@
-/*==========  SLIDE CONFIG  ==========*/
+/**
+ * wallop--slide.css
+ *
+ * @fileoverview Slide animation for wallop
+ *
+ * @author Pedro Duarte
+ * @author http://pedroduarte.me/wallop
+ */
+
 /* the 10ms animation-delay fixed some weird rendering issues with iPhone */
 .Wallop--slide .Wallop-item--show-previous {
   -webkit-animation: slideFromLeft 350ms 10ms linear both;
@@ -6,22 +14,26 @@
   -ms-animation: slideFromLeft 350ms 10ms linear both;
   animation: slideFromLeft 350ms 10ms linear both;
 }
+
 .Wallop--slide .Wallop-item--show-next {
   -webkit-animation: slideFromRight 350ms 10ms linear both;
   -moz-animation: slideFromRight 350ms 10ms linear both;
   -ms-animation: slideFromRight 350ms 10ms linear both;
   animation: slideFromRight 350ms 10ms linear both;
 }
+
 .Wallop--slide .Wallop-item--hide-previous,
 .Wallop--slide .Wallop-item--hide-next {
   display: block;
 }
+
 .Wallop--slide .Wallop-item--hide-previous {
   -webkit-animation: slideToLeft 350ms 10ms linear both;
   -moz-animation: slideToLeft 350ms 10ms linear both;
   -ms-animation: slideToLeft 350ms 10ms linear both;
   animation: slideToLeft 350ms 10ms linear both;
 }
+
 .Wallop--slide .Wallop-item--hide-next {
   -webkit-animation: slideToRight 350ms 10ms linear both;
   -moz-animation: slideToRight 350ms 10ms linear both;
@@ -29,7 +41,6 @@
   animation: slideToRight 350ms 10ms linear both;
 }
 
-/*==========  SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromLeft {
   0% {
     -webkit-transform: translate3d(-100%, 0, 0);

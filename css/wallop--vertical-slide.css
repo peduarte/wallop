@@ -1,31 +1,44 @@
-/*==========  VERTICAL SLIDE CONFIG  ==========*/
+/**
+ * wallop--vertical-slide.css
+ *
+ * @fileoverview Verical slide animation for wallop
+ *
+ * @author Pedro Duarte
+ * @author http://pedroduarte.me/wallop
+ */
+
 /* the 10ms animation-delay fixed some weird rendering issues with iPhone */
 .Wallop--vertical-slide .Wallop-list {
   position: relative;
   overflow: hidden;
 }
+
 .Wallop--vertical-slide .Wallop-item--show-next {
   -webkit-animation: slideFromTop 350ms 10ms linear both;
   -moz-animation: slideFromTop 350ms 10ms linear both;
   -ms-animation: slideFromTop 350ms 10ms linear both;
   animation: slideFromTop 350ms 10ms linear both;
 }
+
 .Wallop--vertical-slide .Wallop-item--show-previous {
   -webkit-animation: slideFromBottom 350ms 10ms linear both;
   -moz-animation: slideFromBottom 350ms 10ms linear both;
   -ms-animation: slideFromBottom 350ms 10ms linear both;
   animation: slideFromBottom 350ms 10ms linear both;
 }
+
 .Wallop--vertical-slide .Wallop-item--hide-previous,
 .Wallop--vertical-slide .Wallop-item--hide-next {
   display: block;
 }
+
 .Wallop--vertical-slide .Wallop-item--hide-previous {
   -webkit-animation: slideToBottom 350ms 10ms linear both;
   -moz-animation: slideToBottom 350ms 10ms linear both;
   -ms-animation: slideToBottom 350ms 10ms linear both;
   animation: slideToBottom 350ms 10ms linear both;
 }
+
 .Wallop--vertical-slide .Wallop-item--hide-next {
   -webkit-animation: slideToTop 350ms 10ms linear both;
   -moz-animation: slideToTop 350ms 10ms linear both;
@@ -33,7 +46,6 @@
   animation: slideToTop 350ms 10ms linear both;
 }
 
-/*==========  VERTICAL SLIDE ANIMATIONS  ==========*/
 @-webkit-keyframes slideFromTop {
   0% {
     -webkit-transform: translate3d(0, -100%, 0);
