@@ -78,12 +78,13 @@ Once you have downloaded Wallop, the first thing you need to do is include the C
 ### HTML
 ```html
 <div class="Wallop">
-  <div class="Wallop-item">…</div>
-  <div class="Wallop-item">…</div>
-  <div class="Wallop-item">…</div>
-  <div class="Wallop-item">…</div>
-  <div class="Wallop-item">…</div>
-
+  <div class="Wallop-list">
+    <div class="Wallop-item">…</div>
+    <div class="Wallop-item">…</div>
+    <div class="Wallop-item">…</div>
+    <div class="Wallop-item">…</div>
+    <div class="Wallop-item">…</div>
+  </div>
   <button class="Wallop-buttonPrevious">Previous</button>
   <button class="Wallop-buttonNext">Next</button>
 </div>
@@ -107,7 +108,7 @@ I have created a few basic animations which is ready for you to use out-of-the-b
 
 ### Extending with modifier
 ```html
-<div class="Wallop Wallop--slide">
+<div class="Wallop Wallop--fade">
 ...
 </div>
 ```
