@@ -4,7 +4,7 @@
   "description": "wallop is a minimal 4kb library for showing & hiding things",
   "main": "js/Wallop.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "zuul --ui tape --local 9966 -- test.js",
     "publish": "npm uglify && npm publish ./",
     "uglify": "./node_modules/.bin/uglifyjs ./js/Wallop.js -o ./js/Wallop.min.js --comments -m -c "
   },
@@ -25,8 +25,10 @@
   "bugs": {
     "url": "https://github.com/peduarte/wallop/issues"
   },
-  "homepage": "https://github.com/peduarte/wallop#readme",
+  "homepage": "http://pedroduarte.me/wallop",
   "devDependencies": {
-    "uglify-js": "^2.4.24"
+    "tape": "^4.2.0",
+    "uglify-js": "^2.4.24",
+    "zuul": "^3.3.0"
   }
 }
