@@ -26,6 +26,7 @@
   Especially when doing animations such as scale
  */
 .Wallop-list {
+  position: relative;
   overflow: hidden;
 }
 

@@ -24,7 +24,7 @@
 
 .Wallop--slide .Wallop-item--hide-previous,
 .Wallop--slide .Wallop-item--hide-next {
-  display: block;
+  visibility: visible;
 }
 
 .Wallop--slide .Wallop-item--hide-previous {
