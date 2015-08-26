@@ -6,7 +6,7 @@ This is the reason why wallop has no Keyboard or Gestures bindings. I would like
 Bug fixes are more than welcome! 
 For any new feature please [submit an issue](https://github.com/peduarte/wallop/issues) first before send any pull request.
 
-Thank you & happy contributing! 👊�
+Thank you & happy contributing! 👊
 
 ## Tests
 
