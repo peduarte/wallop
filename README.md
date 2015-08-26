@@ -28,20 +28,20 @@ With those classes, you can do an infite [number of things](#real-life-examples)
 ## Install
 With npm
 
-```
-npm install wallop
+```bash
+$ npm install wallop
 ```
 
 With bower
 
-```
-bower install wallop
+```bash
+$ bower install wallop
 ```
 
 With git
 
-```
-git clone https://github.com/peduarte/wallop.git
+```bash
+$ git clone https://github.com/peduarte/wallop.git
 ```
 
 
