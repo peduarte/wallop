@@ -5,7 +5,7 @@
   "main": "js/Wallop.js",
   "scripts": {
     "test": "zuul --ui tape --local 9966 -- test.js",
-    "uglify": "./node_modules/.bin/uglifyjs ./js/Wallop.js -o ./js/Wallop.min.js --comments -m -c "
+    "uglify": "./node_modules/.bin/uglifyjs ./js/Wallop.js -o ./js/Wallop.min.js --comments -m -c ",
     "build": "npm run test && npm run uglify"
   },
   "repository": {
