@@ -121,8 +121,9 @@ Here's a list of the available animation modifiers ready for you to use
 - `Wallop--rotate`
 - `Wallop--fold`
 - `Wallop--vertical-slide`
-> **protip**<br>
-> These animation helpers are especially helpful using if you are using wallop as a slider, but don't feel forced to use them, instead, feel free to take advantage of the classes wallop provides you with, and create you own! Like [these guys](http://london-housing.uk) did.
+
+>**protip**<br>
+>These animation helpers are especially helpful using if you are using wallop as a slider, but don't feel forced to use them, instead, feel free to take advantage of the classes wallop provides you with, and create you own! Like [these guys](http://london-housing.uk) did.
 
 ## Options
 Here's a list of options you can pass to Wallop
