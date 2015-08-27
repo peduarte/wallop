@@ -8,7 +8,7 @@ wallop is a minimal 4kb library for showing & hiding things.
 > If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/peduarte/wallop/tree/v1).
 
 ## About
-In a nutshell, wallop takes a collection of HTML elements and Pevious & Next buttons, and adds helper HTML classes in the correct elements based on whether you want to navigate forwards or backwards.
+In a nutshell, wallop takes a collection of HTML elements and Previous & Next buttons, and adds helper HTML classes in the correct elements based on whether you want to navigate forwards or backwards.
 
 It basically just add the right classes in the right places at the right time.
 
