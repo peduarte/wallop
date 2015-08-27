@@ -25,10 +25,10 @@
       buttonNextClass: 'Wallop-buttonNext',
       itemClass: 'Wallop-item',
       currentItemClass: 'Wallop-item--current',
-      showPreviousClass: 'Wallop-item--show-previous',
-      showNextClass: 'Wallop-item--show-next',
-      hidePreviousClass: 'Wallop-item--hide-previous',
-      hideNextClass: 'Wallop-item--hide-next',
+      showPreviousClass: 'Wallop-item--showPrevious',
+      showNextClass: 'Wallop-item--showNext',
+      hidePreviousClass: 'Wallop-item--hidePrevious',
+      hideNextClass: 'Wallop-item--hideNext',
       carousel: true
     };
 

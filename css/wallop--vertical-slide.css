@@ -13,33 +13,33 @@
   overflow: hidden;
 }
 
-.Wallop--vertical-slide .Wallop-item--show-next {
+.Wallop--vertical-slide .Wallop-item--showNext {
   -webkit-animation: slideFromTop 350ms 10ms linear both;
   -moz-animation: slideFromTop 350ms 10ms linear both;
   -ms-animation: slideFromTop 350ms 10ms linear both;
   animation: slideFromTop 350ms 10ms linear both;
 }
 
-.Wallop--vertical-slide .Wallop-item--show-previous {
+.Wallop--vertical-slide .Wallop-item--showPrevious {
   -webkit-animation: slideFromBottom 350ms 10ms linear both;
   -moz-animation: slideFromBottom 350ms 10ms linear both;
   -ms-animation: slideFromBottom 350ms 10ms linear both;
   animation: slideFromBottom 350ms 10ms linear both;
 }
 
-.Wallop--vertical-slide .Wallop-item--hide-previous,
-.Wallop--vertical-slide .Wallop-item--hide-next {
+.Wallop--vertical-slide .Wallop-item--hidePrevious,
+.Wallop--vertical-slide .Wallop-item--hideNext {
   display: block;
 }
 
-.Wallop--vertical-slide .Wallop-item--hide-previous {
+.Wallop--vertical-slide .Wallop-item--hidePrevious {
   -webkit-animation: slideToBottom 350ms 10ms linear both;
   -moz-animation: slideToBottom 350ms 10ms linear both;
   -ms-animation: slideToBottom 350ms 10ms linear both;
   animation: slideToBottom 350ms 10ms linear both;
 }
 
-.Wallop--vertical-slide .Wallop-item--hide-next {
+.Wallop--vertical-slide .Wallop-item--hideNext {
   -webkit-animation: slideToTop 350ms 10ms linear both;
   -moz-animation: slideToTop 350ms 10ms linear both;
   -ms-animation: slideToTop 350ms 10ms linear both;

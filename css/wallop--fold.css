@@ -14,15 +14,15 @@
   perspective: 1000;
 }
 
-.Wallop--fold .Wallop-item--show-previous,
-.Wallop--fold .Wallop-item--show-next {
+.Wallop--fold .Wallop-item--showPrevious,
+.Wallop--fold .Wallop-item--showNext {
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
 
-.Wallop--fold .Wallop-item--show-previous {
+.Wallop--fold .Wallop-item--showPrevious {
   -webkit-transform-origin: center left;
   -moz-transform-origin: center left;
   -ms-transform-origin: center left;
@@ -34,7 +34,7 @@
   z-index: 2;
 }
 
-.Wallop--fold .Wallop-item--show-next {
+.Wallop--fold .Wallop-item--showNext {
   -webkit-transform-origin: center right;
   -moz-transform-origin: center right;
   -ms-transform-origin: center right;
@@ -46,8 +46,8 @@
   z-index: 1;
 }
 
-.Wallop--fold .Wallop-item--hide-previous,
-.Wallop--fold .Wallop-item--hide-next {
+.Wallop--fold .Wallop-item--hidePrevious,
+.Wallop--fold .Wallop-item--hideNext {
   visibility: visible;
 }
 

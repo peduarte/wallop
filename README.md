@@ -8,7 +8,7 @@ wallop is a minimal 4kb library for showing & hiding things.
 > If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/peduarte/wallop/tree/v1).
 
 ## About
-In a nutshell, wallop takes a collection of HTML elements and Pevious & Next buttons, and adds helper HTML classes in the correct elements based on whether you want to navigate forwards or backwards.
+In a nutshell, wallop takes a collection of HTML elements and Previous & Next buttons, and adds helper HTML classes in the correct elements based on whether you want to navigate forwards or backwards.
 
 It basically just add the right classes in the right places at the right time.
 
@@ -28,22 +28,18 @@ With those classes, you can do an infite [number of things](#real-life-examples)
 ## Install
 With npm
 
-```
-npm install wallop
+```bash
+$ npm install wallop
 ```
 
 With bower
 
-```
-bower install wallop
-```
-
-With git
-
-```
-git clone https://github.com/peduarte/wallop.git
+```bash
+$ bower install wallop
 ```
 
+Download<br>
+You can download the latest or checkout all the releases [from this page](https://github.com/peduarte/wallop/releases)
 
 
 ## Usage
@@ -60,8 +56,8 @@ Once you have downloaded Wallop, the first thing you need to do is include the C
 ```html
 <script src="path/to/Wallop.min.js"></script>
 <script>
-  var slider = document.querySelector('.Wallop');
-  var Wallop = new Wallop(slider);
+  var wallopEl = document.querySelector('.Wallop');
+  var slider = new Wallop(wallopEl);
 </script>
 ```
 
@@ -122,16 +118,19 @@ Here's a list of the available animation modifiers ready for you to use
 - `Wallop--fold`
 - `Wallop--vertical-slide`
 
+>**protip**<br>
+>These animation helpers are especially helpful using if you are using wallop as a slider, but don't feel forced to use them, instead, feel free to take advantage of the classes wallop provides you with, and create you own! Like [these guys](http://london-housing.uk) did.
+
 ## Options
 Here's a list of options you can pass to Wallop
 - `buttonPreviousClass: 'Wallop-buttonPrevious'`
 - `buttonNextClass: 'Wallop-buttonNext'`
 - `itemClass: 'Wallop-item'`
 - `currentItemClass: 'Wallop-item--current'`
-- `showPreviousClass: 'Wallop-item--show-previous'`
-- `showNextClass: 'Wallop-item--show-next'`
-- `hidePreviousClass: 'Wallop-item--hide-previous'`
-- `hideNextClass: 'Wallop-item--hide-next'`
+- `showPreviousClass: 'Wallop-item--showPrevious'`
+- `showNextClass: 'Wallop-item--showNext'`
+- `hidePreviousClass: 'Wallop-item--hidePrevious'`
+- `hideNextClass: 'Wallop-item--hideNext'`
 - `carousel: true`
 
 ## API
@@ -190,6 +189,8 @@ Wallop.on('change', function(event) {
 - **[Google](http://www.google.com/trends/worldcup)** – uses wallop as a slideshow, transitioning the background colour and animating the hero image of each item
 - **[Warp](http://warp.net/news/afx-following-global-premieres-you-can-now-hear-4-tracks-from-the-ep/?o=gallery&index=0)** – uses the power of wallop's API and Custom Events to control the items via the URL and to build a custom pagination
 - **[London Housing Headlines](http://london-housing.uk)** – uses wallop to display a collection of really cool headlines about London's housing crisis 👍
+
+If you are using wallop, please do let  me know by [creating an issue](https://github.com/peduarte/wallop/issues) and I'll make sure to add it to this list 👊
 
 ## Limitiations
 Due to its simplicity, wallop has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.

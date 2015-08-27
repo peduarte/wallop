@@ -1,12 +1,13 @@
 {
   "name": "wallop",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "wallop is a minimal 4kb library for showing & hiding things",
   "main": "js/Wallop.js",
   "scripts": {
     "test": "zuul --local 9966 -- test.js",
-    "publish": "npm uglify && npm publish ./",
-    "uglify": "./node_modules/.bin/uglifyjs ./js/Wallop.js -o ./js/Wallop.min.js --comments -m -c "
+    "ci": "zuul -- test.js",
+    "uglify": "./node_modules/.bin/uglifyjs ./js/Wallop.js -o ./js/Wallop.min.js --comments -m -c ",
+    "build": "npm run test && npm run uglify"
   },
   "repository": {
     "type": "git",
