@@ -38,12 +38,8 @@ With bower
 $ bower install wallop
 ```
 
-With git
-
-```bash
-$ git clone https://github.com/peduarte/wallop.git
-```
-
+Download<br>
+You can download the latest or checkout all the releases [from this page](https://github.com/peduarte/wallop/releases)
 
 
 ## Usage
@@ -193,6 +189,8 @@ Wallop.on('change', function(event) {
 - **[Google](http://www.google.com/trends/worldcup)** – uses wallop as a slideshow, transitioning the background colour and animating the hero image of each item
 - **[Warp](http://warp.net/news/afx-following-global-premieres-you-can-now-hear-4-tracks-from-the-ep/?o=gallery&index=0)** – uses the power of wallop's API and Custom Events to control the items via the URL and to build a custom pagination
 - **[London Housing Headlines](http://london-housing.uk)** – uses wallop to display a collection of really cool headlines about London's housing crisis 👍
+
+If you are using wallop, please do let  me know by [creating an issue](https://github.com/peduarte/wallop/issues) and I'll make sure to add it to this list 👊
 
 ## Limitiations
 Due to its simplicity, wallop has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.
