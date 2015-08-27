@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/peduarte/wallop.svg)](https://travis-ci.org/peduarte/wallop)
 # wallop
 ### Much more than just a slider
 
