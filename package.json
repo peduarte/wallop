@@ -4,7 +4,7 @@
   "description": "wallop is a minimal 4kb library for showing & hiding things",
   "main": "js/Wallop.js",
   "scripts": {
-    "test": "zuul --ui tape --local 9966 -- test.js",
+    "test": "zuul --local 9966 -- test.js",
     "publish": "npm uglify && npm publish ./",
     "uglify": "./node_modules/.bin/uglifyjs ./js/Wallop.js -o ./js/Wallop.min.js --comments -m -c "
   },
