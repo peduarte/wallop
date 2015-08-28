@@ -13,7 +13,7 @@ In a nutshell, wallop takes a collection of HTML elements and Previous & Next bu
 
 It basically just add the right classes in the right places at the right time.
 
-With those classes, you can do an infite [number of things](#real-life-examples), controlling what's shown or hidden with CSS.
+With those classes, you can do an infinite [number of things](#real-life-examples), controlling what's shown or hidden with CSS.
 
 ## Benefits
 - Mobile first
