@@ -194,7 +194,7 @@ Wallop.on('change', function(event) {
 
 If you are using wallop, please do let  me know by [creating an issue](https://github.com/peduarte/wallop/issues) and I'll make sure to add it to this list 👊
 
-## Limitiations
+## Limitations
 Due to its simplicity, wallop has a few limitations. For example, it is not possible to have the slide position animation based on gesture, or it's not possible to include physics based animations based on gesture momentum.
 
 If you want a slider which provides all these options, I highly recommend David Desandro's [Flickity](http://flickity.metafizzy.co/).
