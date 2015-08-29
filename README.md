@@ -17,7 +17,7 @@ It basically just add the right classes in the right places at the right time.
 With those classes, you can do an infinite [number of things](#real-life-examples), controlling what's shown or hidden with CSS.
 
 ## Examples
-Take a look at the examples in this [Codepen collection](http://codepen.io/collection/DQWmxZ/)
+Take a look at the examples in this **[Codepen collection](http://codepen.io/collection/DQWmxZ/)** 👀
 
 ## Benefits
 - Mobile first
