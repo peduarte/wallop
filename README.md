@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/peduarte/wallop.svg)](https://travis-ci.org/peduarte/wallop)
+[![npm version](https://badge.fury.io/js/wallop.svg)](http://badge.fury.io/js/wallop) [![Build Status](https://travis-ci.org/peduarte/wallop.svg)](https://travis-ci.org/peduarte/wallop)
 ---
 # wallop
 ### Much more than just a slider
