@@ -17,7 +17,11 @@ It basically just add the right classes in the right places at the right time.
 With those classes, you can do an infinite [number of things](#real-life-examples), controlling what's shown or hidden with CSS.
 
 ## Examples
-Take a look at the examples in this **[Codepen collection](http://codepen.io/collection/DQWmxZ/)** 👀
+- [Basic](http://codepen.io/peduarte/pen/pjzYpG) – This is wallop's most basic implementation
+- [Fade animation](http://codepen.io/peduarte/pen/RWbORJ) – Using one of the [available animations](#adding-animations)
+- [Custom pagination](http://codepen.io/peduarte/pen/bVbZLK) – Create your own pagination by levaragin the power of wallops' API and CustomEvents
+
+I've created a collection on**[Codepen](http://codepen.io/collection/DQWmxZ/)** with a few more examples, go take a 👀!
 
 ## Benefits
 - Mobile first
