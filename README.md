@@ -1,11 +1,10 @@
-[![npm version](https://badge.fury.io/js/wallop.svg)](http://badge.fury.io/js/wallop) [![Build Status](https://travis-ci.org/peduarte/wallop.svg)](https://travis-ci.org/peduarte/wallop)
----
 # wallop
-### Much more than just a slider
+[![Build Status](https://travis-ci.org/peduarte/wallop.svg)](https://travis-ci.org/peduarte/wallop) [![npm version](https://badge.fury.io/js/wallop.svg)](http://badge.fury.io/js/wallop)
 
+### Much more than just a slider
 wallop is a minimal 4kb library for showing & hiding things.
 
->❗️️**Important note**️<br>
+> ❗️**Important note**️<br>
 > Version 1 of *WallopSlider* is not compatible with version 2+.<br>
 > If you are still v1, please note that I am no longer supporting it. Documentation, etc has been moved to [this branch](https://github.com/peduarte/wallop/tree/v1).
 
@@ -29,7 +28,6 @@ Take a look at the examples in this **[Codepen collection](http://codepen.io/col
 - 4KB minified
 - Dependency free
 
-
 ## Install
 With npm
 
@@ -45,7 +43,6 @@ $ bower install wallop
 
 Download<br>
 You can download the latest or checkout all the releases [from this page](https://github.com/peduarte/wallop/releases)
-
 
 ## Usage
 Once you have downloaded Wallop, the first thing you need to do is include the CSS and the JavaScript.
@@ -123,8 +120,8 @@ Here's a list of the available animation modifiers ready for you to use
 - `Wallop--fold`
 - `Wallop--vertical-slide`
 
->**protip**<br>
->These animation helpers are especially helpful using if you are using wallop as a slider, but don't feel forced to use them, instead, feel free to take advantage of the classes wallop provides you with, and create you own! Like [these guys](http://london-housing.uk) did.
+> **protip**<br>
+> These animation helpers are especially helpful using if you are using wallop as a slider, but don't feel forced to use them, instead, feel free to take advantage of the classes wallop provides you with, and create you own! Like [these guys](http://london-housing.uk) did.
 
 ## Options
 Here's a list of options you can pass to Wallop
@@ -150,8 +147,8 @@ var Wallop = new Wallop(slider);
 // Go to 2nd slide
 Wallop.goTo(1);
 ```
->**#protip**<br>
->index starts at 0 👌
+> **#protip**<br>
+> index starts at 0 👌
 
 ### next
 This allows you to go to the next slide
