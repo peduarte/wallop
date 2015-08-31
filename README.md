@@ -21,7 +21,7 @@ With those classes, you can do an infinite [number of things](#real-life-example
 - [Fade animation](http://codepen.io/peduarte/pen/RWbORJ) – Using one of the [available animations](#adding-animations)
 - [Custom pagination](http://codepen.io/peduarte/pen/bVbZLK) – Create your own pagination by levaragin the power of wallops' API and CustomEvents
 
-I've created a collection on**[Codepen](http://codepen.io/collection/DQWmxZ/)** with a few more examples, go take a 👀!
+I've created a collection on **[Codepen](http://codepen.io/collection/DQWmxZ/)** with a few more examples, go take a 👀!
 
 ## Benefits
 - Mobile first
