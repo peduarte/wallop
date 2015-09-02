@@ -185,7 +185,7 @@
 
   function $$(element) {
     if (!element) { return; }
-    return document.getElementsByClassName(element);
+    return document.querySelectorAll('.' + element);
   }
 
   function addClass(element, className) {
