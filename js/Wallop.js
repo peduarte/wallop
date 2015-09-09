@@ -216,7 +216,7 @@
     return evt;
   }
 
-  CustomEvent.prototype = window.CustomEvent.prototype;
+  CustomEvent.prototype = window.CustomEvent ? window.CustomEvent.prototype : {};
   window.CustomEvent = CustomEvent;
 
   // Exports to multiple environments
