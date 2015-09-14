@@ -6,7 +6,6 @@
   <meta name="viewport" content="initial-scale=1, user-scalable=no">
   <link rel="stylesheet" href="css/example.css">
   <link rel="stylesheet" href="../css/wallop.css">
-  <link rel="stylesheet" href="../css/wallop--slide.css">
 </head>
 <body>
 
@@ -15,7 +14,7 @@
     <h2>Default</h2>
 
     <!-- SLIDER STARTS -->
-    <div class="Wallop Wallop--slide">
+    <div class="Wallop">
       <div class="Wallop-list">
         <div class="Wallop-item"><img src="imgs/1.jpg"></div>
         <div class="Wallop-item"><img src="imgs/2.jpg"></div>
@@ -37,14 +36,6 @@
     // New instance of Wallop
     var slider = document.querySelector('.Wallop');
     var Wallop = new Wallop(slider);
-
-    Wallop.on('change', function(e) {
-      console.log('changed -> ', e.detail);
-    });
-
-    document.addEventListener('click', function(e) {
-      console.log('e.target -> ', e.target);
-    });
   </script>
 
 </body>

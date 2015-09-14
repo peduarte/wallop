@@ -99,6 +99,8 @@
 
   // Method to add classes to the right elements depending on the index passed
   WS.goTo = function (index) {
+    if (index === this.currentItemIndex) { return; }
+
     // Check if it's a carousel and if so, change index to be last item when clicking previous on first item
     if (this.options.carousel && index === -1) { index = this.allItemsArrayLength - 1; }
     else if (index > this.allItemsArrayLength || index < 0) { return; }
@@ -185,7 +187,7 @@
 
   function $$(element) {
     if (!element) { return; }
-    return document.getElementsByClassName(element);
+    return document.querySelectorAll('.' + element);
   }
 
   function addClass(element, className) {
@@ -214,7 +216,7 @@
     return evt;
   }
 
-  CustomEvent.prototype = window.CustomEvent.prototype;
+  CustomEvent.prototype = window.CustomEvent ? window.CustomEvent.prototype : {};
   window.CustomEvent = CustomEvent;
 
   // Exports to multiple environments
