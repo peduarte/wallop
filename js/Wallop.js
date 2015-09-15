@@ -59,10 +59,8 @@
       addClass(this.allItemsArray[this.currentItemIndex], this.options.currentItemClass);
     }
 
-    // Update the button state on initialization when the `carousel` option isn't enabled
-    if (!this.carousel) {
-      this.updateButtonStates();
-    }
+    // Update button states to make sure the correct state is set on initialization
+    this.updateButtonStates();
 
     // Wrapped in timeout function so event can
     // be listened from outside at anytime
@@ -79,11 +77,11 @@
 
   // Update prev/next disabled attribute
   WS.updateButtonStates = function () {
-    if (!this.buttonPrevious && !this.buttonNext) { return; }
+    if ((!this.buttonPrevious && !this.buttonNext) || this.options.carousel) { return; }
 
-    if (this.currentItemIndex === this.allItemsArrayLength && this.options.carousel !== true) {
+    if (this.currentItemIndex === this.allItemsArrayLength) {
       this.buttonNext.setAttribute('disabled', 'disabled');
-    } else if (this.currentItemIndex === 0 && this.options.carousel !== true) {
+    } else if (this.currentItemIndex === 0) {
       this.buttonPrevious.setAttribute('disabled', 'disabled');
     }
   };
