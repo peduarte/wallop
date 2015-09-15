@@ -54,9 +54,14 @@
     this.createCustomEvent();
 
     // If there is no active item, start at 0
-    if (this.currentItemIndex < 0) {
+    if (this.currentItemIndex === -1) {
       this.currentItemIndex = 0;
       addClass(this.allItemsArray[this.currentItemIndex], this.options.currentItemClass);
+    }
+
+    // Update the button state on initialization when the `carousel` option isn't enabled
+    if (!this.carousel) {
+      this.updateButtonStates();
     }
 
     // Wrapped in timeout function so event can
@@ -107,8 +112,9 @@
 
     this.removeAllHelperSettings();
 
-    addClass(this.allItemsArray[this.currentItemIndex], index > this.currentItemIndex ? this.options.hidePreviousClass : this.options.hideNextClass);
-    addClass(this.allItemsArray[index], this.options.currentItemClass + ' ' + (index > this.currentItemIndex ? this.options.showNextClass : this.options.showPreviousClass));
+    var isForwards = (index > this.currentItemIndex || index === 0 && this.currentItemIndex === this.allItemsArrayLength) && !(index === this.allItemsArrayLength && this.currentItemIndex === 0);
+    addClass(this.allItemsArray[this.currentItemIndex], isForwards ? this.options.hidePreviousClass : this.options.hideNextClass);
+    addClass(this.allItemsArray[index], this.options.currentItemClass + ' ' + (isForwards ? this.options.showNextClass : this.options.showPreviousClass));
 
     this.currentItemIndex = index;
 
