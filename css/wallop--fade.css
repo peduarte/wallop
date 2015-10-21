@@ -30,20 +30,25 @@
 @-webkit-keyframes fadeOut {
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-moz-keyframes fadeOut {
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @-ms-keyframes fadeOut {
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 @keyframes fadeOut {
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
+
