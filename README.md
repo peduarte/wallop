@@ -182,14 +182,19 @@ Wallop dispatches a Custom Event everytime a slide changes, and it returns a `de
 ```js
 var slider = document.querySelector('.Wallop');
 var Wallop = new Wallop(slider);
-
-Wallop.on('change', function(event) {
+var handler = function(event) {
   // event.detail.wallopEl
   // => <div class="Wallop">…</div>
 
   // event.detail.currentItemIndex
   // => number
-});
+};
+
+// Listen to the handler
+Wallop.on('change', handler);
+
+// Remove the handler listener
+Wallop.off('change', handler);
 ```
 
 ## Real life examples
