@@ -152,11 +152,14 @@
 
   };
 
-  // Method so it is nicer for the user to use custom events
+  // Method to bind custom event
   WS.on = function (eventName, callback) {
-    this.$selector.addEventListener(eventName, function(event) {
-      return callback(event);
-    }, false);
+    this.$selector.addEventListener(eventName, callback, false);
+  };
+
+  // Method to unbind custom event
+  WS.off = function (eventName, callback) {
+    this.$selector.removeEventListener(eventName, callback, false);
   };
 
   // Create custom Event
