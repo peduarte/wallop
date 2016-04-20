@@ -29,7 +29,12 @@
       carousel: true
     };
 
-    if (selector.length > 0) {
+    // Whitelist elements which container `length`
+    this.whitelist = {
+      'form': true
+    };
+
+    if (selector.length > 0 && !this.whitelist[selector]) {
       throw new Error('Selector cannot be an array, Refer to Usage documentation: https://github.com/peduarte/wallop#javascript');
     } else {
       this.$selector = selector;
