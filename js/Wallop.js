@@ -135,6 +135,13 @@
     this.goTo(this.currentItemIndex + 1);
   };
 
+  // Update global variables
+  WS.update = function (){
+    this.allItemsArray = Array.prototype.slice.call(this.$selector.querySelectorAll(' .' + this.options.itemClass));
+    this.currentItemIndex = this.allItemsArray.indexOf(this.$selector.querySelector(' .' + this.options.currentItemClass));
+    this.lastItemIndex = this.allItemsArray.length - 1;
+  };
+
   // Attach click handlers
   WS.bindEvents = function () {
     selectorPool.push(this.$selector);
