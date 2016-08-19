@@ -84,10 +84,10 @@
   // Reset all settings by removing classes and attributes added by goTo() & updateButtonStates()
   WS.removeAllHelperSettings = function () {
     removeClass(this.allItemsArray[this.currentItemIndex], this.options.currentItemClass);
-    removeClass($$(this.options.hidePreviousClass)[0], this.options.hidePreviousClass);
-    removeClass($$(this.options.hideNextClass)[0], this.options.hideNextClass);
-    removeClass($$(this.options.showPreviousClass)[0], this.options.showPreviousClass);
-    removeClass($$(this.options.showNextClass)[0], this.options.showNextClass);
+    removeClass($$(this.options.hidePreviousClass, this.$selector), this.options.hidePreviousClass);
+    removeClass($$(this.options.hideNextClass, this.$selector), this.options.hideNextClass);
+    removeClass($$(this.options.showPreviousClass, this.$selector), this.options.showPreviousClass);
+    removeClass($$(this.options.showNextClass, this.$selector), this.options.showNextClass);
 
     if (!this.buttonPrevious && !this.buttonNext) { return; }
 
@@ -176,9 +176,12 @@
   };
 
   // Helper functions
-  function $$(element) {
+  function $$(element, container) {
     if (!element) { return; }
-    return document.querySelectorAll('.' + element);
+    if (!container) {
+      container = document;
+    }
+    return container.querySelector('.' + element);
   }
 
   function addClass(element, className) {
