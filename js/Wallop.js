@@ -29,7 +29,7 @@
       carousel: true
     };
 
-    // Whitelist elements which container `length`
+    // Whitelist elements which contain `length`
     this.whitelist = {
       'form': true
     };
