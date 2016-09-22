@@ -44,9 +44,7 @@
     this.event = null;
 
     // "Global vars"
-    this.allItemsArray = Array.prototype.slice.call(this.$selector.querySelectorAll(' .' + this.options.itemClass));
-    this.currentItemIndex = this.allItemsArray.indexOf(this.$selector.querySelector(' .' + this.options.currentItemClass));
-    this.lastItemIndex = this.allItemsArray.length - 1;
+    this.reset();
     this.buttonPrevious = this.$selector.querySelector(' .' + this.options.buttonPreviousClass);
     this.buttonNext = this.$selector.querySelector(' .' + this.options.buttonNextClass);
 
@@ -133,6 +131,13 @@
   // Next item handler
   WS.next = function () {
     this.goTo(this.currentItemIndex + 1);
+  };
+
+  // Update global variables
+  WS.reset = function (){
+    this.allItemsArray = Array.prototype.slice.call(this.$selector.querySelectorAll(' .' + this.options.itemClass));
+    this.currentItemIndex = this.allItemsArray.indexOf(this.$selector.querySelector(' .' + this.options.currentItemClass));
+    this.lastItemIndex = this.allItemsArray.length - 1;
   };
 
   // Attach click handlers
