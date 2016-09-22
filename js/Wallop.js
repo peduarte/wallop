@@ -134,7 +134,7 @@
   };
 
   // Update global variables
-  WS.reset = function (){
+  WS.reset = function () {
     this.allItemsArray = Array.prototype.slice.call(this.$selector.querySelectorAll(' .' + this.options.itemClass));
     this.currentItemIndex = this.allItemsArray.indexOf(this.$selector.querySelector(' .' + this.options.currentItemClass));
     this.lastItemIndex = this.allItemsArray.length - 1;

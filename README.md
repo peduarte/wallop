@@ -175,8 +175,23 @@ var Wallop = new Wallop(slider);
 Wallop.previous();
 ```
 
+### reset()
+This resets all internal variables of Wallop. Useful when dynamically changing the
+number of items in your slider.
+```js
+var slider = document.querySelector('.Wallop');
+var Wallop = new Wallop(slider);
+
+// Some function that will dynamically
+// insert new itmes in Wallop
+insertNewItems();
+
+// Reset config
+Wallop.reset();
+```
+
 ## Events
-Wallop dispatches a Custom Event everytime a slide changes, and it returns a `detail` object which contains the current slide index and the element you initiated Wallop with.
+Wallop dispatches a Custom Event every time a slide changes, and it returns a `detail` object which contains the current slide index and the element you initiated Wallop with.
 
 ### Listening to a slide change
 ```js
