@@ -229,4 +229,4 @@ If you want a slider which provides all these options, I highly recommend David 
 Plese see [CONTRIBUTING.md](https://github.com/peduarte/wallop/blob/master/CONTRIBUTING.md) for more information.
 
 ## Licensing
-MIT © 2015 [Pedro Duarte](http://pedroduarte.me)
+MIT © 2018 [Pedro Duarte](http://pedroduarte.me)
