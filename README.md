@@ -126,7 +126,7 @@ Here's a list of the available animation modifiers ready for you to use
 - `Wallop--vertical-slide`
 
 > **protip**<br>
-> These animation helpers are especially helpful using if you are using wallop as a slider, but don't feel forced to use them, instead, feel free to take advantage of the classes wallop provides you with, and create you own! Like [these guys](http://london-housing.uk) did.
+> These animation helpers are especially helpful using if you are using wallop as a slider, but don't feel forced to use them, instead, feel free to take advantage of the classes wallop provides you with, and create you own!
 
 ## Options
 Here's a list of options you can pass to Wallop
@@ -215,7 +215,6 @@ Wallop.off('change', handler);
 ## Real life examples
 - **[Google](http://www.google.com/trends/worldcup)** – uses wallop as a slideshow, transitioning the background colour and animating the hero image of each item
 - **[Warp](http://warp.net/news/afx-following-global-premieres-you-can-now-hear-4-tracks-from-the-ep/?o=gallery&index=0)** – uses the power of wallop's API and Custom Events to control the items via the URL and to build a custom pagination
-- **[London Housing Headlines](http://london-housing.uk)** – uses wallop to display a collection of really cool headlines about London's housing crisis 👍
 - **[Strava Insights](http://insights.strava.com/)** – uses wallop a a slideshow, transitioning and transforming the background images with delay
 
 If you are using wallop, please do let  me know by [creating an issue](https://github.com/peduarte/wallop/issues) and I'll make sure to add it to this list 👊
